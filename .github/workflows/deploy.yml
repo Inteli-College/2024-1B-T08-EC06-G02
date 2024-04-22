@@ -23,7 +23,7 @@ jobs:
   build:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.url }}
     runs-on: ubuntu-latest
 
     steps:
@@ -55,5 +55,3 @@ jobs:
       uses: actions/deploy-pages@v2
       with:
         repository-token: ${{ secrets.GITHUB_TOKEN }}
-      outputs:
-        page_url: ${{ steps.deployment.outputs.url }}
