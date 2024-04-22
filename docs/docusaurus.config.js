@@ -8,15 +8,15 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: 'Documentação G5',
+  tagline: 'Documentação',
+  favicon: 'img/logo-grupo.svg',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/2024-T0008-EC05-G05/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -45,15 +45,15 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-            routeBasePath : "/"
-          },
-        blog: {
+            routeBasePath: '/'
+        },
+        blog: false /*{
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        }*/,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -67,20 +67,20 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Documentação Módulo 6',
+        title: 'Documentação Módulo 5',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Inteli',
+          src: 'img/logo-grupo.svg',
         },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Documentação',
+            label: 'Documentação módulo 5',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/Inteli-College/2024-T0008-EC05-G05',
             label: 'GitHub',
             position: 'right',
           },
@@ -90,28 +90,35 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Desenvolvedores',
             items: [
               {
-                label: 'Tutorial',
-                to: '/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Caio Teixeira de Paula',
+                href: 'https://github.com/CaioPaula',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Cecília Gio Alonso Gonçalves',
+                href: 'https://www.linkedin.com/in/cec%C3%ADlia-alonso-gon%C3%A7alves-3aa4bb271/',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Eduardo Henrique dos Santos',
+                href: 'https://www.linkedin.com/in/eduardo-henrique-dos-santos/',
+              },
+              {
+                label: 'José Vitor Alencar',
+                href: 'https://www.linkedin.com/in/josevalencar/',
+              },
+              {
+                label: 'Lídia Cruz Mariano',
+                href: 'https://www.linkedin.com/in/lidiamariano/',
+              },
+              {
+                label: 'Murilo',
+                href: 'https://www.linkedin.com/in/lidiamariano/',
+              },
+              {
+                label: 'Pedro Henrique de Azedo Coutinho Cruz',
+                href: 'https://github.com/PEDROCRUZ2',
               },
             ],
           },
@@ -119,17 +126,13 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/Inteli-College/2024-T0008-EC05-G05',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} , Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
