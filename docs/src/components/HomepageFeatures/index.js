@@ -4,47 +4,57 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    img_name: 'Caio Teixeira de Paula',
+    img_src: "https://media.licdn.com/dms/image/D4D03AQGBJLYhBOwqUQ/profile-displayphoto-shrink_200_200/0/1680548400615?e=1719446400&v=beta&t=NDsYkD3dlB9r7Kal7ikkPdMCKIRwaXaw7wzoP2BqNe0",
+    linkedin : "https://www.linkedin.com/in/caio-teixeira-paula/",
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    img_name: 'Cecília Alonço Gonçalves',
+    img_src: "https://media.licdn.com/dms/image/D4E03AQHFDADl2nqTcA/profile-displayphoto-shrink_200_200/0/1680660675815?e=1719446400&v=beta&t=ucOjGB_bF8KICbk3Qcm0G8zwiO7ZMjxnnojKFYjQ30k",
+    linkedin: "https://www.linkedin.com/in/caio-teixeira-paula/",
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    img_name: 'Eduardo do Santos',
+    img_src: "https://media.licdn.com/dms/image/D4D03AQEJckPVxSd3HA/profile-displayphoto-shrink_200_200/0/1686266549436?e=1719446400&v=beta&t=RxXGe7VWGDOXYaALPzZggVoTtTuhBsPsaiPQ0hOQowM",
+    linkedin: "https://www.linkedin.com/in/eduardo-henrique-dos-santos/",
   },
+  {
+    img_name: 'José Vitor Alencar',
+    img_src: "https://media.licdn.com/dms/image/D4D03AQFTDVgnDATDFA/profile-displayphoto-shrink_200_200/0/1678911625026?e=1719446400&v=beta&t=qg4lSqQllMsnUSnXnAgBI3dUCQE9JqE9TIctKfgeUZw",
+    linkedin: "https://www.linkedin.com/in/josevalencar/",
+  },
+  {
+    img_name: "Lídia Cruz Mariano",
+    img_src : "https://media.licdn.com/dms/image/D4D03AQG56mwRJ4G55g/profile-displayphoto-shrink_200_200/0/1675023865459?e=1719446400&v=beta&t=RGMxoQ_mjRd1T5Azg3dt-T1RgxicmchyGsP3qGYw4OM",
+    linkedin: "https://www.linkedin.com/in/lidiamariano/",
+  },
+  {
+    img_name : "Murilo Prianti",
+    img_src : "https://media.licdn.com/dms/image/D4D35AQG6W_7TsJCfoQ/profile-framedphoto-shrink_200_200/0/1655926445979?e=1714446000&v=beta&t=zoyHGNmwU6g3QYrzVUsT_XzIjUleoT5sz-AqLf_s254",
+    linkedin : "https://www.linkedin.com/in/murilo-prianti-0073111a1/",
+  },
+  {
+    img_name : "Pedro Coutinho Cruz",
+    img_src : "",
+    linkedin : "",
+  }
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ img_src, img_name, linkedin}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+    <div className={clsx('col col--3', styles.member_card)}>
+      <a
+        href={linkedin}
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        <div className="text--center">
+          <img src={img_src} className={styles.roundedImage} alt={img_name} />
+        </div>
+        <div className="text--center padding-horiz--md">
+          <Heading as="h3">{img_name}</Heading>
+        </div>
+      </a>
     </div>
   );
 }
@@ -52,7 +62,8 @@ function Feature({Svg, title, description}) {
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
-      <div className="container">
+      <div className="container text--center gap-2">
+        <Heading as="h1">Desenvolvedores</Heading>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
