@@ -78,7 +78,7 @@ const config = {
           label: 'Documentação módulo 5',
         },
         {
-          href: 'https://github.com/Inteli-College/2024-T0008-EC05-G05',
+          href: 'https://github.com/Inteli-College/2024-1B-T08-EC06-G02/',
           label: 'GitHub',
           position: 'right',
         },
@@ -105,7 +105,7 @@ const config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/Inteli-College/2024-T0008-EC05-G05',
+              href: 'https://github.com/Inteli-College/2024-1B-T08-EC06-G02/',
             },
           ],
         },
