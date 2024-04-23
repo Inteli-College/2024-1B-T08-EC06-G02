@@ -4,12 +4,12 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Documentação G5',
-  tagline: 'Documentação',
+  title: 'RePipe',
+  tagline: 'Descobrindo um futuro melhor',
   favicon: 'img/logo-grupo.svg',
 
   // Set the production url of your site here
@@ -45,7 +45,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-            routeBasePath: '/'
+          routeBasePath: '/'
         },
         blog: false /*{
           showReadingTime: true,
@@ -61,84 +61,74 @@ const config = {
     ],
   ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
-      navbar: {
-        title: 'Documentação Módulo 5',
-        logo: {
-          alt: 'Inteli',
-          src: 'img/logo-grupo.svg',
+  themeConfig: /** @type {import('@docusaurus/preset-classic').ThemeConfig} */ ({
+    // Replace with your project's social card
+    image: 'img/docusaurus-social-card.jpg',
+    navbar: {
+      title: 'Repipe',
+      logo: {
+        alt: 'RepipeLogo',
+        src: 'img/logo.svg',
+      },
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'left',
+          label: 'Documentação módulo 5',
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Documentação módulo 5',
-          },
-          {
-            href: 'https://github.com/Inteli-College/2024-T0008-EC05-G05',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Desenvolvedores',
-            items: [
-              {
-                label: 'Caio Teixeira de Paula',
-                href: 'https://github.com/CaioPaula',
-              },
-              {
-                label: 'Cecília Gio Alonso Gonçalves',
-                href: 'https://www.linkedin.com/in/cec%C3%ADlia-alonso-gon%C3%A7alves-3aa4bb271/',
-              },
-              {
-                label: 'Eduardo Henrique dos Santos',
-                href: 'https://www.linkedin.com/in/eduardo-henrique-dos-santos/',
-              },
-              {
-                label: 'José Vitor Alencar',
-                href: 'https://www.linkedin.com/in/josevalencar/',
-              },
-              {
-                label: 'Lídia Cruz Mariano',
-                href: 'https://www.linkedin.com/in/lidiamariano/',
-              },
-              {
-                label: 'Murilo',
-                href: 'https://www.linkedin.com/in/lidiamariano/',
-              },
-              {
-                label: 'Pedro Henrique de Azedo Coutinho Cruz',
-                href: 'https://github.com/PEDROCRUZ2',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/Inteli-College/2024-T0008-EC05-G05',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-    }),
+        {
+          href: 'https://github.com/Inteli-College/2024-T0008-EC05-G05',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Parceiros',
+          items: [
+            {
+              label: 'Inteli - Instituto de Tecnologia e Liderança',
+              href: 'https://www.inteli.edu.br/',
+            },
+            {
+              label: "Atvos",
+              href: "https://atvos.com/",
+            }
+          ],
+        },
+        {
+          title: 'Projeto',
+          items: [
+            {
+              label: 'GitHub',
+              href: 'https://github.com/Inteli-College/2024-T0008-EC05-G05',
+            },
+          ],
+        },
+        {
+          title: "Tecnologias",
+          items: [
+            {    
+              label: "ROS - Robot Operating System",
+              href: "https://www.ros.org/",
+            },
+            {
+              label: "Docusaurus",
+              href: "https://docusaurus.io/",
+            }
+          ]
+        }
+      ],
+    },
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
+  }),
 };
 
 export default config;
