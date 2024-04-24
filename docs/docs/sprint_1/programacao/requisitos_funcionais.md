@@ -3,7 +3,7 @@
 
 &emsp; Esses requisitos normalmente consistem em duas partes: função e comportamento. A função descreve a ação que o sistema deve executar (por exemplo, "calcular o imposto sobre vendas"). O comportamento, por sua vez, especifica como essa função deve ser realizada (por exemplo, "o sistema deve calcular o imposto sobre vendas multiplicando o preço de compra pela alíquota do imposto"). [1]
 
-&emsp; Com essa descrição do que seriam esses tipos de requisitos para presente solução pensada foram elencados os seguintes requisitos funcionais:
+&emsp; Com essa descrição do que seriam esses tipos de requisitos para presente solução pensada foram elencados os seguintes requisitos funcionais(RF):
 
 **RF01:**  O robô deve verificar se há tubos sujos após a primeira limpeza. Nesse requisito, o usuário controlando o robô irá acessar a câmera para visualizar o que está sendo detectado e o sistema irá informar através dessa interface se está sujo ou não a tubulação.
 
@@ -14,6 +14,10 @@
 **RF04:** O sistema deve medir a temperatura do reboiler. Nesse requisito, o usuário irá até o local dos reboilers pelo robô, com isso o mesmo vai verificar a temperatura do local e examinar se o robô pode prosseguir para verificação dos reboilers ou não, pois dependendo da temperatura traria malefícios a estrutura e componentes do robô. 
 
 **RF05:**O sistema deve ser multiplataforma. Nesse requisito, o usuário pode interagir com aplicação no caso para poder acessar a API e pegar os dados para ser posto na própria plataforma da Ativos.
+
+**RF06:** O sistema deve ter uma interface para o controle do robô. Neste requisisto, o Operador Industrial utilizará essa interface para monitorar o trajeto do robô e observar os locais para os quais ele foi direcionado.
+
+**RF07:** O robô deve possuir um código em seu sistema que possibilite sua movimentação. Neste requisito, o Operador Industrial utilizará um controle para guiar o robô ao longo do caminho, utilizando o sistema projetado para receber esses comandos e direcionar o robô adequadamente.
 
 
 
