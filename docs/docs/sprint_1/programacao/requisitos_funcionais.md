@@ -18,5 +18,5 @@
 
 
 # Bibliografia:
-[1] Jain, Anushtha. 2022. ‘What Are Functional Requirements: Examples, Definition, Complete Guide’, Visure Solutions (Visure Solutions) <https://visuresolutions.com/pt/blog/functional-requirements/> [accessed 20 April 2024]
+<!-- [1] Jain, Anushtha. 2022. ‘What Are Functional Requirements: Examples, Definition, Complete Guide’, Visure Solutions (Visure Solutions) <https://visuresolutions.com/pt/blog/functional-requirements/> [accessed 20 April 2024] -->
 
