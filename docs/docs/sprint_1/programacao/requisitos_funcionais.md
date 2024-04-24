@@ -14,7 +14,7 @@
 
 **RF04:** O sistema deve ser capaz de medir a temperatura do reboiler. Neste requisito, o Operador Industrial irá até o local dos reboilers através do robô. Ele verificará a temperatura do ambiente e determinará se é viável prosseguir com a verificação dos reboilers por um período específico tempo, pois temperaturas elevadas podem prejudicar a estrutura e os componentes do robô.
 
-**RF05:**O sistema deve ser multiplataforma. Neste requisito, o Operador Industrial poderá interagir com a aplicação para acessar a API e obter os dados necessários para integrá-los à plataforma da Ativos.
+**RF05:** O sistema deve ser multiplataforma. Neste requisito, o Operador Industrial poderá interagir com a aplicação para acessar a API e obter os dados necessários para integrá-los à plataforma da Ativos.
 
 **RF06:** O sistema deve ter uma interface para o controle do robô. Neste requisisto, o Operador Industrial utilizará essa interface para monitorar o trajeto do robô e observar os locais para os quais ele foi direcionado.
 
