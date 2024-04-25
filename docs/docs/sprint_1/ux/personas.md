@@ -1,3 +1,7 @@
+---
+sidebar_position : 1
+---
+
 # Personas
 
 Uma persona é uma figura fictícia que representa o cliente ideal de um negócio, desempenhando um papel crucial no desenvolvimento de projetos. Ela é elaborada com base em dados como características pessoais, desafios, necessidades e aspirações, o que torna mais fácil a personificação e aprofundamento do entendimento sobre as diversas partes interessadas no projeto.
