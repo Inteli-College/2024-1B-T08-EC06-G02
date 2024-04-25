@@ -25,7 +25,6 @@ sidebar_position: 1
 **RF07:** O robô deve possuir um código em seu sistema que possibilite sua movimentação. Neste requisito, o Operador Industrial utilizará um controle para guiar o robô ao longo do caminho, utilizando o sistema projetado para receber esses comandos e direcionar o robô adequadamente.
 
 
-
 # Bibliografia:
-[1] Jain, Anushtha. 2022. ‘What Are Functional Requirements: Examples, Definition, Complete Guide’, Visure Solutions (Visure Solutions) [https://visuresolutions.com/pt/blog/functional-requirements/](https://visuresolutions.com/pt/blog/functional-requirements/) [accessed 20 April 2024]
 
+[1] Jain, Anushtha. 2022. ‘What Are Functional Requirements: Examples, Definition, Complete Guide’, Visure Solutions (Visure Solutions) [https://visuresolutions.com/pt/blog/functional-requirements/](https://visuresolutions.com/pt/blog/functional-requirements/) [accessed 20 April 2024]
