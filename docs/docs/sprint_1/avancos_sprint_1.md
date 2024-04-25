@@ -1,49 +1,43 @@
 ---
-sidebar_position : "1"
+sidebar_position: "1"
 ---
 
 # Avanços da Sprint
 
-Com base no problema proposto pela Atvos, que é um robô, teleoperado, para o escaneamento dos canos de reboilers, o grupo Repipe trabalhou durante essa sprint nas áreas de experiência do usuário, negódicos e programação.
+Com base no desafio proposto pela Atvos de desenvolver um robô teleoperado para escanear os canos de reboilers, o grupo Repipe concentrou seus esforços durante esta sprint nas áreas de experiência do usuário, negócios e programação.
 
-O trabalho dessa semana foram focados no entendimento do escopo do projeto, na pesquisa de tecnologias a serem utilizadas, usuários e mercado.
+Durante esta semana, o trabalho foi focado no entendimento detalhado do escopo do projeto, incluindo suas nuances técnicas e requisitos operacionais. Além disso, foi realizada uma pesquisa abrangente sobre tecnologias emergentes e tendências de mercado, visando garantir que a solução esteja alinhada com as melhores práticas e as necessidades dos usuários.
 
-## Espereriência do Usuário
+## Experiência do Usuário
 
-Nessa área foram levantadas todas as questões que envolvem os futuros usuários da solução, buscando tentar entender como eles utilizarão a ferramenta.
+Nesta área, buscou-se compreender profundamente o contexto de uso da solução, identificando as necessidades, expectativas e desafios dos futuros usuários. Para isso, foram desenvolvidas personas detalhadas, que representam os diferentes perfis de usuários finais, permitindo antecipar suas demandas e garantir uma experiência personalizada e intuitiva.
 
-Durante essas duas semanas, o grupo desenvolveu os seguintes documentos:
+Durante estas duas semanas, o grupo elaborou não apenas as personas, mas também histórias de usuário envolventes, que descrevem as interações específicas dos usuários com a solução em diferentes cenários. Isso permitiu mapear com precisão os fluxos de trabalho e os pontos de dor dos usuários, orientando o design e o desenvolvimento da solução de forma mais eficaz.
 
--   Personas
--   User Stories
+### Personas
 
-### Personas 
+As personas desenvolvidas são baseadas em pesquisas empáticas, entrevistas com stakeholders e análise de dados demográficos e comportamentais. Elas são essenciais para humanizar os requisitos do projeto e garantir que as soluções atendam às necessidades reais dos usuários.
 
-Persoanas, que são pessoas criadas, com o propósito de entender os usuários finais, foram criadas. Com elas, foi possível mapear as dores dos usuários, os desejos e dificuldades ao utilizar a solução. Desse modo, a solução está sendo desenvolvida focada na melhor utilização dos usuários fináis.
+### Histórias de Usuário
 
-### User Stories (Histórias dos Usuários)
-
-Essa etapa do entendimendo da persona, se refere às rotinas que uma persona irá fazer, ao utilizar a solução que está sendo desenvolvida. Desse mode, é mais fácil rastrear as etapas que o usuário itá fazer, com a intenção de projetar uma porposta simples, tanto à quem usa, como para quem ficará encarregado de manter a solução funcionando.
-
+As histórias de usuário são narrativas concisas que descrevem uma funcionalidade específica da perspectiva do usuário. Elas ajudam a visualizar os requisitos do sistema de forma tangível e a manter o foco nas necessidades do usuário durante todo o ciclo de desenvolvimento.
 
 ## Negócios
 
-A parte de negócios do projeto envolve toda a análise de mercado tanto da solução, que o grupo Repipe está desenvolvendo, está inserida como a Atvos.
+A parte de negócios do projeto envolve uma análise abrangente do mercado, incluindo a identificação de concorrentes, tendências do setor e oportunidades de diferenciação. Além disso, são avaliados os riscos potenciais e as estratégias de mitigação para garantir o sucesso comercial da solução.
 
-Durante essa sprint, forem desenvolvidos os seguintes documentos:
+Durante esta sprint, foi desenvolvida uma matriz de riscos e oportunidades detalhada, que destaca os principais desafios e possíveis pontos de falha do projeto. Isso permite tomar decisões informadas e implementar medidas proativas para minimizar os riscos e capitalizar as oportunidades à medida que surgem.
 
-- Matriz de risco e oportunidades
-- Canvas value proposition
-  
-### Matriz de risco e oportunidades
+Além disso, foi utilizado o Canvas de Proposta de Valor para definir claramente os benefícios e diferenciais competitivos da solução. Este framework ajuda a comunicar de forma eficaz o valor do produto aos clientes e investidores, fundamentando a estratégia de entrada no mercado.
 
-Essa é a análise dos riscos e oportunidades que o projeto pode assumir ao longo do desenvolvimento, mas na entrega, também.
+### Matriz de Riscos e Oportunidades
 
-### Canvas value proposition
+A análise detalhada de riscos e oportunidades é fundamental para identificar os pontos críticos do projeto e desenvolver estratégias de contingência eficazes. Através dessa matriz, é possível priorizar os recursos e o tempo de maneira a mitigar os riscos potenciais e maximizar as oportunidades de sucesso.
 
-É uma ferramenta utilizada para a criação de estratégias eficientes, para inseriri o produto no mercado.
+### Canvas de Proposta de Valor
 
+O Canvas de Proposta de Valor é uma ferramenta visual que ajuda a entender melhor as necessidades dos clientes e a definir uma proposta de valor única e convincente. Ele inclui elementos-chave, como segmentos de clientes, propostas de valor, canais de distribuição e fontes de receita, proporcionando uma visão abrangente da estratégia de negócios.
 
 ## Programação
 
-Aqui são discutidos os assuntos relacionados à parte de infraestrutura, código e fluxo do programa que a ferramenta irá fazer 
+Nesta área, dedicou-se tempo para discutir a arquitetura de software, as tecnologias de desenvolvimento e os fluxos de trabalho necessários para implementar a solução com eficiência e robustez. Além disso, foram realizadas revisões de código e testes de unidade para garantir a qualidade e a confiabilidade do produto final.
