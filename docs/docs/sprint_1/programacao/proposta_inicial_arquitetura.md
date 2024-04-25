@@ -1,3 +1,7 @@
+---
+   label : "Proposta inicial da Arquitetura"
+---
+
 # Proposta Inicial da Arquitetura  
 &emsp;A proposta inicial da arquitetura tem como objetivo fornecer uma estrutura básica para o sistema, definindo módulos, integração entre eles e apresentando um diagrama que ilustre essa arquitetura. A qualidade da proposta será avaliada com base na sua adequação aos requisitos do projeto e na sua capacidade de fornecer uma visão clara e abrangente da arquitetura do sistema.<br/>
 
