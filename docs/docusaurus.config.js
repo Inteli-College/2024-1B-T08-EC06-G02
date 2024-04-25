@@ -14,7 +14,7 @@ const config = {
   },
   themes: ['@docusaurus/theme-mermaid'],
 
-  title: 'RePipe',
+  title: 'Repipe',
   tagline: 'Descobrindo um futuro melhor',
   favicon: 'img/logo-grupo.svg',
 
@@ -74,7 +74,7 @@ const config = {
       title: 'Repipe',
       logo: {
         alt: 'RepipeLogo',
-        src: 'img/logo.svg',
+        src: 'img/logo-repipe.png',
       },
       items: [
         {
