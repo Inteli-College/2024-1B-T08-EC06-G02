@@ -8,6 +8,12 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   title: 'Repipe',
   tagline: 'Descobrindo um futuro melhor',
   favicon: 'img/logo-grupo.svg',
