@@ -35,8 +35,8 @@ const FeatureList = [
   },
   {
     img_name : "Pedro Coutinho Cruz",
-    img_src : "",
-    linkedin : "",
+    img_src : "https://media.licdn.com/dms/image/D4E35AQHjfLOaQ5ZbqQ/profile-framedphoto-shrink_800_800/0/1695676563992?e=1714586400&v=beta&t=eGIJE2g92JtoiOVLJHwqi1SIGg_MIopMdqwYfq1RwyM",
+    linkedin : "https://www.linkedin.com/in/pedro-henrique-coutinho-cruz/",
   }
 ];
 
