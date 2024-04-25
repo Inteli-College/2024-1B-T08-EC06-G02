@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Requisitos funcionais 
 &emsp; Um requisito funcional é uma declaração que descreve o comportamento esperado de um sistema, ou seja, especifica o que o sistema deve fazer para atender às necessidades ou expectativas do usuário. Os requisitos funcionais representam as características ou funcionalidades que o usuário percebe ao interagir com o sistema. Ao contrário dos requisitos não funcionais, que detalham aspectos internos do sistema, como desempenho e segurança, os requisitos funcionais se concentram no que o sistema deve realizar. [1]
 
