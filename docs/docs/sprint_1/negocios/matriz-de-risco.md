@@ -12,7 +12,7 @@ Além da elaboração da matriz, é elaborado tanto um plano de prevenção (par
 
 ### 1. Atvos não fornecerem dados para treino
 - **Prevenção**: Tentar combinar com eles o mais cedo possível e validar a hipótese de recebermos dados deles para o treinamento.
-- **Ataque**: Utilizar dados sintéticos / mockados para o treinamento do modelo.
+- **Ataque**: Caso não seja possível utilizar dados da Atvos, utilizar dados sintéticos / mockados para o treinamento do modelo.
 
 ### 2. Mudança no escopo do projeto
 - **Prevenção**: Definir claramente o escopo nos encontros com a atvos.
@@ -20,7 +20,7 @@ Além da elaboração da matriz, é elaborado tanto um plano de prevenção (par
 
 ### 3. Robô não conseguir entregar respostas binárias (Está limpo / não está limpo)
 - **Prevenção**: Desenvolver um algoritmo robusto de visão computacional buscando confirmar ao máximo a necessidade de uma segunda lavagem.
-- **Ataque**: Trabalhar com faixas de avaliação e definir o que necessita uma segunda lavagem e o que não necessita.
+- **Ataque**: Conversar com o parceiro sobre a situação, e dentro das capacidades de avaliação do algoritmo, definir um "número mínimo de sujeira detectada" que demonstraria a necessidade de uma segunda lavagem.
 
 ### 4. Modelo sofrer de overfitting e não ser corrigido
 - **Prevenção**: Utilizar técnicas de validação cruzada e regularização durante o desenvolvimento do modelo.
