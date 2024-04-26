@@ -1,7 +1,7 @@
 ---
 sidebar_position : 2
 ---
-![Matriz de Riscos](../../static/img/matriz-de-risco.png)
+![Matriz de Riscos](../../../static/img/matriz-de-risco.png)
 # Matriz de Riscos
 
 A matriz de riscos é uma ferramenta essencial na gestão de projetos que permite identificar, classificar e gerenciar os potenciais riscos durante todo o ciclo de vida de um projeto, o que significa que ela está sempre sujeita a alterações de acordo com os acontecimentos ao longo do projeto. Ela é estruturada para visualizar a probabilidade de ocorrência de cada risco contra o impacto que ele pode ter no projeto, facilitando assim a priorização das ações de mitigação. Além disso, também são inclúidas possibilidades que podem aumentar ainda mais o valor do projeto, sendo essas possibilidades incluídas na parte de oportunidades. 
