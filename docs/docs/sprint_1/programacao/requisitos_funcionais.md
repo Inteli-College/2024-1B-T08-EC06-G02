@@ -14,14 +14,13 @@ Com essa descrição do que seriam esses tipos de requisitos para presente solu�
 
 **RF02:** O robô deve verificar se há tubos sujos após a primeira limpeza. Neste requisito, o Operador Industrial, controlando o robô, irá acessar a câmera para visualizar o que está sendo detectado. O sistema, por meio dessa interface, informará se a tubulação está suja ou não.
 
-**RF03:** O sistema deve emitir um sinal de alerta no visor em caso de uma possível colisão a 1 metro de distância.Neste requisito, o Operador Industrial estará pilotando o robô via controle remoto. No entanto, caso o robô se aproxime a uma distância de 1 metro de um objeto ou ser vivo, um alerta será acionado na tela para notificar o usuário.
+**RF03:** O robô deve ter um sistema de colisão. Neste requisito, o Operador Industrial estará pilotando o robô via controle remoto. No entanto, caso o robô se aproxime a uma determinada distância de um objeto ou ser vivo, o alerta será acionado na tela para notificar o usuário.
 
 **RF04:** O sistema deve ser escalável. Neste requisito, o analista de dados da Atvos poderá interagir com os dados captados por meio de uma API que se comunica com o dashboard proprietário deles.
 
 **RF05:** O sistema deve ter uma interface para o controle do robô. Neste requisisto, o Operador Industrial utilizará essa interface para monitorar o trajeto do robô e observar os locais para os quais ele foi direcionado.
 
 **RF06:** O robô deve possuir um código em seu sistema que possibilite sua movimentação. Neste requisito, o Operador Industrial utilizará um controle para guiar o robô ao longo do caminho, utilizando o sistema projetado para receber esses comandos e direcionar o robô adequadamente.
-
 
 
 # Bibliografia:
