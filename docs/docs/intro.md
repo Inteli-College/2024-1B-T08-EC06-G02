@@ -3,46 +3,16 @@ sidebar_position: 1
 sluge : "/"
 ---
 
-# Tutorial Intro
+# Repipe
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## Logo
+![Logo_do_grupo](/img/logo-repipe.png)
 
-## Getting Started
+## A Equipe
+![equipe](/img/equipe-repipe.png)
 
-Get started by **creating a new site**.
+## Apresentações
+### Apresentação 1 
+*[Link da Apresentação](https://www.canva.com/design/DAGDbpVUOqA/ghg1AGVfMMTZlQP5oWzkdQ/view?utm_content=DAGDbpVUOqA&utm_campaign=designshare&utm_medium=link&utm_source=editor)*
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Nessa apresentação contou com o entendimento do problema e contexto. As atividades incluíram um estudo aprofundado das necessidades e expectativas dos usuários, desenvolvendo personas e histórias de usuário para orientar um design intuitivo. No aspecto de comercial, foi realizada uma análise de mercado para identificar riscos e oportunidades, utilizando ferramentas como a Matriz de Riscos e o Business Model Canvas para estruturar a abordagem de mercado. Na programação, a equipe focou na arquitetura de software e realizou testes de unidade para assegurar a robustez e eficiência da solução.
