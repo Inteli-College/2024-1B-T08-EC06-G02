@@ -81,7 +81,7 @@ const config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Documentação módulo 5',
+          label: 'Documentação módulo 6',
         },
         {
           href: 'https://github.com/Inteli-College/2024-1B-T08-EC06-G02/',

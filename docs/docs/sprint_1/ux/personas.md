@@ -8,13 +8,13 @@ Uma persona é uma figura fictícia que representa o cliente ideal de um negóci
 
 No contexto deste projeto de simulação de robôs, a persona de Marcos Batista é crucial, pois representa os operadores industriais que buscam tornar o processo de limpeza dos reboilers mais eficiente. Compreendendo as experiências de Marcos, pode-se desenvolver uma solução de automação que não apenas facilita sua jornada de trabalho, mas também garante mais segurança no ambiente de trabalho. 
 
-![Persona Operador Industrial](/img/persona-marcos.png)
+![Persona Operador Industrial](/img/sprint_1/persona-marcos.png)
 <h6 align="center"> Fonte: Elaboração grupo Repipe </h6>
 
 Marcos Batista  enfatiza as demandas específicas dos trabalhadores industriais em busca de maior eficácia e segurança. Seu perfil e demandas deixam claro como uma solução automatizada pode impactar positivamente o ambiente de trabalho.
 Em seguida, tem-se Rubens Ferreira, Controlador de Processos Industriais na Atvos, cuja experiência é essencial para compreender como a solução de automação pode atender às demandas de controle e gerenciamento.
 
-![Persona Controlador de Processos](/img/persona-rubens.png)
+![Persona Controlador de Processos](/img/sprint_1/persona-rubens.png)
 <h6 align="center"> Fonte: Elaboração grupo Repipe </h6>
 
 Rubens Ferreira é importante, uma vez que sua experiência em controle de processos guia a implementação da tecnologia. Seu uso eficaz de relatórios de status para tomar decisões operacionais essenciais destaca a importância de uma solução automatizada que melhore a eficiência e a segurança no trabalho.

@@ -11,7 +11,7 @@ As histórias de usuário são uma ferramenta essencial no desenvolvimento ágil
 ## User Stories do projeto
 
 ## Marcos Batista (Operador Industrial)
-![User stories 1](/img/userstories1.png "User Stories 1")
+![User stories 1](/img/sprint_1/userstories1.png "User Stories 1")
 
 ### User Stories 1
 
@@ -32,7 +32,7 @@ As histórias de usuário são uma ferramenta essencial no desenvolvimento ágil
 - **Descrição:** Marcos deseja receber alertas visuais imediatos em caso de risco de colisão com objetos ou seres vivos, para garantir uma operação segura do sistema robótico.
 
 ## Rubens Ferreira (Controlador de Processos Industriais)
-![User stories 2](/img/userstories2.png "User Stories 2")
+![User stories 2](/img/sprint_1/userstories2.png "User Stories 2")
 
 ### User Stories 1
 
