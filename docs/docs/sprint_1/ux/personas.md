@@ -20,6 +20,7 @@ Em seguida, tem-se Rubens Ferreira, Controlador de Processos Industriais na Atvo
 Rubens Ferreira é importante, uma vez que sua experiência em controle de processos guia a implementação da tecnologia. Seu uso eficaz de relatórios de status para tomar decisões operacionais essenciais destaca a importância de uma solução automatizada que melhore a eficiência e a segurança no trabalho.
 Em síntese, as personas desempenham um papel fundamental ao os trabalhadores envolvidos diretamente na solução, permitindo uma abordagem centrada no usuário e garantindo a implementação segura do robô, e que atenda às necessidades reais das partes interessadas.
 
+
 ## Referências
 [1] SECRETARIA NACIONAL DA FAMÍLIA. **Famílias e Filhos no Brasil**. Brasilia, [s.d;]. Disponível em: https://www.gov.br/mdh/pt-br/navegue-por-temas/observatorio-nacional-da-familia/fatos-e-numeros/familias-e-filhos-no-brasil.pdf. Acesso em: 23 abr. 2024.
 
