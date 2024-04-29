@@ -76,3 +76,7 @@ Primeiramente, vamos entender o que são requisitos não funcionais. Um requisit
 - Passo 2: Configure a simulação para realizar atualizações de dados programadas.
 - Passo 3: Verifique se os dados simulados são captados pela API e atualizados corretamente.
 - Passo 4: Avalie a precisão e integridade dos dados atualizados e verifique se as atualizações ocorrem sem falhas ou erros perceptíveis.
+
+## Referências 
+
+[1] Requisitos não funcionais: o guia completo!. Disponível em : [betrybe](https://blog.betrybe.com/tecnologia/requisitos-nao-funcionais/)
