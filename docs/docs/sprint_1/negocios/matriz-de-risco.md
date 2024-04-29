@@ -57,6 +57,6 @@ Além da elaboração da Matriz de Risco, é elaborado um plano de prevenção p
 - **Ataque**: Fazer ajustes técnicos no robô ou alterar a estratégia de inserção do mesmo no terreno.
 
 # Bibliografia: 
-[1] REDACAO PAPOCA. O que é matriz de risco? Aprenda como montar + exemplo. Esfera Energia. Disponível em: <https://blog.esferaenergia.com.br/gestao-empresarial/matriz-de-risco>. Acesso em: 29 abr. 2024.
+[1] REDACAO PAPOCA. O que é matriz de risco? Aprenda como montar + exemplo. Esfera Energia. Disponível em: [https://blog.esferaenergia.com.br/gestao-empresarial/matriz-de-risco](https://blog.esferaenergia.com.br/gestao-empresarial/matriz-de-risco). Acesso em: 29 abr. 2024.
 
 ‌
