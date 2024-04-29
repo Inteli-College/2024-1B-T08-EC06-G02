@@ -20,7 +20,7 @@ const FeatureList = [
   },
   {
     img_name: 'José Vitor Alencar',
-    img_src: "https://media.licdn.com/dms/image/D4D03AQFTDVgnDATDFA/profile-displayphoto-shrink_200_200/0/1678911625026?e=1719446400&v=beta&t=qg4lSqQllMsnUSnXnAgBI3dUCQE9JqE9TIctKfgeUZw",
+    img_src: "https://media.licdn.com/dms/image/D4D03AQGcVfLbFU12Ww/profile-displayphoto-shrink_200_200/0/1714085847839?e=1720051200&v=beta&t=6y9gs-vKsRwPS5WlDT5DD-ApX-rTWJouktmyb81l2a0",
     linkedin: "https://www.linkedin.com/in/josevalencar/",
   },
   {
