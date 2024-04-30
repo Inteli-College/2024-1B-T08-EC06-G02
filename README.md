@@ -42,9 +42,9 @@
     
 ## 📝 Descrição
 
-Este projeto, desenvolvido em colaboração com a Atvos, visa a criação de um robô AGV (Automated Guided Vehicle), também conhecido como Veículo Autônomo Guiado. Esses robôs autônomos são projetados para seguir um percurso predefinido sem intervenção humana direta.
+Este projeto, desenvolvido em colaboração com a Atvos, visa a criação de um sistema para controlar um robô AGV (Automatic Guided Vehicle), também conhecido como Veículo Autoguiado. Esses robôs automáticos são projetados para seguir um percurso predefinido podendo ou não ter intervenção humana direta.
 
-O objetivo principal do robô AGV é realizar a verificação do nível de limpeza dos canos de reboiler nas refinarias de açúcar. Esta função é crucial para reduzir o tempo de retrabalho, minimizar possíveis acidentes e também servir como um mecanismo eficiente de pesquisa e coleta de dados na empresa.
+O objetivo principal do robô AGV nesse projeto é realizar a verificação do nível de limpeza dos canos de reboiler nas refinarias de açúcar da Atvos. Esta função é crucial para reduzir o tempo de retrabalho, minimizar possíveis acidentes e também servir como um mecanismo eficiente de pesquisa e coleta de dados na empresa.
 
 A implementação desse robô AGV oferecerá uma série de benefícios significativos. Primeiramente, ao automatizar a verificação do nível de limpeza dos canos de reboiler, reduz-se a dependência de trabalho manual, o que pode levar a uma maior eficiência operacional e a uma redução de erros humanos. Além disso, ao evitar a exposição dos trabalhadores a ambientes potencialmente perigosos, o robô AGV contribui para melhorar a segurança no local de trabalho.
 
