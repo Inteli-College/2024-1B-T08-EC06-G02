@@ -17,7 +17,7 @@
 ## 🧑‍🎓Integrantes:
 - <a href="https://www.linkedin.com/in/caio-teixeira-paula/">Caio Teixeira de Paula</a>
 - <a href="https://www.linkedin.com/in/cec%C3%ADlia-alonso-gon%C3%A7alves-3aa4bb271/">Cecília Alonço Gonçalves</a>
-- <a href="https://www.linkedin.com/in/eduardo-henrique-dos-santos/">Eduardo do Santos</a>
+- <a href="https://www.linkedin.com/in/eduardo-henrique-dos-santos/">Eduardo dos Santos</a>
 - <a href="https://www.linkedin.com/in/josevalencar/">José Vitor Alencar</a>
 - <a href="https://www.linkedin.com/in/lidiamariano/">Lídia Cruz Mariano</a>
 - <a href="https://www.linkedin.com/in/murilo-prianti-0073111a1/">Murilo Prianti</a>
@@ -26,7 +26,10 @@
 
 ## 🧑‍🏫Professores:
 
-### Onrientador(a)
+### Orientador(a)
+<a href="#"> Rodrigo Mangoni Nicola </a>
+
+
 
 
 ### Instrutores
@@ -34,7 +37,8 @@
 - <a href="#"> Geraldo Vasconcelos </a>
 - <a href="#"> Guilherme Henrique de Oliveira Cestari </a>
 - <a href="#"> Lisane Valdo </a>
-- 
+- <a href="#"> Mônica Anastassiu </a>
+- <a href="#"> Murilo Zanini de Carvalho </a>
     
 ## 📝 Descrição
 
