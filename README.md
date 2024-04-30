@@ -49,15 +49,6 @@ A capacidade do robô AGV de coletar dados durante suas operações também é e
 Em suma, a criação deste robô AGV em parceria com a Atvos não só representa um avanço tecnológico significativo, mas também oferece uma solução prática e eficaz para melhorar a eficiência, segurança e qualidade das operações nas refinarias de açúcar.
 
 
-### Atvos
-
-<div align="center">
-    <a href="https://atvos.com/">
-        <img src="docs/static/img/atvos_logo.png">
-    </a>
-</div>
-
-
 ## 📁 Estrutura de pastas
 
 ```
