@@ -48,6 +48,6 @@ Por fim, é detalhado como operar o robô pela Interface por Linha de Comando (C
 
 ###### [1] O que é uma LAN (rede local)?. Disponível em: [cloudflare](https://www.cloudflare.com/pt-br/learning/network-layer/what-is-a-lan/). Acesso em 30 de abril de 2024.
 
-###### [2] O que é uma CLI e Como ela Impacta Seu Trabalho de Programação. Disponível em: [hostinger](https://www.hostinger.com.br/tutoriais/o-que-e-cli)
+###### [2] O que é uma CLI e Como ela Impacta Seu Trabalho de Programação. Disponível em: [hostinger](https://www.hostinger.com.br/tutoriais/o-que-e-cli). Acesso em 30 de abril de 2024.
 
 ###### [3] Diferencial da Prova de Conceito (PoC) para projetos em TI. Disponível em: [positivo](https://www.meupositivo.com.br/panoramapositivo/prova-de-conceito/). Acesso em 1 de maio de 2024.
