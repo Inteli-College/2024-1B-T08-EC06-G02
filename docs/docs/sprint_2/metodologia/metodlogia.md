@@ -1,8 +1,15 @@
 # Metodologia
 
-A metodologia para essa etapa do projeto primeiramente foi de estar em posse de um robô TurtleBot3 que estava montado e continha um micro cartão SD. Nesse sentido, foi extraído o micro cartão SD do robô e posto em um notebook. Após isso, para configuração inicial do sistema foi vista a documentação do Rodrigo Mangoni Nicola, disposta em: `https://rmnicola.github.io/m6-ec-encontros/setupturtle`.
+A metodologia adotada nessa etapa do projeto começou com a posse de um robô TurtleBot3, previamente montado e continha um primeiramente foi de estar em posse de um robô TurtleBot3 que estava montado e equipado com um micro cartão SD. Nesse sentido, o primeiro passo foi remover o micro cartão SD do robô e inseri-lo em um notebook. 
 
-Com isso em mente, foi baixado a imagem do raspberry pi imager, disposta em: [https://www.raspberrypi.com/software/](https://www.raspberrypi.com/software/) para ser inserido no micro cartão SD. A configuração do sistema na opção **Operating System** foi escolhido o Ubuntu Desktop 22.04.4 LTS (64 bit) e para o **Storage** foi selecionado o micro cartão SD. Essa etapa mais detalhada pode ser vista da Imagem 1 a Imagem 8.
+Para a configuração inicial do sistema, foi utilizada a documentação fornecida por Rodrigo Mangoni Nicola, disponível em: `https://rmnicola.github.io/m6-ec-encontros/setupturtle`.
+
+Em seguida, foi feito o download da imagem do Raspberry Pi Imager, disponível nesse [`link`](https://www.raspberrypi.com/software/), para gravá-la no micro cartão SD. Na seção **Operating System**, foi escolhido o Ubunto Desktop 22.04.4 LTS (64 bits) e para o **Storage**, foi escolhido o micro cartão SD.
+
+Essa etapa pode ser vista com detalhes adicionais nas Imagens 1 a 8.
+
+
+Na Imagem 1, apresentam-se as primeiras impressões da interface do Raspberry Pi Imager, marcando o início do processo de instalação do sistema.
 
 <h2 align="center"> Imagem 1 - Tela incial do Raspberry Pi </h2>
 
@@ -10,14 +17,14 @@ Com isso em mente, foi baixado a imagem do raspberry pi imager, disposta em: [ht
 
 <h6 align="center"> Fonte: Raspberry Pi Imager </h6>
 
-Na Imagem 1 se tem as primeiras impressões da interface do Raspberry Pi Imager para começar a instalação do sistema.
+Na imagem 2, é possível observar a opção para selecionar o sistema operacional desejado com o qual se pretende trabalhar.
 
 <h2 align="center"> Imagem 2 - Seleção do Operating System </h2>
 
 ![alt text](../../../static/img/sprint_2/operating_system.png)
 <h6 align="center"> Fonte: Material de Rodrigo Mangoni Nicola. Disponível em: (https://rmnicola.github.io/m6-ec-encontros/setupturtle) </h6>
 
-Na imagem 2 se tem a opção para selecionar o sistema operacional desejado para trabalhar.
+Na Imagem 3, encontra-se a opção para selecionar um sistema operacional diferente que não está disponível na tela inicial. Clique nela para acessar outras opções disponíveis.
 
 <h2 align="center"> Imagem 3 - Seleção de outro sistema </h2>
 
@@ -26,44 +33,41 @@ Na imagem 2 se tem a opção para selecionar o sistema operacional desejado para
 
 <h2 align="center"> Imagem 4 - Seleção do Ubuntu </h2>
 
-Na Imagem 3 se tem a opção para selecionar um sistema operacional diferente que não está diposto nessa primeira tela. Clique nele para ir em outras opçẽos.
-
 ![alt text](../../../static/img/sprint_2/selecao_ubuntu.png)
 <h6 align="center"> Fonte: Material de Rodrigo Mangoni Nicola. Disponível em: (https://rmnicola.github.io/m6-ec-encontros/setupturtle) </h6>
+
+Na Imagem 5, foi selecionada a opção do Ubuntu que foi utilizada na aplicação.
 
 <h2 align="center"> Imagem 5 - Seleção da versão do Ubuntu </h2>
 
 ![alt text](../../../static/img/sprint_2/versao_ubuntu.png)
 <h6 align="center"> Fonte: Raspberry Pi Imager </h6>
 
-Na Imagem 5 foi selecionada a opção do Ubuntu que foi utilizada na aplicação.
-
 Após essas etapas é necessário seleconar o **Storage** que aparecerá a primeira opção que a entrada do micro cartão SD está lendo. 
-
 
 <h2 align="center"> Imagem 6 - Seleção do Storage </h2>
 
 ![alt text](../../../static/img/sprint_2/storage.png)
 <h6 align="center"> Fonte: Raspberry Pi Imager </h6>
 
+Na Imagem 7, está sendo selecionada a unidade na qual se deseja gravar a imagem do sistema operacional escolhido.
 
 <h2 align="center"> Imagem 7 - Seleção do micro cartão SD </h2>
 
 ![alt text](../../../static/img/sprint_2/escolha_cartao.png)
 <h6 align="center"> Fonte: Material de Rodrigo Mangoni Nicola. Disponível em: (https://rmnicola.github.io/m6-ec-encontros/setupturtle) </h6>
 
-Na Imagem 7 está sendo selecionado a unidade que se deseja colocar a imagem do sistema operacional escolhido.
+Na Imagem 8, a tarefa de instalação do sistema operacional no micro cartão SD foi concluída. Após a finalização da instalação, remova o micro cartão SD do notebook/computador e insira-o novamente no TurtleBot3.
 
 <h2 align="center"> Imagem 8 - Seleção do micro cartão SD </h2>
 
 ![alt text](../../../static/img/sprint_2/write.png)
 <h6 align="center"> Fonte: Material de Rodrigo Mangoni Nicola. Disponível em: (https://rmnicola.github.io/m6-ec-encontros/setupturtle) </h6>
 
-Na Imagem 8 foi finalizada a tarefa de instalação do sistema operacional no micro cartão SD. Quando houver o término da instalção retire o micro cartão SD do notebook/computador e coloque novamente no TurtleBot3.
 
-Após esse processo foi ligado o TurtleBot3 com o micro cartão SD inserido e a partir disso foi mostrado as telas para configuração do Ubuntu, foi configurado conforme o grupo visou necessário, ou seja, colocando nome de usuário, senha, conexão rede e etc.
+Após esse processo, o TurtleBot3 foi ligado com o micro cartão SD inserido, dando início à configuração do Ubuntu. As telas para configuração foram ajustadas conforme o que o grupo visou necessário, ou seja, colocando nome de usuário, senha, conexão de rede, entre outros aspectos.
 
-Após isso, foi instalado o ROS baseado no material de  Rodrigo Mangoni Nicola disponível em [https://rmnicola.github.io/m6-ec-encontros/E01/ros](https://rmnicola.github.io/m6-ec-encontros/E01/ros). Assim, foi usado os seguintes comandos para instalação no terminal:
+Após isso, o ROS foi instalado com base no material fornecido por Rodrigo Mangoni Nicola, disponível em: `https://rmnicola.github.io/m6-ec-encontros/E01/ros`. Para isso, foram utilizados os seguintes comandos no temrinal:
 
 **1-** `sudo apt-add-repository universe` 
 
