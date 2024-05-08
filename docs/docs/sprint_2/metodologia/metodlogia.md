@@ -4,7 +4,7 @@ A metodologia adotada nessa etapa do projeto começou com a posse de um robô Tu
 
 Para a configuração inicial do sistema, foi utilizada a documentação fornecida por Rodrigo Mangoni Nicola, disponível em: `https://rmnicola.github.io/m6-ec-encontros/setupturtle`.
 
-Em seguida, foi feito o download da imagem do Raspberry Pi Imager, disponível nesse [`link`](https://www.raspberrypi.com/software/), para gravá-la no micro cartão SD. Na seção **Operating System**, foi escolhido o Ubunto Desktop 22.04.4 LTS (64 bits) e para o **Storage**, foi escolhido o micro cartão SD.
+Em seguida, foi feito o download da imagem do Raspberry Pi Imager, disponível nesse [`link`](https://www.raspberrypi.com/software/), para gravá-la no micro cartão SD. Na seção **Operating System**, foi escolhido o Ubunto Desktop 22.04.4 LTS (x86 - 64 bits) e para o **Storage**, foi escolhido o micro cartão SD.
 
 Essa etapa pode ser vista com detalhes adicionais nas Imagens 1 a 8.
 
