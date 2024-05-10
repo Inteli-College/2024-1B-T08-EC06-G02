@@ -37,7 +37,7 @@ def control():
             node.send_cmd_vel(0.0, 0.5)
         elif command == 'direita':
             node.send_cmd_vel(0.0, -0.5)
-        elif command ==  'Emergência (Parar Funcionamento)'
+        elif command ==  'Emergência (Parar Funcionamento)':
             node.send_cmd_vel(0.0,0.0)
     node.send_cmd_vel(0.0, 0.0)
     rclpy.shutdown()
