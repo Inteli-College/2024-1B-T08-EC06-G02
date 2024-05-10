@@ -1,6 +1,7 @@
 # Use the official Ubuntu 22.04 base image
-FROM ubuntu:22.04
+FROM ubuntu:jammy-20240227
 
+# Set the environment variables to avoid interaction while installing packages
 # Set the environment variables to avoid interaction while installing packages
 ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG pt_BR.UTF-8
@@ -8,7 +9,6 @@ ENV LANGUAGE pt_BR:pt
 ENV LC_ALL pt_BR.UTF-8
 ENV TZ=America/Sao_Paulo
 
-# Update the package lists and install some useful tools and locales
 RUN apt-get update && apt-get install -y \
     sudo \
     locales \
@@ -16,17 +16,22 @@ RUN apt-get update && apt-get install -y \
     wget \
     nano \
     vim \
-    x11-apps \
+    git \
+    libspdlog1 \
+    bzip2 \
+    tzdata \
+    python3 \
+    python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
 # Set up locale
-RUN sed -i -e 's/# pt_BR.UTF-8 UTF-8/pt_BR.UTF-8 UTF-8/' /etc/locale.gen && \
-    locale-gen
+RUN apt-get update && apt-get install -y locales \
+    && sed -i -e 's/# pt_BR.UTF-8 UTF-8/pt_BR.UTF-8 UTF-8/' /etc/locale.gen \
+    && locale-gen
 
-# Install required packages for GUI support
-RUN apt-get update && apt-get install -y \
-    x11-apps \
-    && rm -rf /var/lib/apt/lists/*
+# Set the timezone0,000 GBP
+RUN ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime \
+    && dpkg-reconfigure --frontend noninteractive tzdata
 
 # Set up a non-root user for better security practices
 RUN useradd -m username && \
@@ -45,7 +50,13 @@ RUN mkdir -p /home/username/Downloads
 RUN mkdir -p /home/username/Scripts
 
 # Copies the scripts files
-COPY prepare_ros.sh /home/username/Scripts
+COPY . /home/username/
 
-# Default command to run bash shell
+# Update packages
+RUN sudo apt update && sudo apt upgrade -y
+
+EXPOSE 1135 
+
+RUN echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
+
 CMD ["/bin/bash"]
