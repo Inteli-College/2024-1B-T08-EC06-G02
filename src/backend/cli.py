@@ -26,27 +26,29 @@ def control():
     questions = [inquirer.List(
         name='command',
         message='Selecione uma ação:',
-        choices=['Frente', 'Trás', 'Esquerda', 'Direita','Emergência (Parar Funcionamento)','Sair'])]
-    while True:
-        print('iniciando cli')
-        command = inquirer.prompt(questions)['command']
-        print('answer processou')
-        if command == 'Sair':
-            break
-        elif command == 'Frente':
-            print('teste')
-            node.send_cmd_vel(0.2, 0.0)
-            print('eu debugo ')
-        elif command == 'Trás':
-            node.send_cmd_vel(-0.2, 0.0)
-        elif command == 'Esquerda':
-            node.send_cmd_vel(0.0, 0.5)
-        elif command == 'D-ireita':
-            node.send_cmd_vel(0.0, -0.5)
-        elif command ==  'Emergência (Parar Funcionamento)':
-            node.send_cmd_vel(0.0,0.0)
-    node.send_cmd_vel(0.0, 0.0)
-    rclpy.shutdown()
+        choices=['Frente', 'Trás', 'Esquerda', 'Direita', 'Emergência (Parar Funcionamento)', 'Sair'])]
+    try:
+        while True:
+            command = inquirer.prompt(questions)['command']
+            match command:
+                case 'Sair':
+                    break
+                case 'Frente':
+                    node.send_cmd_vel(0.2, 0.0) 
+                case 'Trás':
+                    node.send_cmd_vel(-0.2, 0.0)
+                case 'Esquerda':
+                    node.send_cmd_vel(0.0, 0.5)
+                case 'Direita':
+                    node.send_cmd_vel(0.0, -0.5)
+                case 'Emergência (Parar Funcionamento)':
+                    node.send_cmd_vel(0.0, 0.0)
+    except Exception as e:
+        print('Interface Fechada a Força, Parando movimentação do robô')
+        node.send_cmd_vel(0.0, 0.0) 
+    finally:
+        node.send_cmd_vel(0.0, 0.0)
+        rclpy.shutdown()
 
 if __name__ == "__main__":
     app()
