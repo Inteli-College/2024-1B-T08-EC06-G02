@@ -23,19 +23,25 @@ def control():
     rclpy.init()
     node = TeleopTurtle()
     print("Controle do TurtleBot3")
-    questions = [inquirer.List('command', message='Selecione uma ação:', choices=['Frente', 'Trás', 'Esquerda', 'Direita','Emergência (Parar Funcionamento)' 'Sair'])]
+    questions = [inquirer.List(
+        name='command',
+        message='Selecione uma ação:',
+        choices=['Frente', 'Trás', 'Esquerda', 'Direita','Emergência (Parar Funcionamento)','Sair'])]
     while True:
-        answer = inquirer.prompt(questions)
-        command = answer['command']
-        if command == 'sair':
+        print('iniciando cli')
+        command = inquirer.prompt(questions)['command']
+        print('answer processou')
+        if command == 'Sair':
             break
-        elif command == 'frente':
+        elif command == 'Frente':
+            print('teste')
             node.send_cmd_vel(0.2, 0.0)
-        elif command == 'trás':
+            print('eu debugo ')
+        elif command == 'Trás':
             node.send_cmd_vel(-0.2, 0.0)
-        elif command == 'esquerda':
+        elif command == 'Esquerda':
             node.send_cmd_vel(0.0, 0.5)
-        elif command == 'direita':
+        elif command == 'D-ireita':
             node.send_cmd_vel(0.0, -0.5)
         elif command ==  'Emergência (Parar Funcionamento)':
             node.send_cmd_vel(0.0,0.0)
