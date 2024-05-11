@@ -23,24 +23,32 @@ def control():
     rclpy.init()
     node = TeleopTurtle()
     print("Controle do TurtleBot3")
-    questions = [inquirer.List('command', message='Selecione uma ação:', choices=['Frente', 'Trás', 'Esquerda', 'Direita','Emergência (Parar Funcionamento)' 'Sair'])]
-    while True:
-        answer = inquirer.prompt(questions)
-        command = answer['command']
-        if command == 'sair':
-            break
-        elif command == 'frente':
-            node.send_cmd_vel(0.2, 0.0)
-        elif command == 'trás':
-            node.send_cmd_vel(-0.2, 0.0)
-        elif command == 'esquerda':
-            node.send_cmd_vel(0.0, 0.5)
-        elif command == 'direita':
-            node.send_cmd_vel(0.0, -0.5)
-        elif command ==  'Emergência (Parar Funcionamento)':
-            node.send_cmd_vel(0.0,0.0)
-    node.send_cmd_vel(0.0, 0.0)
-    rclpy.shutdown()
+    questions = [inquirer.List(
+        name='command',
+        message='Selecione uma ação:',
+        choices=['Frente', 'Trás', 'Esquerda', 'Direita', 'Emergência (Parar Funcionamento)', 'Sair'])]
+    try:
+        while True:
+            command = inquirer.prompt(questions)['command']
+            match command:
+                case 'Sair':
+                    break
+                case 'Frente':
+                    node.send_cmd_vel(0.2, 0.0) 
+                case 'Trás':
+                    node.send_cmd_vel(-0.2, 0.0)
+                case 'Esquerda':
+                    node.send_cmd_vel(0.0, 0.5)
+                case 'Direita':
+                    node.send_cmd_vel(0.0, -0.5)
+                case 'Emergência (Parar Funcionamento)':
+                    node.send_cmd_vel(0.0, 0.0)
+    except Exception as e:
+        print('Interface Fechada a Força, Parando movimentação do robô')
+        node.send_cmd_vel(0.0, 0.0) 
+    finally:
+        node.send_cmd_vel(0.0, 0.0)
+        rclpy.shutdown()
 
 if __name__ == "__main__":
     app()
