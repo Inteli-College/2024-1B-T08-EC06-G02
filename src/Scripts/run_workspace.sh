@@ -45,6 +45,6 @@ fi
 
 source ~/.bashrc
 
-read -p "Path to main program </path/to/main.py> : " main_program
+cd ../backend
 
-python3 $main_program
+python3 cli.py
