@@ -2,29 +2,29 @@
 sidebar_position : 1
 ---
 
-# Documentação da Sprint 2
+# Metodologia Sprint 2
 
-A seguir, este documento descreverá as implementações do grupo Repipe na Sprint 2. O foco ao longo dessas duas semanas foram, principalmente, a movimentação do Robô Turtlebot. Logo, falaremos sobre o setup do robô, a criação de uma interface navegável para interagir com o robô e as comunicações necessárias para isso acontecer. 
+A seguir, este documento descreverá as atualizações da Sprint 2 do grupo Repipe. O foco ao longo dessas duas semanas foram, principalmente, a movimentação do Robô Turtlebot. Logo, será abordado sobre o setup do robô, a criação de uma interface navegável para interagir com o robô e as comunicações necessárias para isso acontecer. 
 
 # Setup do Robô 
 
-Este é um passo importanto do projeto, pois realiza as configurações iniciais do Turtlebot, robô utilizado neste projeto. O Turtlebot é um robô que possui um Raspberry Pi, um módulo driver e um sensor LiDAR. Com isso, tivemos que instalar um sistema operacional no cartão sd inserido para configurá-lo e instalar as dependências necessárias. Este foi o fluxo realizado nessa etapa:
+Este é um passo importante do projeto, pois realiza as configurações iniciais do Turtlebot, robô utilizado neste projeto. O Turtlebot é um robô que possui um Raspberry Pi, um módulo driver e um sensor LiDAR. Com isso, foi instalado um sistema operacional no cartão sd inserido para configurá-lo e instalar as dependências necessárias. Este foi o fluxo realizado nessa etapa:
 
-* Conectamos a Raspberry Pi ao monitor;
-* Instalamos a Raspberry Pi Imager;
-* Instalamos o sistema operacional Ubuntu 22.04 LTS no micro cartão SD;
-* Conectamos ao Raspberry Pi utilizando ssh para uma solução headless;
-* Instalamos o ROS Humble;
-* Instalamos os pacotes do Turtlebot3;
-* Compilamos o pacote do LIDAR LDS-02;
-* Fizemos o setup do OpenCR;
+* A Raspberry Pi foi conectada ao monitor;
+* A Raspberry Pi Imager foi instalado;
+* O sistema operacional Ubuntu 22.04 LTS foi instalado no micro cartão SD;
+* A conexão com o Raspberry Pi foi realizada utilizando ssh para uma solução headless;
+* O Ros Humble foi instalado;
+* Os pacotes do Turtlebot3 foram instalados;
+* O pacote do LIDAR LDS-02 foi compilado;
+* O setup do OpenCR foi realizado;
 
 # Interface navegável 
+
 
 Depois de ter instalado e configurado os pacotes do Turtlebot3, precisamos criar um método efetivo para controlar o robô. Para isso, nesta seção iremos abordar a comunicação com o robô e como faremos para isso chegar com uma boa usabilidade ao usuário final. 
 
 ## Comunicação com o Robô 
-Para controlar o robô, desenvolvemos um script em Python destinado a controlar o Turtlebot3 usando ROS 2 (Robot Operating System), especificamente para teleoperação. 
 
 A estrutura do ROS é baseada em nós, tópicos, mensagens e serviços, que juntos criam uma arquitetura flexível e poderosa para robótica do nosso projeto. 
 
@@ -45,6 +45,7 @@ Além disso, é válido mencionar que o ROS 2 permite que os nós se comuniquem 
 
 
 Abaixo, segue uma explicação detalhada de cada parte do código. Nosso grupo se inspirou neste repositório [aqui](https://github.com/ROBOTIS-GIT/turtlebot3/blob/master/turtlebot3_teleop/nodes/turtlebot3_teleop_key). Porém, achamos muito confuso e diminuímos/refatoramos algumas coisas. 
+
 
 ### Dependências 
 Primeiro, este script precisou das seguintes bibliotecas Python, que são parte do ecossistema ROS 2:
@@ -87,7 +88,8 @@ O método send_cmd_vel é usado para definir e enviar os comandos de velocidade 
 **Feedback para Debug**: Finalmente, as velocidades são impressas no console. Essa saída é crucial para debug e verificação dos comandos enviados, permitindo a gente confirmar se os valores das velocidades estão conforme o esperado.
 
 ### Enviando movimentos para o robô 
-Certo. Depois de estabelecermos a estrutura necessária pra movimentar o nosso turtlebot, como iremos controlá-lo? Nesta parte da implementação, configuramos pra que o usuário em controle possa apertar teclas como `w, x, d, a` e consiga operar o robô. 
+
+Certo. Depois de estabelecer a estrutura necessária pra movimentar o nosso turtlebot, como é controlado? Nesta parte da implementação, foi configurado para que o usuário em controle possa apertar teclas como `w, x, d, a` e consiga operar o robô. 
 
 #### Método get_key
 Este método serve para capturar uma única tecla pressionada pelo usuário diretamente do terminal. 
@@ -146,12 +148,17 @@ De forma resumida, o script que desenvolvemos utiliza os conceitos do ROS para i
 
 ## Decisões de design 
 Para que o usuário consiga aproveitar ao máximo dessa comunicação com o robô, pensamos em duas soluções viáveis: 
+
 * CLI (Interface por Linha de Comando) - para controlar o robô pelo terminal e executar funções pré-definidas de uma forma mais rápida e fácil;
 * Interface gráfica - uma interface onde o usuário possa controlar através de uma tela, apertando botões e interagindo com o robô ao invés de comandos via terminal. 
 
+A escolha entre utilizar uma Interface de Linha de Comando (CLI) ou uma interface gráfica no controle de um robô AGV é crucial para definir a eficiência, a facilidade de uso e a acessibilidade do sistema. A CLI se destaca pela sua rapidez e eficácia em execuções, requer menos recursos do sistema, enquanto a interface gráfica aprimora a experiência do usuário com interações visuais intuitivas e feedback, embora exija mais do ponto de vista computacional e um desenvolvimento mais elaborado.
+
+
 ### CLI 
 
-Logo, nesta Sprint, achamos justo criarmos uma CLI para que seja possível navegar pelo robô. Esta abordagem é mais direta, rápida e fácil para o usuário. O ponto negativo é que talvez não seja tão intuitivo no começo como ter uma interface. 
+Logo, nesta Sprint, o grupo considerou válido criar uma CLI para que seja possível navegar pelo robô. Esta abordagem é mais direta, rápida e fácil para o usuário. O ponto negativo é que talvez não seja tão intuitivo quanto interface. 
+
 
 Uma CLI é uma interface de linha de comando que permite aos usuários interagir com um programa ou sistema por meio de comandos de texto digitados em um terminal. Com uma CLI, os usuários podem executar tarefas, fornecer entrada e receber saída diretamente na linha de comando, sem a necessidade de uma interface gráfica.
 
