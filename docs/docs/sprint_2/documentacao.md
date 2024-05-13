@@ -143,25 +143,6 @@ Aqui surgiram questões importantes como - e se acontecer uma comunicação ines
 ### Wireframe 
 Para avançarmos no desenvolvimento de uma interface gráfica, achamos necessários já planejar uma interface gráfica. Então, prototipamos um wireframe onde é possível ver as principais funcionalidades da aplicação. 
 
-<!--
-#### Imagem 1 do Wireframe - tela de login
-![Imagem 1 do Wireframe - tela de login](/img/wireframe-login.png)
-
-#### Imagem 2 do Wireframe - tela principal
-![Imagem 2 do Wireframe - tela principal](/img/wireframe-principal.png)
-
-#### Imagem 3 do Wireframe - tela de visualização
-![Imagem 3 do Wireframe - tela de visualização](/img/wireframe-visu.png)
-
-#### Imagem 4 do Wireframe - tela de limpo
-![Imagem 4 do Wireframe - tela de limpo](/img/wireframe-limpo.png)
-
-#### Imagem 5 do Wireframe - tela de obstruído
-![Imagem 5 do Wireframe - tela de obstruído](/img/wireframe-obstruido.png)
-
-(Explicaremos um por um)-->
-
 # Como executar
 
-(Explicar parte de rodar o Docker)
-
+Para executar o projeto, acesse esse link: [Como executar](./como_executar.md)
