@@ -2,9 +2,9 @@
 sidebar_position : 1
 ---
 
-# Metodologia da Sprint 2
+# Documentação da Sprint 2
 
-A seguir, este documento descreverá as atualizações da Sprint 2 do grupo Repipe. O foco ao longo dessas duas semanas foram, principalmente, a movimentação do Robô Turtlebot. Logo, falaremos sobre o setup do robô, a criação de uma interface navegável para interagir com o robô e as comunicações necessárias para isso acontecer. 
+A seguir, este documento descreverá as implementações do grupo Repipe na Sprint 2. O foco ao longo dessas duas semanas foram, principalmente, a movimentação do Robô Turtlebot. Logo, falaremos sobre o setup do robô, a criação de uma interface navegável para interagir com o robô e as comunicações necessárias para isso acontecer. 
 
 # Setup do Robô 
 
@@ -19,14 +19,16 @@ Este é um passo importanto do projeto, pois realiza as configurações iniciais
 * Compilamos o pacote do LIDAR LDS-02;
 * Fizemos o setup do OpenCR;
 
-(Não sei se devemos descrever mais sobre cada tópico.)
-
 # Interface navegável 
 
 Depois de ter instalado e configurado os pacotes do Turtlebot3, precisamos criar um método efetivo para controlar o robô. Para isso, nesta seção iremos abordar a comunicação com o robô e como faremos para isso chegar com uma boa usabilidade ao usuário final.
 
 ## Comunicação com o Robô 
-Para controlar o robô, desenvolvemos um script em Python destinado a controlar o Turtlebot3 usando ROS 2 (Robot Operating System), especificamente para teleoperação. Aqui está uma explicação detalhada de cada parte do código:
+Para controlar o robô, desenvolvemos um script em Python destinado a controlar o Turtlebot3 usando ROS 2 (Robot Operating System), especificamente para teleoperação. 
+
+Os robôs 
+
+Aqui está uma explicação detalhada de cada parte do código:
 
 ### Dependências 
 Primeiro, este script precisou das seguintes bibliotecas Python, que são parte do ecossistema ROS 2:
@@ -142,19 +144,19 @@ Aqui surgiram questões importantes como - e se acontecer uma comunicação ines
 Para avançarmos no desenvolvimento de uma interface gráfica, achamos necessários já planejar uma interface gráfica. Então, prototipamos um wireframe onde é possível ver as principais funcionalidades da aplicação. 
 
 #### Imagem 1 do Wireframe - tela de login
-![Imagem 1 do Wireframe - tela de login](../../../static/img/wireframe-login.png)
+![Imagem 1 do Wireframe - tela de login](/img/wireframe-login.png)
 
 #### Imagem 2 do Wireframe - tela principal
-![Imagem 2 do Wireframe - tela principal](../../../static/img/wireframe-principal.png)
+![Imagem 2 do Wireframe - tela principal](/img/wireframe-principal.png)
 
 #### Imagem 3 do Wireframe - tela de visualização
-![Imagem 3 do Wireframe - tela de visualização](../../../static/img/wireframe-visu.png)
+![Imagem 3 do Wireframe - tela de visualização](/img/wireframe-visu.png)
 
 #### Imagem 4 do Wireframe - tela de limpo
-![Imagem 4 do Wireframe - tela de limpo](../../../static/img/wireframe-limpo.png)
+![Imagem 4 do Wireframe - tela de limpo](/img/wireframe-limpo.png)
 
 #### Imagem 5 do Wireframe - tela de obstruído
-![Imagem 5 do Wireframe - tela de obstruído](../../../static/img/wireframe-obstruido.png)
+![Imagem 5 do Wireframe - tela de obstruído](/img/wireframe-obstruido.png)
 
 (Explicaremos um por um)
 
