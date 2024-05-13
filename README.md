@@ -130,24 +130,36 @@ Em suma, a criação deste robô AGV em parceria com a Atvos não só representa
 
 ## 🗃 Histórico de lançamento
 
-- 2.1.0 - 29/04/2024
-  - Atualização readme
-- 1.2.4 - 26/04/2024
-  - Apresentação
-- 1.2.3 - 25/04/2024
-  - Correções
-- 1.2.2 - 24/04/2024
-  - Arquitetura da solução
-- 1.2.1 - 23/04/2024
-  - Requisitos não funcionais
+- 1.1.0 - 15/04/2024
+  - Início do Projeto
+
+- 1.1.1 - 18/04/2024
+  - Definição do escopo do projeto
+
+- 1.1.2 - 19/04/2024
+  - Criação das personas
+
 - 1.2.0 - 22/04/2024
   - Análise financeira
   - User Stories
   - Requisitos funcionais
-- 1.1.2 - 19/04/2024
-  - Criação das personas
-- 1.1.1 - 18/04/2024
-  - Definição do escopo do projeto
-- 1.1.0 - 15/04/2024
-  - Início do Projeto
-  
+
+- 1.2.1 - 23/04/2024
+  - Requisitos não funcionais
+
+- 1.2.2 - 24/04/2024
+  - Arquitetura da solução
+
+- 1.2.3 - 25/04/2024
+  - Correções
+
+- 1.2.4 - 26/04/2024
+  - Apresentação
+
+- 2.1.0 - 29/04/2024
+  - Atualização readme
+
+- 2.1.1 - 01/05/2024
+  - Documento Avanços da Sprint
+
+- 2.1.2 - 

@@ -2,7 +2,7 @@
 sidebar_position : 1
 ---
 
-# Metodologia da Sprint 2
+# Metodologia Sprint 2
 
 A seguir, este documento descreverá as atualizações da Sprint 2 do grupo Repipe. O foco ao longo dessas duas semanas foram, principalmente, a movimentação do Robô Turtlebot. Logo, será abordado sobre o setup do robô, a criação de uma interface navegável para interagir com o robô e as comunicações necessárias para isso acontecer. 
 
@@ -19,13 +19,12 @@ Este é um passo importante do projeto, pois realiza as configurações iniciais
 * O pacote do LIDAR LDS-02 foi compilado;
 * O setup do OpenCR foi realizado;
 
-(Não sei se devemos descrever mais sobre cada tópico.)
-
 # Interface navegável 
 
 Depois de ter instalado e configurado os pacotes do Turtlebot3, foi criado um método efetivo para controlar o robô. Para isso, nesta seção será tratada a comunicação com o robô e como será feito para isso chegar com uma boa usabilidade ao usuário final.
 
 ## Comunicação com o Robô 
+
 Para controlar o robô, será desenvolvido um script em Python destinado a controlar o Turtlebot3 usando ROS 2 (Robot Operating System), especificamente para teleoperação. Aqui está uma explicação detalhada de cada parte do código:
 
 ### Dependências 
@@ -69,6 +68,7 @@ O método send_cmd_vel é usado para definir e enviar os comandos de velocidade 
 * As velocidades atualmente enviadas são impressas no console para confirmação e debug.
 
 ### Enviando movimentos para o robô 
+
 Certo. Depois de estabelecer a estrutura necessária pra movimentar o nosso turtlebot, como é controlado? Nesta parte da implementação, foi configurado para que o usuário em controle possa apertar teclas como `w, x, d, a` e consiga operar o robô. 
 
 #### Método get_key
@@ -130,11 +130,11 @@ Para que o usuário consiga aproveitar ao máximo dessa comunicação com o rob�
 
 A escolha entre utilizar uma Interface de Linha de Comando (CLI) ou uma interface gráfica no controle de um robô AGV é crucial para definir a eficiência, a facilidade de uso e a acessibilidade do sistema. A CLI se destaca pela sua rapidez e eficácia em execuções, requer menos recursos do sistema, enquanto a interface gráfica aprimora a experiência do usuário com interações visuais intuitivas e feedback, embora exija mais do ponto de vista computacional e um desenvolvimento mais elaborado.
 
+
 ### CLI 
 
 Logo, nesta Sprint, o grupo considerou válido criar uma CLI para que seja possível navegar pelo robô. Esta abordagem é mais direta, rápida e fácil para o usuário. O ponto negativo é que talvez não seja tão intuitivo quanto interface. 
 
-(Explicar as funcionalidades da CLI)
 
 #### Botão de emergência
 Aqui surgiram questões importantes como - e se acontecer uma comunicação inesperada com o robô? E se quisermos interromper totalmente a comunicação com ele? Para isso, criamos um botão de emergência onde, em qualquer momento da atividade com o turtlebot, seja possível pará-lo. 
@@ -142,26 +142,9 @@ Aqui surgiram questões importantes como - e se acontecer uma comunicação ines
 (Explicar como isso acontece)
 
 ### Wireframe 
+
 Com o objetivo de avançar no desenvolvimento de uma interface gráfica, considerou-se necessário já planejar tal interface. Portanto, foi prototipado um wireframe onde é possível visualizar as principais funcionalidades da aplicação.
-
-#### Imagem 1 do Wireframe - tela de login
-![Imagem 1 do Wireframe - tela de login](../../../static/img/wireframe-login.png)
-
-#### Imagem 2 do Wireframe - tela principal
-![Imagem 2 do Wireframe - tela principal](../../../static/img/wireframe-principal.png)
-
-#### Imagem 3 do Wireframe - tela de visualização
-![Imagem 3 do Wireframe - tela de visualização](../../../static/img/wireframe-visu.png)
-
-#### Imagem 4 do Wireframe - tela de limpo
-![Imagem 4 do Wireframe - tela de limpo](../../../static/img/wireframe-limpo.png)
-
-#### Imagem 5 do Wireframe - tela de obstruído
-![Imagem 5 do Wireframe - tela de obstruído](../../../static/img/wireframe-obstruido.png)
-
-(Explicaremos um por um)
 
 # Como executar
 
-(Explicar parte de rodar o Docker)
-
+Para executar o projeto, acesse esse link: [Como executar](./como_executar.md)
