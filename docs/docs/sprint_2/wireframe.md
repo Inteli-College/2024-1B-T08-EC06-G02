@@ -1,7 +1,6 @@
 ---
-sidebar_position : 1
+sidebar_position : 3
 ---
-
 
 ### Wireframe 
 Para avançarmos no desenvolvimento de uma interface gráfica, achamos necessários já planejar uma interface gráfica. Então, prototipamos um wireframe onde é possível ver as principais funcionalidades da aplicação. 
