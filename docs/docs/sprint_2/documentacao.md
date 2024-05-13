@@ -21,11 +21,31 @@ Este é um passo importante do projeto, pois realiza as configurações iniciais
 
 # Interface navegável 
 
-Depois de ter instalado e configurado os pacotes do Turtlebot3, foi criado um método efetivo para controlar o robô. Para isso, nesta seção será tratada a comunicação com o robô e como será feito para isso chegar com uma boa usabilidade ao usuário final.
+
+Depois de ter instalado e configurado os pacotes do Turtlebot3, precisamos criar um método efetivo para controlar o robô. Para isso, nesta seção iremos abordar a comunicação com o robô e como faremos para isso chegar com uma boa usabilidade ao usuário final. 
 
 ## Comunicação com o Robô 
 
-Para controlar o robô, será desenvolvido um script em Python destinado a controlar o Turtlebot3 usando ROS 2 (Robot Operating System), especificamente para teleoperação. Aqui está uma explicação detalhada de cada parte do código:
+A estrutura do ROS é baseada em nós, tópicos, mensagens e serviços, que juntos criam uma arquitetura flexível e poderosa para robótica do nosso projeto. 
+
+#### Nós
+No ROS 2, um nó representa um processo que realiza computação. Nós são entidades autônomas que podem se comunicar com outros nós por meio de tópicos ou serviços. No código em que mencionamos abaixo, o TeleopTurtle é um nó que foi criado para enviar comandos de controle ao Turtlebot3.
+
+#### Tópicos e Mensagens
+Tópicos são canais onde os nós podem publicar ou se inscrever para ler dados. No nosso script, o nó TeleopTurtle publica mensagens no tópico cmd_vel. Essas mensagens são do tipo Twist, que é uma estrutura de dados definida em geometry_msgs.msg. Essa mensagem contém dois vetores principais: linear e angular. Esses vetores especificam a velocidade na direção linear (x, y, z) e angular (roll, pitch, yaw), respectivamente. 
+
+Quando publicamos uma mensagem Twist no tópico cmd_vel, o Turtlebot3 recebe essa mensagem e a interpreta como uma instrução para mover-se de acordo com os parâmetros de velocidade especificados.
+
+#### Serviços
+Serviços no ROS 2 são outra forma de comunicação entre nós. Diferentemente dos tópicos, que são geralmente usados para transmissão contínua de dados, os serviços são mais adequados para interações de requisição-resposta. Neste script, especificamente, não estamos usando, mas, por exemplo, poderíamos usar um serviço para configurar parâmetros do robô ou para iniciar/parar determinadas ações.
+
+#### Rede Local e Comunicação
+Além disso, é válido mencionar que o ROS 2 permite que os nós se comuniquem eficientemente em uma rede local ou mesmo distribuídos por várias máquinas. No nosso cenário, tanto o nó TeleopTurtle quanto o robô Turtlebot3 estão operando na mesma rede local, permitindo que as mensagens sejam transmitidas. 
+
+
+
+Abaixo, segue uma explicação detalhada de cada parte do código. Nosso grupo se inspirou neste repositório [aqui](https://github.com/ROBOTIS-GIT/turtlebot3/blob/master/turtlebot3_teleop/nodes/turtlebot3_teleop_key). Porém, achamos muito confuso e diminuímos/refatoramos algumas coisas. 
+
 
 ### Dependências 
 Primeiro, este script precisou das seguintes bibliotecas Python, que são parte do ecossistema ROS 2:
@@ -51,7 +71,7 @@ class TeleopTurtle(Node):
         self.publisher_ = self.create_publisher(Twist, 'cmd_vel', 10)
         self.twist_msg = Twist()
 ```
-* O publisher é configurado para publicar mensagens no tópico `cmd_vel`, que o Turtlebot3 escuta para receber comandos de movimento.
+* O publisher é configurado para publicar mensagens no tópico `cmd_vel`, que o Turtlebot3 escuta para receber comandos de movimento. Um publisher é um componente que publica mensagens em um tópico específico. Ele é responsável por produzir dados que outros nós podem consumir. Aqui, a classe TeleopTurtle possui um publisher configurado para enviar mensagens ao tópico cmd_vel. Este é o mecanismo pelo qual o nó envia comandos de movimento para o Turtlebot3.
 
 ### Método send_cmd_vel
 O método send_cmd_vel é usado para definir e enviar os comandos de velocidade para o robô. Como vamos fazer isso?
@@ -63,9 +83,9 @@ O método send_cmd_vel é usado para definir e enviar os comandos de velocidade 
         self.publisher_.publish(self.twist_msg)
         print("Linear Vel: {}, Angular Vel: {}".format(linear_vel, angular_vel))
 ```
-* linear_vel e angular_vel são argumentos que determinam as velocidades linear e angular do robô, respectivamente.
-* As velocidades são aplicadas ao objeto twist_msg e então publicadas no tópico cmd_vel.
-* As velocidades atualmente enviadas são impressas no console para confirmação e debug.
+* **Configuração de Velocidades**: O método ajusta as propriedades linear.x e angular.z do objeto Twist chamado twist_msg. A propriedade linear.x afeta o movimento para frente ou para trás do robô, enquanto angular.z controla a rotação do robô sobre seu eixo vertical (yaw). Definindo linear.x como positivo, o robô avança; negativo, ele recua. Similarmente, um valor positivo de angular.z faz o robô girar para a esquerda, e um valor negativo para a direita.
+* **Publicação da Mensagem**: Após definir as velocidades no twist_msg, o método utiliza self.publisher_, que é um objeto publisher, para enviar essa mensagem ao tópico cmd_vel. Este tópico é monitorado pelo robô, que aguarda as instruções de movimento.
+**Feedback para Debug**: Finalmente, as velocidades são impressas no console. Essa saída é crucial para debug e verificação dos comandos enviados, permitindo a gente confirmar se os valores das velocidades estão conforme o esperado.
 
 ### Enviando movimentos para o robô 
 
@@ -92,17 +112,17 @@ def main(args=None):
         if key == '\x03': # CTRL-C
             break
         elif key == 'w':
-            node.send_cmd_vel(0.2, 0.0)  # Move forward
+            node.send_cmd_vel(0.2, 0.0)  # Move pra frente
         elif key == 'x':
-            node.send_cmd_vel(-0.2, 0.0)  # Move backward
+            node.send_cmd_vel(-0.2, 0.0)  # Move pra trás
         elif key == 'd':
-            node.send_cmd_vel(0.0, -0.5)  # Turn right
+            node.send_cmd_vel(0.0, -0.5)  # Vira à direita
         elif key == 'a':
-            node.send_cmd_vel(0.0, 0.5)  # Turn left
+            node.send_cmd_vel(0.0, 0.5)  # Vira à direita
         elif key == ' ' or key == 's':
-            node.send_cmd_vel(0.0, 0.0)  # Stop
+            node.send_cmd_vel(0.0, 0.0)  # Para
 
-    node.send_cmd_vel(0.0, 0.0)  # Stop the robot before exiting
+    node.send_cmd_vel(0.0, 0.0)  # Para o robô antes de sair
     rclpy.shutdown()
 
 if __name__ == '__main__':
@@ -118,13 +138,17 @@ O botão:
 * espaço ou s: Para o robô
 * ctrl + c: corta a comunicação e fecha nó. 
 
-(Este código vai mudar um pouco pois: as mudanças futuras serão implementadas ou integrar outra funções com a CLI)
+### Resumo
+De forma resumida, o script que desenvolvemos utiliza os conceitos do ROS para implementar uma forma de teleoperação onde:
+
+* Um nó (TeleopTurtle) é criado e configurado para enviar comandos.
+* Mensagens do tipo Twist são usadas para encapsular as instruções de movimento.
+* Tópicos servem como o meio de comunicação para enviar esses comandos ao robô.
+* A interface do usuário (captura de teclas no terminal) é mapeada para comandos de movimento, tornando a interação com o robô intuitiva e responsiva.
 
 ## Decisões de design 
+Para que o usuário consiga aproveitar ao máximo dessa comunicação com o robô, pensamos em duas soluções viáveis: 
 
-(Explicar a importância)
-
-Para que o usuário consiga aproveitar ao máximo dessa comunicação com o robô, foi idealizada duas soluções viáveis: 
 * CLI (Interface por Linha de Comando) - para controlar o robô pelo terminal e executar funções pré-definidas de uma forma mais rápida e fácil;
 * Interface gráfica - uma interface onde o usuário possa controlar através de uma tela, apertando botões e interagindo com o robô ao invés de comandos via terminal. 
 
@@ -136,15 +160,79 @@ A escolha entre utilizar uma Interface de Linha de Comando (CLI) ou uma interfac
 Logo, nesta Sprint, o grupo considerou válido criar uma CLI para que seja possível navegar pelo robô. Esta abordagem é mais direta, rápida e fácil para o usuário. O ponto negativo é que talvez não seja tão intuitivo quanto interface. 
 
 
+Uma CLI é uma interface de linha de comando que permite aos usuários interagir com um programa ou sistema por meio de comandos de texto digitados em um terminal. Com uma CLI, os usuários podem executar tarefas, fornecer entrada e receber saída diretamente na linha de comando, sem a necessidade de uma interface gráfica.
+
+No contexto do nosso projeto, a implementação de uma CLI permitiria que os usuários controlassem o robô Turtlebot3 por meio de comandos digitados no terminal. Isso proporcionaria uma forma direta e rápida de interagir com o robô, executando funções pré-definidas e controlando seu movimento.
+
+Mantendo apenas a mesma classe TeleopTurtle com a função send_cmd_vel ao código que comentamos anteriormente, os principais ajustes que fizemos para implementar uma CLI, foi:
+* Importar bibliotecas para criar a CLI;
+* Criar a função necessária de acordo com as entradas do usuário.
+
+#### Implementação da CLI
+
+```python
+import typer
+import inquirer
+
+app = typer.Typer()
+```
+
+O código acima importa as bibliotecas necessárias. A biblioteca typer é uma biblioteca de linha de comando que permite criar facilmente interfaces de linha de comando interativas e amigáveis.
+
+Já a biblioteca inquirer é uma biblioteca de interação de linha de comando que fornece uma maneira fácil de criar perguntas interativas para o usuário. Com o inquirer, podemos criar perguntas de múltipla escolha e perguntas de entrada de texto.
+
+Sendo assim, implementamos a seguinte função ao nosso código:
+
+```python
+@app.command()
+def control():
+    rclpy.init()
+    node = TeleopTurtle()
+    print("Controle do TurtleBot3")
+    questions = [inquirer.List(
+        name='command',
+        message='Selecione uma ação:',
+        choices=['Frente', 'Trás', 'Esquerda', 'Direita', 'Emergência (Parar Funcionamento)', 'Sair'])]
+    try:
+        while True:
+            command = inquirer.prompt(questions)['command']
+            match command:
+                case 'Sair':
+                    break
+                case 'Frente':
+                    node.send_cmd_vel(0.2, 0.0) 
+                case 'Trás':
+                    node.send_cmd_vel(-0.2, 0.0)
+                case 'Esquerda':
+                    node.send_cmd_vel(0.0, 0.5)
+                case 'Direita':
+                    node.send_cmd_vel(0.0, -0.5)
+                case 'Emergência (Parar Funcionamento)':
+                    node.send_cmd_vel(0.0, 0.0)
+    except Exception as e:
+        print('Interface Fechada a Força, Parando movimentação do robô')
+        node.send_cmd_vel(0.0, 0.0) 
+    finally:
+        node.send_cmd_vel(0.0, 0.0)
+        rclpy.shutdown()
+
+if __name__ == "__main__":
+    app()
+``` 
+
+A função control() é definida como um comando do aplicativo. Dentro dessa função, o código inicializa o sistema de comunicação do ROS usando a função rclpy.init(). Em seguida, cria uma instância da classe TeleopTurtle, responsável por enviar comandos de movimento para o robô.
+
+O programa exibe uma mensagem de boas-vindas para o usuário, e em seguida, cria uma lista de perguntas usando a biblioteca inquirer. Essa lista contém uma pergunta com opções para o usuário selecionar uma ação. Se o usuário selecionar "Sair", o loop é interrompido e o programa é encerrado. Se o usuário selecionar "Frente", "Trás", "Esquerda" ou "Direita", o programa chama o método send_cmd_vel() da instância node para enviar comandos de velocidade para o robô. Se o usuário selecionar "Emergência (Parar Funcionamento)", o programa envia um comando de velocidade nulo para parar o robô.
+
+Se ocorrer qualquer exceção durante a execução do programa, a mensagem "Interface Fechada a Força, Parando movimentação do robô" é exibida e um comando de velocidade nulo é enviado para parar o robô. Finalmente, independentemente de qualquer exceção, o programa envia um comando de velocidade nulo e encerra o sistema de comunicação do ROS usando as funções node.send_cmd_vel(0.0, 0.0) e rclpy.shutdown().
+
 #### Botão de emergência
-Aqui surgiram questões importantes como - e se acontecer uma comunicação inesperada com o robô? E se quisermos interromper totalmente a comunicação com ele? Para isso, criamos um botão de emergência onde, em qualquer momento da atividade com o turtlebot, seja possível pará-lo. 
+Aqui surgiram questões importantes como: e se acontecer uma comunicação inesperada com o robô? E se quisermos interromper totalmente a comunicação com ele? Para isso, criamos um botão de emergência onde, em qualquer momento da atividade com o turtlebot, seja possível pará-lo. 
 
-(Explicar como isso acontece)
+Isto é o que está presente no botão Emergência '(Parar Funcionamento)', uma opção de segurança para evitar qualquer movimento que irá prejudicar o robô ou a operação. 
 
-### Wireframe 
-
-Com o objetivo de avançar no desenvolvimento de uma interface gráfica, considerou-se necessário já planejar tal interface. Portanto, foi prototipado um wireframe onde é possível visualizar as principais funcionalidades da aplicação.
-
-# Como executar
-
-Para executar o projeto, acesse esse link: [Como executar](./como_executar.md)
+```python 
+case 'Emergência (Parar Funcionamento)':
+                    node.send_cmd_vel(0.0, 0.0)
+```
+Se o usuário selecionar "Emergência (Parar Funcionamento)", o programa envia um comando de velocidade nulo para parar o robô.
