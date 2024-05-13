@@ -229,5 +229,3 @@ case 'Emergência (Parar Funcionamento)':
                     node.send_cmd_vel(0.0, 0.0)
 ```
 Se o usuário selecionar "Emergência (Parar Funcionamento)", o programa envia um comando de velocidade nulo para parar o robô.
-
-# Conclusão 
