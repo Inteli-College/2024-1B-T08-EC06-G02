@@ -143,6 +143,7 @@ Aqui surgiram questões importantes como - e se acontecer uma comunicação ines
 ### Wireframe 
 Para avançarmos no desenvolvimento de uma interface gráfica, achamos necessários já planejar uma interface gráfica. Então, prototipamos um wireframe onde é possível ver as principais funcionalidades da aplicação. 
 
+<!--
 #### Imagem 1 do Wireframe - tela de login
 ![Imagem 1 do Wireframe - tela de login](/img/wireframe-login.png)
 
@@ -158,7 +159,7 @@ Para avançarmos no desenvolvimento de uma interface gráfica, achamos necessár
 #### Imagem 5 do Wireframe - tela de obstruído
 ![Imagem 5 do Wireframe - tela de obstruído](/img/wireframe-obstruido.png)
 
-(Explicaremos um por um)
+(Explicaremos um por um)-->
 
 # Como executar
 
