@@ -13,25 +13,25 @@ ANG_VEL_STEP_SIZE = 0.1
 STOP_DISTANCE = 0.5
 
 msg = """
-Control Your TurtleBot3 Burger!
+Controle o robô da Atvos!
 ---------------------------
-Moving around:
+Para se mover:
     ↑
-←  ↓  →
+←       →
     ↓
 
-↑ : increase linear velocity (Burger : ~ 0.22)
-↓ : decrease linear velocity (Burger : ~ 0.22)
-← : increase angular velocity (Burger : ~ 2.84)
-→ : decrease angular velocity (Burger : ~ 2.84)
+↑ : aumenta a velocidade linear (~ 0.22)
+↓ : diminui a velocidade linear (~ 0.22)
+← : aumenta velocidade angular (~ 2.84)
+→ : diminui velocidade angular (~ 2.84)
 
-space key : force stop
+Tecla de espaço: força a pausa
 
-CTRL-C to quit
+Pressione S para encerrar
 """
 
 e = """
-Communications Failed
+Comunicação falhou
 """
 
 def getKey(settings):
@@ -110,7 +110,8 @@ class TeleopAndLidarNode(Node):
             self.control_angular_vel = 0.0
             self.get_logger().info(vels(self.target_linear_vel, self.target_angular_vel))
         else:
-            if key == '\x03':  # Ctrl-C
+            if key.lower() == 's':  # S key
+                print("Comunicação encerrada com o robô")
                 rclpy.shutdown()
                 termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self.settings)
                 return
@@ -137,9 +138,9 @@ class TeleopAndLidarNode(Node):
         min_distance = min(msg.ranges)
         self.get_logger().info(f'Min distance: {min_distance}')
 
-        # Check if there's something within 0.5 meters
+        # Check if there's something within 0.15 meters
         if min_distance < STOP_DISTANCE:
-            self.get_logger().warn(f'Object detected within {STOP_DISTANCE} meters! Stopping the robot.')
+            self.get_logger().warn(f'Objeto detectado em {STOP_DISTANCE} metros! Parando o robô.')
             self.obstacle_detected = True
         else:
             self.obstacle_detected = False

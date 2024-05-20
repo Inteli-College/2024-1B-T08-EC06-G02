@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"name": "prova-ros2-turtlesim",
+			"path": "../../../../prova/prova-ros2-turtlesim"
+		}
+	],
+	"settings": {}
+}
