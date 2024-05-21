@@ -4,6 +4,7 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
 import sys, select, tty, termios
 
 BURGER_MAX_LIN_VEL = 0.22
@@ -75,11 +76,16 @@ class TeleopAndLidarNode(Node):
     def __init__(self):
         super().__init__('teleop_and_lidar_node')
         self.publisher = self.create_publisher(Twist, 'cmd_vel', 10)
+        qos_profile = QoSProfile(
+            history=HistoryPolicy.KEEP_LAST,
+            depth=5,
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            durability=rclpy.qos.DurabilityPolicy.VOLATILE)        
         self.subscription = self.create_subscription(
             LaserScan,
             'scan',
             self.lidar_callback,
-            10)
+            qos_profile)
         self.target_linear_vel = 0.0
         self.target_angular_vel = 0.0
         self.control_linear_vel = 0.0
