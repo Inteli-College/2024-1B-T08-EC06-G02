@@ -31,20 +31,36 @@
     messageType : 'sensor_msgs/CompressedImage'
   });
 
+  // Topic to receive FPS and latency information
+  var fpsTopic = new ROSLIB.Topic({
+    ros : ros,
+    name : '/fps',
+    messageType : 'std_msgs/String'
+  });
+
   // Function to handle incoming video frames
   videoTopic.subscribe(function(message) {
     var img = document.getElementById('videoStream');
     img.src = 'data:image/jpeg;base64,' + message.data;
   });
 
+  // Function to handle incoming FPS and latency messages
+  fpsTopic.subscribe(function(message) {
+    var fpsDisplay = document.getElementById('fpsDisplay');
+    fpsDisplay.innerText = message.data;
+  });
+
   window.onload = function() {
-    // Subscribe to video frames once
+    // Subscribe to video frames and FPS once
     videoTopic.subscribe();
+    fpsTopic.subscribe();
   };
 </script>
 </head>
 <body>
   <h1>Real-time Video Stream from ROS2 Topic</h1>
   <img id="videoStream" alt="Video Stream" style="width: 640px; height: 480px;" />
+  <h2>Latency and FPS: <span id="fpsDisplay">Waiting for data...</span></h2>
 </body>
 </html>
+
