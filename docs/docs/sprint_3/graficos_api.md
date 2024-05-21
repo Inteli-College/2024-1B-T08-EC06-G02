@@ -27,3 +27,22 @@ A latência é um fator crítico em sistemas de visão computacional e robótica
 # Conclusão
 A função latencia implementada neste projeto é essencial para monitorar e otimizar a latência na captura e publicação de frames de vídeo. A medição contínua e a exibição da latência permitem identificar e corrigir problemas rapidamente, garantindo que o sistema funcione de maneira eficiente e responsiva.
 
+
+# Explicação sobre a Bateria no projeto
+
+## Introdução
+Este documento tem como objetivo explicar a função da bateria e como as pessoas que estão operando o robô podem interfirir na vida útil da mesma. Lembrando sempre que estamos usando uma bateria de lítio então o mal uso pode ocorrer uma explosão (em pequena escala, claro, por conta do robô e a bateria serem pequenos). A seguir vamos falar mais sobre a bateria que estamos usando e o que devemos fazer para prolongar o período de vida útil dela tambem colocaremos um gráfico informativo sobre a vida útil dela, tomando e não tomando os devidos cuidados.
+
+## Expecificações da bateria
+- Modelo: LB-12
+- Li-po 11.1V
+- 1800 mAh
+- 3 células com 3,7V cada
+- Peso: 106g
+- Tamano: 88mm x 35mm x 26mm
+
+# Bateria LB-12 (cuidando adequadamente)
+
+# Bateria LB-12 (Não cuidando adequadamente)
+
+# Conclusão
