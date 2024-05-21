@@ -2,13 +2,15 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import CompressedImage
 import cv2
+import numpy as np 
+
 
 class WebcamPublisher(Node):
     def __init__(self):
         super().__init__('webcam_publisher')
         self.publisher_ = self.create_publisher(CompressedImage, '/video_frames', 10)
         self.timer = self.create_timer(0.02, self.timer_callback)  # Publish every 0.02 seconds (50 Hz)
-        self.cap = cv2.VideoCapture("v4l2src device=/dev/video0 ! videoconvert ! video/x-raw,format=BGR ! appsink", cv2.CAP_GSTREAMER)
+        self.cap = cv2.VideoCapture(0)
 
     def timer_callback(self):
         ret, frame = self.cap.read()
