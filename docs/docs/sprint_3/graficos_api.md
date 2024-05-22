@@ -18,9 +18,7 @@ A latência é um fator crítico em sistemas de visão computacional e robótica
 
 **Diagnosticar Problemas:** Detectar problemas com a câmera ou o sistema de captura que possam estar introduzindo atrasos inesperados.
 
-# Dados e possiveis gráficos para a visualização da Latência:
-
-
+# Dados e possiveis gráficos para a visualização da Latência (em tempo real):
 
 
 
@@ -35,14 +33,29 @@ Este documento tem como objetivo explicar a função da bateria e como as pessoa
 
 ## Expecificações da bateria
 - Modelo: LB-12
-- Li-po 11.1V
+- Li-po 11.1V (pode ser carregada até 12.6V)
 - 1800 mAh
 - 3 células com 3,7V cada
 - Peso: 106g
 - Tamano: 88mm x 35mm x 26mm
 
 # Bateria LB-12 (cuidando adequadamente)
+Para prolongar a vida útil da bateria do modelo LB-12, é importante entender que esta bateria possui 3 células de 3,7 volts cada. Para carregá-la corretamente, utilizamos um carregador específico, o "Lipro Balance Charger" modelo "iMAX B6", que permite carregar as células de maneira uniforme.
+
+Além disso, é crucial monitorar o nível de carga da bateria. O TurtleBot possui um mecanismo de segurança que emite um som de alerta quando a voltagem da bateria atinge 11V.
+
+Abaixo, apresentamos um gráfico que representa a vida útil da bateria ao longo do tempo, considerando todos os cuidados necessários. Este gráfico mostra a voltagem da bateria em função do tempo, ajudando a monitorar e manter a saúde da bateria a longo prazo:
+
+
 
 # Bateria LB-12 (Não cuidando adequadamente)
+Ao não seguir as práticas recomendadas para o cuidado da bateria LB-12, diversos problemas podem surgir, comprometendo tanto a eficiência quanto a vida útil da bateria. A LB-12 é composta por 3 células de 3,7 volts cada, e o uso inadequado pode causar desequilíbrios entre essas células.
+
+Além disso, ignorar o monitoramento do nível de carga da bateria pode ser prejudicial. O TurtleBot possui um alerta sonoro de segurança que avisa quando a voltagem da bateria cai para 11V. Ignorar esses avisos e permitir que a voltagem caia ainda mais pode danificar permanentemente as células da bateria, reduzindo sua capacidade e eficiência.
+
+Abaixo, apresentamos um gráfico que ilustra a vida útil da bateria ao longo do tempo sem os cuidados adequados. Este gráfico mostra a degradação acelerada da voltagem da bateria devido à falta de manutenção apropriada, destacando a importância de seguir as práticas recomendadas para garantir a longevidade da bateria:
+
+**OBS: Vale lembrar que se a voltagem da bateria ficar abaixo de 10V ela não funciona mais, ela incha por ser de lítio e para de funcinar e inchando é possível que exploda**
 
 # Conclusão
+Cuidar adequadamente da bateria LB-12 é crucial para garantir a segurança e a eficiência do TurtleBot. Utilizar um carregador balanceador adequado e monitorar o nível de carga regularmente prolonga a vida útil da bateria e evita riscos, como explosões. Negligenciar esses cuidados resulta em degradação acelerada, perda de capacidade e possíveis danos irreparáveis. Seguir as práticas recomendadas é essencial para manter o robô funcionando de maneira eficiente e segura.
