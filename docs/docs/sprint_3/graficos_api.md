@@ -4,12 +4,10 @@ sidebar_position: 1
 
 # Explicação da Latência no Projeto
 
-## Introdução
-
+## Introdução:
 Este documento tem como objetivo explicar a função de latência implementada no projeto de publicação de frames de vídeo usando ROS 2 (Robot Operating System). No contexto deste projeto, a latência refere-se ao tempo de atraso entre a captura de um frame pela câmera e a publicação deste frame como uma mensagem no tópico ROS. Entender e monitorar essa latência é crucial para aplicações em que o tempo real é um fator importante, como robótica, vigilância e sistemas de controle.
 
-## Funcionamento da latência no projeto
-
+## Funcionamento da latência no projeto:
 A latência é um fator crítico em sistemas de visão computacional e robótica, onde decisões baseadas em vídeo precisam ser tomadas rapidamente. Monitorar a latência ajuda a:
 
 **Avaliar o Desempenho:** Identificar gargalos no sistema que podem atrasar o processamento de vídeo.
@@ -18,27 +16,71 @@ A latência é um fator crítico em sistemas de visão computacional e robótica
 
 **Diagnosticar Problemas:** Detectar problemas com a câmera ou o sistema de captura que possam estar introduzindo atrasos inesperados.
 
-# Dados e possiveis gráficos para a visualização da Latência (em tempo real):
+## Dados e possiveis gráficos para a visualização da Latência (em tempo real):
 Este gráfico com valores estáticos serve para medir a distância e a latência entre o computador e o robô, garantindo a execução perfeita dos comandos. Quanto maior a distância, maior a latência. Portanto, é essencial monitorar esses fatores para manter a comunicação eficiente e a câmera, juntamente com o robô, funcionando corretamente:
 
 ![Latência_1](../../static/img/sprint_3/latencia_metros.png "Latência(ms) X Distância(m)")
 
 **OBS: Vale lembrar que, quanto menor a latência, melhor a comunicação para o controle do robô. E que esses valores estão sendo colocados a prova ainda pois estamos fazendo testes para medir com maior precisão a maior ditância que podemos controlar o robô e qual é a latência dessa comunicação**
 
-# Dados e possiveis gráficos para a visualização da Latência (em tempo real):
+## Script para a obtenção do gráfico de latencia X distância:
+Para conseguir plotar o mesmo gráfico que esta acima, usa-se esse código em python:
+```python
+import matplotlib.pyplot as plt
+
+# Dados fornecidos
+distancias = ['1 - 5', '5 - 10', '10 - 20', '20 - 30', '30 - 50']
+latencias = [20, 25, 32, 40, 48]
+
+# Criação do gráfico de barras
+plt.figure(figsize=(10, 6))
+plt.bar(distancias, latencias, color='b')
+plt.title('Latência em função da Distância')
+plt.xlabel('Distância (M)')
+plt.ylabel('Latência (ms)')
+plt.grid(axis='y')
+plt.show()
+```
+## Dados e possiveis gráficos para a visualização da Latência (em tempo real):
 Ja com esse gráfico, podemos perceber o perído de resposta (Latência) em uma comunicação entre o robô e o computador que durou 50 segundos antes de encerrar, podemos ver alguns picos que tiveram que retratam muito bem a requisição de serviços de frames dos vídeos:
 
 ![Latência_1](../../static/img/sprint_3/latencia_comunicacao.png "Latência em tempo real")
 
-# Conclusão
+
+## Script para a obtenção do gráfico de latencia em tempo real:
+Para conseguir plotar o mesmo gráfico que esta acima, usa-se esse código em python:
+```python
+import matplotlib.pyplot as plt
+
+# Dados fornecidos
+duracao_comunicacao = list(range(1, 51))
+latencia = [20, 21, 20, 25, 24, 23, 20, 27, 25, 28, 26, 24, 22, 20, 20, 21, 22, 21, 20, 21, 
+            20, 20, 28, 27, 26, 24, 23, 28, 27, 25, 23, 22, 20, 21, 22, 21, 20, 25, 24, 22, 
+            20, 21, 28, 27, 25, 23, 21, 20, 21, 20]
+
+# Plot do gráfico de linhas
+plt.figure(figsize=(12, 6))
+plt.plot(duracao_comunicacao, latencia, marker='o', linestyle='-', color='b')
+plt.title('Latência durante a comunicação de 50 segundos')
+plt.xlabel('Duração da Comunicação (segundos)')
+plt.ylabel('Latência (ms)')
+plt.grid(True)
+plt.xticks(duracao_comunicacao, rotation=90)
+plt.tight_layout()
+
+# Exibindo o gráfico
+plt.show()
+```
+
+## Conclusão:
 A função latencia implementada neste projeto é essencial para monitorar e otimizar a latência na captura e publicação de frames de vídeo. A medição contínua e a exibição da latência permitem identificar e corrigir problemas rapidamente, garantindo que o sistema funcione de maneira eficiente e responsiva.
 
 # Explicação sobre a Bateria no projeto
 
-## Introdução
+## Introdução:
 Este documento tem como objetivo explicar a função da bateria e como as pessoas que estão operando o robô podem interfirir na vida útil da mesma. Lembrando sempre que estamos usando uma bateria de lítio então o mal uso pode ocorrer uma explosão (em pequena escala, claro, por conta do robô e a bateria serem pequenos). A seguir vamos falar mais sobre a bateria que estamos usando e o que devemos fazer para prolongar o período de vida útil dela tambem colocaremos um gráfico informativo sobre a vida útil dela, tomando e não tomando os devidos cuidados.
 
-## Expecificações da bateria
+## Expecificações da bateria:
 - Modelo: LB-12
 - Li-po 11.1V (pode ser carregada até 12.6V)
 - 1800 mAh
@@ -46,7 +88,7 @@ Este documento tem como objetivo explicar a função da bateria e como as pessoa
 - Peso: 106g
 - Tamano: 88mm x 35mm x 26mm
 
-# Bateria LB-12 (cuidando adequadamente)
+## Bateria LB-12 (cuidando adequadamente):
 Para prolongar a vida útil da bateria do modelo LB-12, é importante entender que esta bateria possui 3 células de 3,7 volts cada. Para carregá-la corretamente, utilizamos um carregador específico, o "Lipro Balance Charger" modelo "iMAX B6", que permite carregar as células de maneira uniforme.
 
 Além disso, é crucial monitorar o nível de carga da bateria. O TurtleBot possui um mecanismo de segurança que emite um som de alerta quando a voltagem da bateria atinge 11V.
@@ -55,7 +97,7 @@ Abaixo, apresentamos um gráfico que representa a vida útil da bateria ao longo
 
 ![Gráficos_1](../../static/img/sprint_3/bateria_boa.png "Bateria cuidada de forma adequada")
 
-# Bateria LB-12 (Não cuidando adequadamente)
+## Bateria LB-12 (Não cuidando adequadamente):
 Ao não seguir as práticas recomendadas para o cuidado da bateria LB-12, diversos problemas podem surgir, comprometendo tanto a eficiência quanto a vida útil da bateria. A LB-12 é composta por 3 células de 3,7 volts cada, e o uso inadequado pode causar desequilíbrios entre essas células.
 
 Além disso, ignorar o monitoramento do nível de carga da bateria pode ser prejudicial. O TurtleBot possui um alerta sonoro de segurança que avisa quando a voltagem da bateria cai para 11V. Ignorar esses avisos e permitir que a voltagem caia ainda mais pode danificar permanentemente as células da bateria, reduzindo sua capacidade e eficiência.
@@ -66,7 +108,7 @@ Abaixo, apresentamos um gráfico que ilustra a vida útil da bateria ao longo do
 
 **OBS: Vale lembrar que se a voltagem da bateria ficar abaixo de 10V ela não funciona mais, ela incha por ser de lítio e para de funcinar e inchando é possível que exploda**
 
-## Script para a obtenção dos gráficos
+## Script para a obtenção dos gráficos:
 Para conseguir plotar os mesmos gráficos que estão acima, usa-se esse código em python:
 ```python
 import pandas as pd
@@ -109,5 +151,5 @@ plt.grid(True)
 plt.show()
 ```
 
-# Conclusão
+## Conclusão:
 Cuidar adequadamente da bateria LB-12 é crucial para garantir a segurança e a eficiência do TurtleBot. Utilizar um carregador balanceador adequado e monitorar o nível de carga regularmente prolonga a vida útil da bateria e evita riscos, como explosões. Negligenciar esses cuidados resulta em degradação acelerada, perda de capacidade e possíveis danos irreparáveis. Seguir as práticas recomendadas é essencial para manter o robô funcionando de maneira eficiente e segura.
