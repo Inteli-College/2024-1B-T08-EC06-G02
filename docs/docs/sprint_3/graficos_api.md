@@ -19,12 +19,19 @@ A latência é um fator crítico em sistemas de visão computacional e robótica
 **Diagnosticar Problemas:** Detectar problemas com a câmera ou o sistema de captura que possam estar introduzindo atrasos inesperados.
 
 # Dados e possiveis gráficos para a visualização da Latência (em tempo real):
+Este gráfico com valores estáticos serve para medir a distância e a latência entre o computador e o robô, garantindo a execução perfeita dos comandos. Quanto maior a distância, maior a latência. Portanto, é essencial monitorar esses fatores para manter a comunicação eficiente e a câmera, juntamente com o robô, funcionando corretamente:
 
+![Latência_1](../../static/img/sprint_3/latencia_metros.png "Latência(ms) X Distância(m)")
 
+**OBS: Vale lembrar que, quanto menor a latência, melhor a comunicação para o controle do robô. E que esses valores estão sendo colocados a prova ainda pois estamos fazendo testes para medir com maior precisão a maior ditância que podemos controlar o robô e qual é a latência dessa comunicação**
+
+# Dados e possiveis gráficos para a visualização da Latência (em tempo real):
+Ja com esse gráfico, podemos perceber o perído de resposta (Latência) em uma comunicação entre o robô e o computador que durou 50 segundos antes de encerrar, podemos ver alguns picos que tiveram que retratam muito bem a requisição de serviços de frames dos vídeos:
+
+![Latência_1](../../static/img/sprint_3/latencia_comunicacao.png "Latência em tempo real")
 
 # Conclusão
 A função latencia implementada neste projeto é essencial para monitorar e otimizar a latência na captura e publicação de frames de vídeo. A medição contínua e a exibição da latência permitem identificar e corrigir problemas rapidamente, garantindo que o sistema funcione de maneira eficiente e responsiva.
-
 
 # Explicação sobre a Bateria no projeto
 
@@ -55,7 +62,7 @@ Além disso, ignorar o monitoramento do nível de carga da bateria pode ser prej
 
 Abaixo, apresentamos um gráfico que ilustra a vida útil da bateria ao longo do tempo sem os cuidados adequados. Este gráfico mostra a degradação acelerada da voltagem da bateria devido à falta de manutenção apropriada, destacando a importância de seguir as práticas recomendadas para garantir a longevidade da bateria:
 
-![Gráficos_1](../../static/img/sprint_3/bateria_ruim.png "Bateria cuidada de forma adequada")
+![Gráficos_2](../../static/img/sprint_3/bateria_ruim.png "Bateria cuidada de forma inadequada")
 
 **OBS: Vale lembrar que se a voltagem da bateria ficar abaixo de 10V ela não funciona mais, ela incha por ser de lítio e para de funcinar e inchando é possível que exploda**
 
