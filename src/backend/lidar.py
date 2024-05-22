@@ -6,6 +6,7 @@ from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
 import sys, select, tty, termios
+import math
 
 BURGER_MAX_LIN_VEL = 0.22
 BURGER_MAX_ANG_VEL = 2.84
@@ -90,7 +91,10 @@ class TeleopAndLidarNode(Node):
         self.target_angular_vel = 0.0
         self.control_linear_vel = 0.0
         self.control_angular_vel = 0.0
-        self.obstacle_detected = False
+        self.obstacle_detected_forward = False
+        self.obstacle_detected_left = False
+        self.obstacle_detected_right = False
+        self.obstacle_detected_backward = False
         self.settings = termios.tcgetattr(sys.stdin)
         self.get_logger().info(msg)
         self.timer = self.create_timer(0.1, self.update)
@@ -98,16 +102,20 @@ class TeleopAndLidarNode(Node):
     def update(self):
         key = getKey(self.settings)
         if key == '\x1b[A':  # Up arrow
-            self.target_linear_vel = checkLinearLimitVelocity(self.target_linear_vel + LIN_VEL_STEP_SIZE)
+            if not self.obstacle_detected_forward:
+                self.target_linear_vel = checkLinearLimitVelocity(self.target_linear_vel + LIN_VEL_STEP_SIZE)
             self.get_logger().info(vels(self.target_linear_vel, self.target_angular_vel))
         elif key == '\x1b[B':  # Down arrow
-            self.target_linear_vel = checkLinearLimitVelocity(self.target_linear_vel - LIN_VEL_STEP_SIZE)
+            if not self.obstacle_detected_backward:
+                self.target_linear_vel = checkLinearLimitVelocity(self.target_linear_vel - LIN_VEL_STEP_SIZE)
             self.get_logger().info(vels(self.target_linear_vel, self.target_angular_vel))
         elif key == '\x1b[D':  # Left arrow
-            self.target_angular_vel = checkAngularLimitVelocity(self.target_angular_vel + ANG_VEL_STEP_SIZE)
+            if not self.obstacle_detected_left:
+                self.target_angular_vel = checkAngularLimitVelocity(self.target_angular_vel + ANG_VEL_STEP_SIZE)
             self.get_logger().info(vels(self.target_linear_vel, self.target_angular_vel))
         elif key == '\x1b[C':  # Right arrow
-            self.target_angular_vel = checkAngularLimitVelocity(self.target_angular_vel - ANG_VEL_STEP_SIZE)
+            if not self.obstacle_detected_right:
+                self.target_angular_vel = checkAngularLimitVelocity(self.target_angular_vel - ANG_VEL_STEP_SIZE)
             self.get_logger().info(vels(self.target_linear_vel, self.target_angular_vel))
         elif key == ' ':
             self.target_linear_vel = 0.0
@@ -122,12 +130,11 @@ class TeleopAndLidarNode(Node):
                 termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self.settings)
                 return
 
-        if self.obstacle_detected:
+        if self.obstacle_detected_backward or self.obstacle_detected_forward or self.obstacle_detected_left or self.obstacle_detected_right and self.target_linear_vel > 0:
             self.control_linear_vel = 0.0
-            self.control_angular_vel = 0.0
-        else:
-            self.control_linear_vel = makeSimpleProfile(self.control_linear_vel, self.target_linear_vel, (LIN_VEL_STEP_SIZE / 2.0))
-            self.control_angular_vel = makeSimpleProfile(self.control_angular_vel, self.target_angular_vel, (ANG_VEL_STEP_SIZE / 2.0))
+        # else:
+        self.control_linear_vel = makeSimpleProfile(self.control_linear_vel, self.target_linear_vel, (LIN_VEL_STEP_SIZE / 2.0))
+        self.control_angular_vel = makeSimpleProfile(self.control_angular_vel, self.target_angular_vel, (ANG_VEL_STEP_SIZE / 2.0))
 
         twist = Twist()
         twist.linear.x = self.control_linear_vel
@@ -140,16 +147,22 @@ class TeleopAndLidarNode(Node):
         self.publisher.publish(twist)
 
     def lidar_callback(self, msg):
-        # Print the minimum range detected by the LIDAR
-        min_distance = min(msg.ranges)
-        self.get_logger().info(f'Min distance: {min_distance}')
+        front_index = 0
+        right_index = int(len(msg.ranges) / 4)
+        back_index = int(len(msg.ranges) / 2)
+        left_index = int(len(msg.ranges) * 3 / 4)
 
-        # Check if there's something within 0.15 meters
-        if min_distance < STOP_DISTANCE:
-            self.get_logger().warn(f'Objeto detectado em {STOP_DISTANCE} metros! Parando o robô.')
-            self.obstacle_detected = True
-        else:
-            self.obstacle_detected = False
+        front_distance = msg.ranges[front_index]
+        left_distance = msg.ranges[left_index]
+        back_distance = msg.ranges[back_index]
+        right_distance = msg.ranges[right_index]
+
+        self.get_logger().info(f'Front distance: {front_distance}, Left distance: {left_distance}, Back distance: {back_distance}, Right distance: {right_distance}')
+
+        self.obstacle_detected_forward = front_distance < STOP_DISTANCE
+        self.obstacle_detected_left = left_distance < STOP_DISTANCE
+        self.obstacle_detected_right = right_distance < STOP_DISTANCE
+        self.obstacle_detected_backward = back_distance < STOP_DISTANCE
 
 def main(args=None):
     rclpy.init(args=args)
