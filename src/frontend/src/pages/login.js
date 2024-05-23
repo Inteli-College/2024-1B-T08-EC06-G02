@@ -1,5 +1,5 @@
 import React from 'react';
-import '../static/main.css';  // Mantém o caminho correto para o CSS
+import '../static/login.css';  // Mantém o caminho correto para o CSS
 
 const Login = () => {
     return (

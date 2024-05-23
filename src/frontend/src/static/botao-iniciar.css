@@ -1,0 +1,20 @@
+.botao-iniciar {
+  width: 180px;
+  height: 120px;
+  position: absolute;
+  border-radius: 10px;
+  background-color: #152457;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+  font-size: 22px;
+  font-weight: 800;
+  cursor: pointer;
+  border: none; /* Remove a borda padrão */
+  bottom: 75px;
+  left: 290px;
+}
+
+.botao-iniciar:hover {
+  background-color: #25385A; /* Cor ao passar o mouse */
+}

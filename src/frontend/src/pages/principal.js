@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import ROSLIB from 'roslib';
 import '../static/principal.css';  // Caminho correto para o CSS
+import BotaoIniciar from '../components/botao-iniciar'; // Corrige a importação para minúsculas
+import BotaoVisualizar from '../components/botao-visualizar'; // Corrige a importação para minúsculas
+import BotoesMover from '../components/botoes-mover'; // Corrige a importação para minúsculas
 
 const Principal = () => {
   const [videoSrc, setVideoSrc] = useState('');
@@ -45,25 +48,12 @@ const Principal = () => {
       <div className="content-box">
         <img id="videoStream" alt="Video Stream" src={videoSrc} className="video-stream" />
       </div>
-        <button className="view-button">
-          <img src={`${process.env.PUBLIC_URL}/visu-botao.png`} alt="cima"/>
-        </button>
-        <button className="start-button">INICIAR</button>
-        <div className="navigation-buttons">
-          <button className="nav-button up">
-            <img src={`${process.env.PUBLIC_URL}/seta-cima.png`} alt="cima"/>
-          </button>
-          <button className="nav-button left">
-            <img src={`${process.env.PUBLIC_URL}/seta-esquerda.png`} alt="esquerda"/>
-          </button>
-          <button className="nav-button down">
-            <img src={`${process.env.PUBLIC_URL}/seta-baixo.png`} alt="baixo"/>
-          </button>
-          <button className="nav-button right">
-            <img src={`${process.env.PUBLIC_URL}/seta-direita.png`} alt="direita"/>
-          </button>
-        </div>
+      <div className="control-buttons">
+        <BotaoIniciar onClick={() => console.log('Botão Iniciar clicado!')} />
+        <BotoesMover />
       </div>
+      <BotaoVisualizar onClick={() => console.log('Botão Visualizar clicado!')} />
+    </div>
   );
 };
 

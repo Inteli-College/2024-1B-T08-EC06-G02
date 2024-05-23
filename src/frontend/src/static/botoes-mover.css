@@ -1,0 +1,49 @@
+.navigation-buttons {
+  display: grid;
+  grid-template-areas: 
+    ". up ."
+    "left . right"
+    ". down .";
+  grid-gap: 15px; /* Espaço entre os botões */
+  position: absolute;
+  bottom: 35px;
+  right: 290px;
+}
+
+.nav-button {
+  width: 90px;
+  height: 40px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.nav-button img {
+  width: 100%; /* Assegura que a imagem ocupe 100% do botão */
+}
+
+.nav-button.left {
+  grid-area: left;
+}
+
+.nav-button.left:hover,
+.nav-button.up:hover,
+.nav-button.right:hover,
+.nav-button.down:hover {
+  transform: scale(1.1); /* Aplica o hover a todas as direções */
+}
+
+.nav-button.up {
+  grid-area: up;
+}
+
+.nav-button.right {
+  grid-area: right;
+}
+
+.nav-button.down {
+  grid-area: down;
+}
