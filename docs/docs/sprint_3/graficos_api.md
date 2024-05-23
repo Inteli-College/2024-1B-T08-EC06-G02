@@ -153,3 +153,24 @@ plt.show()
 
 ## Conclusão:
 Cuidar adequadamente da bateria LB-12 é crucial para garantir a segurança e a eficiência do TurtleBot. Utilizar um carregador balanceador adequado e monitorar o nível de carga regularmente prolonga a vida útil da bateria e evita riscos, como explosões. Negligenciar esses cuidados resulta em degradação acelerada, perda de capacidade e possíveis danos irreparáveis. Seguir as práticas recomendadas é essencial para manter o robô funcionando de maneira eficiente e segura.
+
+# Explicação da API da câmera no projeto
+
+## Introdução:
+Este documento tem como objetivo explicar a utilização da câmera no projeto de inspeção de canos do reboiler. A câmera será utilizada para visualizar os canos do reboiler, possibilitando a identificação de sujeiras e obstruções. No contexto deste projeto, a capacidade de capturar imagens é essencial para a detecção das impurezas e manutenção preventiva eficiente. A implementação desta tecnologia é crucial para assegurar a integridade operacional dos reboilers, reduzindo o risco de falhas e otimizando os processos de limpeza e manutenção.
+
+## Funcionamento da câmera no projeto:
+Para entendermos melhor a transmissão de dados de imagem para a nossa página web, a câmera está conectada com essa a página via websocket (é uma tecnologia que permite a comunicação bidirecional por canais full-duplex sobre um único soquete Transmission Control Protocol).
+A imagem é capturada pela câmera e enviada para o servidor web, que a armazena em um arquivo temporário.
+Com isso, podemos gerar um gráfico partindo das imagens que foram armazenadas no banco de dados.
+
+## Mapa de calor partindo das imagens da câmera:
+Com base nas imganes coletadas, podemos demonstrar através de um mapa de calor.
+O objetivo dessas imagens é poder demonstrar a situação dos canos em relação a sujeira, as manchas vermelhas são os pontos que contém mais sujeira, já os pontos em verde são as partes que estão, de certa forma, limpas.
+
+![Visão computacional](../../static/img/sprint_3/mapa_de_calor.png "Mapa de Calor")
+
+**OBS: Esse funcionamento de visão computacional mostrando o mapa de calor detectando as sujeiras é uma funcionalidade que ainda será trabalhada para poder implementar no projeto. Essa é uma imagem meramente ilustrativa**
+
+## Conclusão:
+A implementação da câmera no projeto de inspeção dos canos do reboiler desempenha um papel crucial na identificação e monitoramento de sujeiras e obstruções, facilitando a manutenção preventiva e assegurando a eficiência operacional. A integração da câmera com a página web via websocket permite uma transmissão de dados de imagem eficiente, possibilitando o armazenamento e análise das imagens capturadas. A utilização de mapas de calor, embora ainda em fase de desenvolvimento, promete aprimorar significativamente a visualização e a identificação das áreas mais críticas em termos de sujeira. Assim, o uso dessa tecnologia representa um avanço importante na manutenção dos reboilers, potencialmente prolongando a vida útil dos equipamentos e reduzindo o risco de falhas operacionais.
