@@ -1,5 +1,5 @@
 import React from 'react';
-import '../static/partials/home/botao-visualizar.css'; // Importa o CSS específico para o botão de visualização
+// import '../../static/partials/home/botao-visualizar.css'; // Importa o CSS específico para o botão de visualização
 
 const BotaoVisualizar = ({ onClick }) => {
   return (

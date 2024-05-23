@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import ROSLIB from 'roslib';
-import '../static/partials/home/principal.css';  // Caminho correto para o CSS
-import BotaoIniciar from '../components/botao-iniciar'; // Corrige a importação para minúsculas
-import BotaoVisualizar from '../components/botao-visualizar'; // Corrige a importação para minúsculas
-import BotoesMover from '../components/botoes-mover'; // Corrige a importação para minúsculas
+import '../static/main.css';  // Caminho correto para o CSS
+import BotaoIniciar from '../components/home/botao-iniciar'; // Corrige a importação para minúsculas
+import BotaoVisualizar from '../components/home/botao-visualizar'; // Corrige a importação para minúsculas
+import BotoesMover from '../components/home/botoes-mover'; // Corrige a importação para minúsculas
 
 const Principal = () => {
   const [videoSrc, setVideoSrc] = useState('');

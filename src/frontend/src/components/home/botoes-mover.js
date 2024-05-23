@@ -1,5 +1,5 @@
 import React from 'react';
-import '../static/partials/home/botoes-mover.css'; // Importa o CSS específico para os botões de navegação
+// import '../../static/partials/home/botoes-mover.css'; // Importa o CSS específico para os botões de navegação
 
 const BotoesMover = () => {
   return (
