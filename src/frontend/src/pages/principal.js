@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ROSLIB from 'roslib';
-import '../static/principal.css';  // Caminho correto para o CSS
+import '../static/partials/home/principal.css';  // Caminho correto para o CSS
 import BotaoIniciar from '../components/botao-iniciar'; // Corrige a importação para minúsculas
 import BotaoVisualizar from '../components/botao-visualizar'; // Corrige a importação para minúsculas
 import BotoesMover from '../components/botoes-mover'; // Corrige a importação para minúsculas

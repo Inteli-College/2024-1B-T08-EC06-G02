@@ -1,5 +1,5 @@
 import React from 'react';
-import '../static/botao-iniciar.css';  // Caminho correto para o CSS
+import '../static/partials/home/botao-iniciar.css';  // Caminho correto para o CSS
 
 const BotaoIniciar = ({ onClick }) => {
   return (
