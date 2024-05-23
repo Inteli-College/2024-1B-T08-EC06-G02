@@ -1,0 +1,74 @@
+.aba{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+    height: 100vh;
+    background-color: #F8F9FA;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+
+.titulo-grafico{
+    color: #152457;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-top: 40px;
+}
+
+.grafico-container{
+    width: 305px;
+    height: 244px;
+}
+
+.grafico{
+    width: 100%;
+}
+
+.analise-button{
+    width: 380px;
+    height: 60px;
+    border-radius: 11px;
+    border: 1px solid #F3AB87;
+    background: #E6E6E6;
+    box-shadow: 0px 8.227px 8.227px 0px rgba(0, 0, 0, 0.25);
+    color: #F85D10;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.titulo-status{
+    color: #152457;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-top: 40px;
+}
+
+.status-container{
+    width: 278px;
+    height: 87px;
+    border-radius: 11px;
+    border: 1px solid #F3AB87;
+    background: #E6E6E6;
+    color: #F85D10;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
