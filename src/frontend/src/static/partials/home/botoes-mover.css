@@ -4,15 +4,15 @@
     ". up ."
     "left . right"
     ". down .";
-  grid-gap: 15px; /* Espaço entre os botões */
+  grid-gap: 15px; 
   position: absolute;
   bottom: 35px;
   right: 290px;
 }
 
 .nav-button {
-  width: 90px;
-  height: 40px;
+  width: px; 
+  height: 100px;
   padding: 0;
   cursor: pointer;
   display: flex;
@@ -20,9 +20,8 @@
   align-items: center;
 }
 
-
 .nav-button img {
-  width: 100%; /* Assegura que a imagem ocupe 100% do botão */
+  width: auto;
 }
 
 .nav-button.left {
@@ -33,7 +32,7 @@
 .nav-button.up:hover,
 .nav-button.right:hover,
 .nav-button.down:hover {
-  transform: scale(1.1); /* Aplica o hover a todas as direções */
+  transform: scale(1.1); 
 }
 
 .nav-button.up {
