@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import ROSLIB from 'roslib';
-import '../static/main.css'; 
-import BotaoIniciar from '../components/home/botao-iniciar'; 
-import BotaoVisualizar from '../components/home/botao-visualizar'; 
-import BotoesMover from '../components/home/botoes-mover'; 
-import AbaVisualizar from '../components/home/aba-visualizar'; 
+import '../static/main.css';
+import BotaoIniciar from '../components/home/botao-iniciar';
+import BotaoVisualizar from '../components/home/botao-visualizar';
+import BotoesMover from '../components/home/botoes-mover';
+import AbaVisualizar from '../components/home/aba-visualizar';
 
 const Principal = () => {
   const [videoSrc, setVideoSrc] = useState('');
@@ -54,8 +54,10 @@ const Principal = () => {
       <div className="content-box">
         <img id="videoStream" alt="Video Stream" src={videoSrc} className="video-stream" />
       </div>
-      <div className="control-buttons">
+      <div className={`control-buttons ${isAbaVisible ? 'with-aba' : ''}`}>
         <BotaoIniciar onClick={() => console.log('Botão Iniciar clicado!')} />
+      </div>
+      <div className={`navigation-buttons ${isAbaVisible ? 'with-aba' : ''}`}>
         <BotoesMover />
       </div>
       <BotaoVisualizar onClick={toggleAbaVisualizar} />

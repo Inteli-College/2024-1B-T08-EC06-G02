@@ -5,11 +5,12 @@
     align-items: center;
     width: 25%;
     height: 100vh;
-    background-color: #F8F9FA;
+    background-color: #f1f1f1;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     position: fixed;
     right: 0;
     top: 0;
+    transition: right 0.3s ease;
 }
 
 .titulo-grafico {
@@ -19,7 +20,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
     font-size: 20px;
     font-weight: 800;
-    margin-top: 80px;
+    margin-top: 85px;
 }
 
 .grafico-container {
@@ -50,7 +51,7 @@
 }
 
 .analise-button:hover {
-    background-color: #ffffff;
+    background-color: #f5f5f5;
 }
 
 .titulo-status {

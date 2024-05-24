@@ -4,28 +4,25 @@
     ". up ."
     "left . right"
     ". down .";
-  grid-gap: 15px; 
-  position: relative;
-  bottom: 35px;
-  right: 290px;
+  grid-gap: 10px; 
+  position: absolute;
+  bottom: 40px;
+  right: 145px;
+  transition: right 0.3s ease;
 }
 
 .nav-button {
-  width: px; 
-  height: 100px;
+  width: 90px;
+  height: 40px;
+  border: none;
+  background: none;
   padding: 0;
+  margin: 5px;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .nav-button img {
-  width: auto;
-}
-
-.nav-button.left {
-  grid-area: left;
+  width: 100%; 
 }
 
 .nav-button.left:hover,
@@ -33,6 +30,10 @@
 .nav-button.right:hover,
 .nav-button.down:hover {
   transform: scale(1.1); 
+}
+
+.nav-button.left {
+  grid-area: left;
 }
 
 .nav-button.up {

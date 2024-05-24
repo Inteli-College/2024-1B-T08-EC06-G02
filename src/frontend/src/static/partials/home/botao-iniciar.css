@@ -1,7 +1,7 @@
 .botao-iniciar {
   width: 180px;
   height: 120px;
-  position: relative;
+  position: absolute;
   border-radius: 10px;
   background-color: #152457;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
@@ -10,11 +10,18 @@
   font-size: 22px;
   font-weight: 800;
   cursor: pointer;
-  border: none;
+  border: none; 
   bottom: 75px;
   left: 290px;
 }
 
 .botao-iniciar:hover {
-  background-color: #25385A;
+  background-color: #25385A; 
+}
+
+.control-buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transition: left 0.3s ease;
 }
