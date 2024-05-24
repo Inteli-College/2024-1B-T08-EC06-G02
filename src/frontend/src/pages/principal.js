@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import ROSLIB from 'roslib';
-import '../static/main.css';  // Caminho correto para o CSS
-import BotaoIniciar from '../components/home/botao-iniciar'; // Corrige a importação para minúsculas
-import BotaoVisualizar from '../components/home/botao-visualizar'; // Corrige a importação para minúsculas
-import BotoesMover from '../components/home/botoes-mover'; // Corrige a importação para minúsculas
-import AbaVisualizar from '../components/home/aba-visualizar'; // Caminho correto para o componente
+import '../static/main.css'; 
+import BotaoIniciar from '../components/home/botao-iniciar'; 
+import BotaoVisualizar from '../components/home/botao-visualizar'; 
+import BotoesMover from '../components/home/botoes-mover'; 
+import AbaVisualizar from '../components/home/aba-visualizar'; 
 
 const Principal = () => {
   const [videoSrc, setVideoSrc] = useState('');
@@ -59,7 +59,7 @@ const Principal = () => {
         <BotoesMover />
       </div>
       <BotaoVisualizar onClick={toggleAbaVisualizar} />
-      {isAbaVisible && <AbaVisualizar />}
+      {isAbaVisible && <AbaVisualizar onClose={toggleAbaVisualizar} />}
     </div>
   );
 };

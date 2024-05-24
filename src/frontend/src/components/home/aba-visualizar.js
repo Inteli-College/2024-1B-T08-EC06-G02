@@ -1,10 +1,10 @@
 import React from 'react';
-import '../../static/partials/visualizar/visualizar.css';  // Caminho correto para o CSS
+import '../../static/partials/visualizar/visualizar.css'; 
 
-const AbaVisualizar = () => {
+const AbaVisualizar = ({ onClose }) => {
     return (
         <div className="aba">
-            <button className="view-button" >
+            <button className="view-button" onClick={onClose}>
                 <img src={`${process.env.PUBLIC_URL}/visu-botao.png`} alt="View" className="view-icon" />
             </button>
             <div className="titulo-grafico">

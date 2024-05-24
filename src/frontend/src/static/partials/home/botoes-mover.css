@@ -5,7 +5,7 @@
     "left . right"
     ". down .";
   grid-gap: 15px; 
-  position: absolute;
+  position: relative;
   bottom: 35px;
   right: 290px;
 }

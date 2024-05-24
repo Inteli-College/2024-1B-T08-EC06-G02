@@ -1,7 +1,7 @@
 .botao-iniciar {
   width: 180px;
   height: 120px;
-  position: absolute;
+  position: relative;
   border-radius: 10px;
   background-color: #152457;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
@@ -10,7 +10,7 @@
   font-size: 22px;
   font-weight: 800;
   cursor: pointer;
-  border: none; /* Remove a borda padrão */
+  border: none;
   bottom: 75px;
   left: 290px;
 }

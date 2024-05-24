@@ -23,14 +23,14 @@
 }
 
 .grafico-container {
-    width: 90%; /* Ajuste a largura conforme necessário */
-    height: auto; /* A altura será ajustada automaticamente */
-    margin-top: -10px; /* Espaço entre o título e o gráfico */
+    width: 90%;
+    height: auto; 
+    margin-top: -10px;
 }
 
 .grafico {
-    width: 100%; /* Ajuste a largura conforme necessário */
-    height: auto; /* A altura será ajustada automaticamente */
+    width: 100%; 
+    height: auto; 
 }
 
 .analise-button {
@@ -65,7 +65,7 @@
 }
 
 .status-container {
-    width: 80%; /* Ajuste a largura conforme necessário */
+    width: 80%;
     height: 100px;
     border-radius: 11px;
     border: 1px solid #F3AB87;
@@ -77,7 +77,7 @@
     font-style: normal;
     font-weight: 1000;
     line-height: normal;
-    margin-top: -5px; /* Espaço entre o título e a caixa de status */
+    margin-top: -5px; 
 }
 
 .status {
