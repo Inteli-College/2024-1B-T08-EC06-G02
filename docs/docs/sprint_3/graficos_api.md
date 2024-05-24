@@ -2,98 +2,44 @@
 sidebar_position: 1
 ---
 
-# Explicação da Latência no Projeto
+# Sugestão de gráficos para Atvos
+A documentação a seguir apresenta uma análise detalhada e visual dos dados coletados ao longo do projeto feito para a empresa Atvos. Com o objetivo de proporcionar uma visão abrangente e precisa do progresso e dos resultados obtidos, foram gerados diversos gráficos que ilustram os principais indicadores de desempenho.
+
+Essas sugestões de gráficos são ferramentas que a empresa Atvos possa obter insights valiosos, permitindo uma tomada de decisão mais informada e estratégica. A visualização dos dados facilita a identificação de padrões, tendências e possíveis áreas de melhoria, contribuindo para a otimização dos processos e a maximização dos resultados.
+
+Além disso, os gráficos aqui apresentados podem ser integrados a um sistema de Business Intelligence (BI), oferecendo uma visão dinâmica de como as iniciativas implementadas estão evoluindo. Com isso, a Atvos poderá monitorar o desempenho em tempo real, ajustando suas estratégias conforme necessário e assegurando que os objetivos do projeto sejam alcançados de maneira eficiente e eficaz.
+
+Portanto, esta documentação não apenas serve como um registro detalhado das atividades e resultados, mas também como uma base para a construção de um BI, fundamental para o sucesso contínuo da Atvos.
+
+# Explicação da API da câmera no projeto
 
 ## Introdução:
-Este documento tem como objetivo explicar a função de latência implementada no projeto de publicação de frames de vídeo usando ROS 2 (Robot Operating System). No contexto deste projeto, a latência refere-se ao tempo de atraso entre a captura de um frame pela câmera e a publicação deste frame como uma mensagem no tópico ROS. Entender e monitorar essa latência é crucial para aplicações em que o tempo real é um fator importante, como robótica, vigilância e sistemas de controle.
+Este documento tem como objetivo explicar a utilização da câmera no projeto de inspeção de canos do reboiler. A câmera será utilizada para visualizar os canos do reboiler, possibilitando a identificação de sujeiras e obstruções. No contexto deste projeto, a capacidade de capturar imagens é essencial para a detecção das impurezas e manutenção preventiva eficiente. A implementação desta tecnologia é crucial para assegurar a integridade operacional dos reboilers, reduzindo o risco de falhas e otimizando os processos de limpeza e manutenção.
 
-## Funcionamento da latência no projeto:
-A latência é um fator crítico em sistemas de visão computacional e robótica, onde decisões baseadas em vídeo precisam ser tomadas rapidamente. Monitorar a latência ajuda a:
+## Funcionamento da câmera no projeto:
+Para entendermos melhor a transmissão de dados de imagem para a nossa página web, a câmera está conectada com essa a página via websocket (é uma tecnologia que permite a comunicação bidirecional por canais full-duplex sobre um único soquete Transmission Control Protocol).
+A imagem é capturada pela câmera e enviada para o servidor web, que a armazena em um arquivo temporário.
+Com isso, podemos gerar um gráfico partindo das imagens que foram armazenadas no banco de dados.
 
-**Avaliar o Desempenho:** Identificar gargalos no sistema que podem atrasar o processamento de vídeo.
+## Mapa de calor partindo das imagens da câmera:
+Com base nas imagens analisadas pela câmera, idealizou-se que um gráfico de calor seria uma boa forma de representar os pontos de sujeira.
+O objetivo dessas imagens é poder demonstrar a situação dos canos em relação a sujeira, as manchas vermelhas são os pontos que contém mais sujeira, já os pontos em verde são as partes que estão, de certa forma, limpas.
 
-**Melhorar a Qualidade do Serviço:** Ajustar parâmetros do sistema para reduzir a latência e melhorar a resposta em tempo real.
+<div align="center">
 
-**Diagnosticar Problemas:** Detectar problemas com a câmera ou o sistema de captura que possam estar introduzindo atrasos inesperados.
+![Visão computacional](../../static/img/sprint_3/mapa_de_calor.png "Mapa de Calor")
 
-## Dados e possiveis gráficos para a visualização da Latência (em tempo real):
-Este gráfico com valores estáticos serve para medir a distância e a latência entre o computador e o robô, garantindo a execução perfeita dos comandos. Quanto maior a distância, maior a latência. Portanto, é essencial monitorar esses fatores para manter a comunicação eficiente e a câmera, juntamente com o robô, funcionando corretamente:
+</div>
 
-![Latência_1](../../static/img/sprint_3/latencia_metros.png "Latência(ms) X Distância(m)")
 
 <div align="center">
 Fonte: Elaboração do grupo Repipe
 </div>
 
-
-**OBS: Vale lembrar que, quanto menor a latência, melhor a comunicação para o controle do robô. E que esses valores estão sendo colocados a prova ainda pois estamos fazendo testes para medir com maior precisão a maior ditância que podemos controlar o robô e qual é a latência dessa comunicação**
-
-## Script para a obtenção do gráfico de latencia X distância:
-Para conseguir plotar o mesmo gráfico que esta acima, usa-se esse código em python:
-```python
-import matplotlib.pyplot as plt
-
-# Dados fornecidos
-distancias = ['1 - 5', '5 - 10', '10 - 20', '20 - 30', '30 - 50']
-latencias = [20, 25, 32, 40, 48]
-
-# Criação do gráfico de barras
-plt.figure(figsize=(10, 6))
-plt.bar(distancias, latencias, color='b')
-plt.title('Latência em função da Distância')
-plt.xlabel('Distância (M)')
-plt.ylabel('Latência (ms)')
-plt.grid(axis='y')
-plt.show()
-```
-
-<div align="center">
-Fonte: Elaboração do grupo Repipe
-</div>
-
-
-## Dados e possiveis gráficos para a visualização da Latência (em tempo real):
-Ja com esse gráfico, podemos perceber o perído de resposta (Latência) em uma comunicação entre o robô e o computador que durou 50 segundos antes de encerrar, podemos ver alguns picos que tiveram que retratam muito bem a requisição de serviços de frames dos vídeos:
-
-![Latência_1](../../static/img/sprint_3/latencia_comunicacao.png "Latência em tempo real")
-
-<div align="center">
-Fonte: Elaboração do grupo Repipe
-</div>
-
-
-
-## Script para a obtenção do gráfico de latencia em tempo real:
-Para conseguir plotar o mesmo gráfico que esta acima, usa-se esse código em python:
-```python
-import matplotlib.pyplot as plt
-
-# Dados fornecidos
-duracao_comunicacao = list(range(1, 51))
-latencia = [20, 21, 20, 25, 24, 23, 20, 27, 25, 28, 26, 24, 22, 20, 20, 21, 22, 21, 20, 21, 
-            20, 20, 28, 27, 26, 24, 23, 28, 27, 25, 23, 22, 20, 21, 22, 21, 20, 25, 24, 22, 
-            20, 21, 28, 27, 25, 23, 21, 20, 21, 20]
-
-# Plot do gráfico de linhas
-plt.figure(figsize=(12, 6))
-plt.plot(duracao_comunicacao, latencia, marker='o', linestyle='-', color='b')
-plt.title('Latência durante a comunicação de 50 segundos')
-plt.xlabel('Duração da Comunicação (segundos)')
-plt.ylabel('Latência (ms)')
-plt.grid(True)
-plt.xticks(duracao_comunicacao, rotation=90)
-plt.tight_layout()
-
-# Exibindo o gráfico
-plt.show()
-```
-
-<div align="center">
-Fonte: Elaboração do grupo Repipe
-</div>
+**OBS: Esse funcionamento de visão computacional mostrando o mapa de calor detectando as sujeiras é uma funcionalidade que ainda será trabalhada para poder implementar no projeto. Essa é uma imagem meramente ilustrativa**
 
 ## Conclusão:
-A função latencia implementada neste projeto é essencial para monitorar e otimizar a latência na captura e publicação de frames de vídeo. A medição contínua e a exibição da latência permitem identificar e corrigir problemas rapidamente, garantindo que o sistema funcione de maneira eficiente e responsiva.
+A implementação da câmera no projeto de inspeção dos canos do reboiler desempenha um papel crucial na identificação e monitoramento de sujeiras e obstruções, facilitando a manutenção preventiva e assegurando a eficiência operacional. A integração da câmera com a página web via websocket permite uma transmissão de dados de imagem eficiente, possibilitando o armazenamento e análise das imagens capturadas. A utilização de mapas de calor, embora ainda em fase de desenvolvimento, promete aprimorar significativamente a visualização e a identificação das áreas mais críticas em termos de sujeira. Assim, o uso dessa tecnologia representa um avanço importante na manutenção dos reboilers, potencialmente prolongando a vida útil dos equipamentos e reduzindo o risco de falhas operacionais.
 
 # Explicação sobre a Bateria no projeto
 
@@ -186,32 +132,93 @@ Fonte: Elaboração do grupo Repipe
 ## Conclusão:
 Cuidar adequadamente da bateria LB-12 é crucial para garantir a segurança e a eficiência do TurtleBot. Utilizar um carregador balanceador adequado e monitorar o nível de carga regularmente prolonga a vida útil da bateria e evita riscos, como explosões. Negligenciar esses cuidados resulta em degradação acelerada, perda de capacidade e possíveis danos irreparáveis. Seguir as práticas recomendadas é essencial para manter o robô funcionando de maneira eficiente e segura.
 
-# Explicação da API da câmera no projeto
+# Explicação da Latência no Projeto
 
 ## Introdução:
-Este documento tem como objetivo explicar a utilização da câmera no projeto de inspeção de canos do reboiler. A câmera será utilizada para visualizar os canos do reboiler, possibilitando a identificação de sujeiras e obstruções. No contexto deste projeto, a capacidade de capturar imagens é essencial para a detecção das impurezas e manutenção preventiva eficiente. A implementação desta tecnologia é crucial para assegurar a integridade operacional dos reboilers, reduzindo o risco de falhas e otimizando os processos de limpeza e manutenção.
+Este documento tem como objetivo explicar a função de latência implementada no projeto de publicação de frames de vídeo usando ROS 2 (Robot Operating System). No contexto deste projeto, a latência refere-se ao tempo de atraso entre a captura de um frame pela câmera e a publicação deste frame como uma mensagem no tópico ROS. Entender e monitorar essa latência é crucial para aplicações em que o tempo real é um fator importante, como robótica, vigilância e sistemas de controle.
 
-## Funcionamento da câmera no projeto:
-Para entendermos melhor a transmissão de dados de imagem para a nossa página web, a câmera está conectada com essa a página via websocket (é uma tecnologia que permite a comunicação bidirecional por canais full-duplex sobre um único soquete Transmission Control Protocol).
-A imagem é capturada pela câmera e enviada para o servidor web, que a armazena em um arquivo temporário.
-Com isso, podemos gerar um gráfico partindo das imagens que foram armazenadas no banco de dados.
+## Funcionamento da latência no projeto:
+A latência é um fator crítico em sistemas de visão computacional e robótica, onde decisões baseadas em vídeo precisam ser tomadas rapidamente. Monitorar a latência ajuda a:
 
-## Mapa de calor partindo das imagens da câmera:
-Com base nas imagens analisadas pela câmera, idealizou-se que um gráfico de calor seria uma boa forma de representar os pontos de sujeira.
-O objetivo dessas imagens é poder demonstrar a situação dos canos em relação a sujeira, as manchas vermelhas são os pontos que contém mais sujeira, já os pontos em verde são as partes que estão, de certa forma, limpas.
+**Avaliar o Desempenho:** Identificar gargalos no sistema que podem atrasar o processamento de vídeo.
 
-<div align="center">
+**Melhorar a Qualidade do Serviço:** Ajustar parâmetros do sistema para reduzir a latência e melhorar a resposta em tempo real.
 
-![Visão computacional](../../static/img/sprint_3/mapa_de_calor.png "Mapa de Calor")
+**Diagnosticar Problemas:** Detectar problemas com a câmera ou o sistema de captura que possam estar introduzindo atrasos inesperados.
 
-</div>
+## Dados e possiveis gráficos para a visualização da Latência (em tempo real):
+Este gráfico com valores estáticos serve para medir a distância e a latência entre o computador e o robô, garantindo a execução perfeita dos comandos. Quanto maior a distância, maior a latência. Portanto, é essencial monitorar esses fatores para manter a comunicação eficiente e a câmera, juntamente com o robô, funcionando corretamente:
 
+![Latência_1](../../static/img/sprint_3/latencia_metros.png "Latência(ms) X Distância(m)")
 
 <div align="center">
 Fonte: Elaboração do grupo Repipe
 </div>
 
-**OBS: Esse funcionamento de visão computacional mostrando o mapa de calor detectando as sujeiras é uma funcionalidade que ainda será trabalhada para poder implementar no projeto. Essa é uma imagem meramente ilustrativa**
+**OBS: Vale lembrar que, quanto menor a latência, melhor a comunicação para o controle do robô. E que esses valores estão sendo colocados a prova ainda pois estamos fazendo testes para medir com maior precisão a maior ditância que podemos controlar o robô e qual é a latência dessa comunicação**
+
+## Script para a obtenção do gráfico de latencia X distância:
+Para conseguir plotar o mesmo gráfico que esta acima, usa-se esse código em python:
+```python
+import matplotlib.pyplot as plt
+
+# Dados fornecidos
+distancias = ['1 - 5', '5 - 10', '10 - 20', '20 - 30', '30 - 50']
+latencias = [20, 25, 32, 40, 48]
+
+# Criação do gráfico de barras
+plt.figure(figsize=(10, 6))
+plt.bar(distancias, latencias, color='b')
+plt.title('Latência em função da Distância')
+plt.xlabel('Distância (M)')
+plt.ylabel('Latência (ms)')
+plt.grid(axis='y')
+plt.show()
+```
+
+<div align="center">
+Fonte: Elaboração do grupo Repipe
+</div>
+
+
+## Dados e possiveis gráficos para a visualização da Latência (em tempo real):
+Ja com esse gráfico, podemos perceber o perído de resposta (Latência) em uma comunicação entre o robô e o computador que durou 50 segundos antes de encerrar, podemos ver alguns picos que tiveram que retratam muito bem a requisição de serviços de frames dos vídeos:
+
+![Latência_1](../../static/img/sprint_3/latencia_comunicacao.png "Latência em tempo real")
+
+<div align="center">
+Fonte: Elaboração do grupo Repipe
+</div>
+
+
+## Script para a obtenção do gráfico de latencia em tempo real:
+Para conseguir plotar o mesmo gráfico que esta acima, usa-se esse código em python:
+```python
+import matplotlib.pyplot as plt
+
+# Dados fornecidos
+duracao_comunicacao = list(range(1, 51))
+latencia = [20, 21, 20, 25, 24, 23, 20, 27, 25, 28, 26, 24, 22, 20, 20, 21, 22, 21, 20, 21, 
+            20, 20, 28, 27, 26, 24, 23, 28, 27, 25, 23, 22, 20, 21, 22, 21, 20, 25, 24, 22, 
+            20, 21, 28, 27, 25, 23, 21, 20, 21, 20]
+
+# Plot do gráfico de linhas
+plt.figure(figsize=(12, 6))
+plt.plot(duracao_comunicacao, latencia, marker='o', linestyle='-', color='b')
+plt.title('Latência durante a comunicação de 50 segundos')
+plt.xlabel('Duração da Comunicação (segundos)')
+plt.ylabel('Latência (ms)')
+plt.grid(True)
+plt.xticks(duracao_comunicacao, rotation=90)
+plt.tight_layout()
+
+# Exibindo o gráfico
+plt.show()
+```
+
+<div align="center">
+Fonte: Elaboração do grupo Repipe
+</div>
 
 ## Conclusão:
-A implementação da câmera no projeto de inspeção dos canos do reboiler desempenha um papel crucial na identificação e monitoramento de sujeiras e obstruções, facilitando a manutenção preventiva e assegurando a eficiência operacional. A integração da câmera com a página web via websocket permite uma transmissão de dados de imagem eficiente, possibilitando o armazenamento e análise das imagens capturadas. A utilização de mapas de calor, embora ainda em fase de desenvolvimento, promete aprimorar significativamente a visualização e a identificação das áreas mais críticas em termos de sujeira. Assim, o uso dessa tecnologia representa um avanço importante na manutenção dos reboilers, potencialmente prolongando a vida útil dos equipamentos e reduzindo o risco de falhas operacionais.
+A função latencia implementada neste projeto é essencial para monitorar e otimizar a latência na captura e publicação de frames de vídeo. A medição contínua e a exibição da latência permitem identificar e corrigir problemas rapidamente, garantindo que o sistema funcione de maneira eficiente e responsiva.
