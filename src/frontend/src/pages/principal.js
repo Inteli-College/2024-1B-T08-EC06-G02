@@ -4,13 +4,14 @@ import '../static/main.css';  // Caminho correto para o CSS
 import BotaoIniciar from '../components/home/botao-iniciar'; // Corrige a importação para minúsculas
 import BotaoVisualizar from '../components/home/botao-visualizar'; // Corrige a importação para minúsculas
 import BotoesMover from '../components/home/botoes-mover'; // Corrige a importação para minúsculas
+import { PopUpColisao } from '../components/home/popup-colisao';
 
 const Principal = () => {
   const [videoSrc, setVideoSrc] = useState('');
 
   useEffect(() => {
     const ros = new ROSLIB.Ros({
-      url: 'ws://10.128.0.17:9090'
+      url: 'ws://localhost:9090'
     });
 
     ros.on('connection', () => {
@@ -46,6 +47,7 @@ const Principal = () => {
   return (
     <div className="principal-container">
       <div className="content-box">
+        <PopUpColisao />
         <img id="videoStream" alt="Video Stream" src={videoSrc} className="video-stream" />
       </div>
       <div className="control-buttons">
