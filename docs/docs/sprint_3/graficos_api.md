@@ -21,6 +21,11 @@ Este gráfico com valores estáticos serve para medir a distância e a latência
 
 ![Latência_1](../../static/img/sprint_3/latencia_metros.png "Latência(ms) X Distância(m)")
 
+<div align="center">
+Fonte: Elaboração do grupo Repipe
+</div>
+
+
 **OBS: Vale lembrar que, quanto menor a latência, melhor a comunicação para o controle do robô. E que esses valores estão sendo colocados a prova ainda pois estamos fazendo testes para medir com maior precisão a maior ditância que podemos controlar o robô e qual é a latência dessa comunicação**
 
 ## Script para a obtenção do gráfico de latencia X distância:
@@ -41,10 +46,21 @@ plt.ylabel('Latência (ms)')
 plt.grid(axis='y')
 plt.show()
 ```
+
+<div align="center">
+Fonte: Elaboração do grupo Repipe
+</div>
+
+
 ## Dados e possiveis gráficos para a visualização da Latência (em tempo real):
 Ja com esse gráfico, podemos perceber o perído de resposta (Latência) em uma comunicação entre o robô e o computador que durou 50 segundos antes de encerrar, podemos ver alguns picos que tiveram que retratam muito bem a requisição de serviços de frames dos vídeos:
 
 ![Latência_1](../../static/img/sprint_3/latencia_comunicacao.png "Latência em tempo real")
+
+<div align="center">
+Fonte: Elaboração do grupo Repipe
+</div>
+
 
 
 ## Script para a obtenção do gráfico de latencia em tempo real:
@@ -72,6 +88,10 @@ plt.tight_layout()
 plt.show()
 ```
 
+<div align="center">
+Fonte: Elaboração do grupo Repipe
+</div>
+
 ## Conclusão:
 A função latencia implementada neste projeto é essencial para monitorar e otimizar a latência na captura e publicação de frames de vídeo. A medição contínua e a exibição da latência permitem identificar e corrigir problemas rapidamente, garantindo que o sistema funcione de maneira eficiente e responsiva.
 
@@ -97,6 +117,10 @@ Abaixo, apresentamos um gráfico que representa a vida útil da bateria ao longo
 
 ![Gráficos_1](../../static/img/sprint_3/bateria_boa.png "Bateria cuidada de forma adequada")
 
+<div align="center">
+Fonte: Elaboração do grupo Repipe
+</div>
+
 ## Bateria LB-12 (Não cuidando adequadamente):
 Ao não seguir as práticas recomendadas para o cuidado da bateria LB-12, diversos problemas podem surgir, comprometendo tanto a eficiência quanto a vida útil da bateria. A LB-12 é composta por 3 células de 3,7 volts cada, e o uso inadequado pode causar desequilíbrios entre essas células.
 
@@ -105,6 +129,10 @@ Além disso, ignorar o monitoramento do nível de carga da bateria pode ser prej
 Abaixo, apresentamos um gráfico que ilustra a vida útil da bateria ao longo do tempo sem os cuidados adequados. Este gráfico mostra a degradação acelerada da voltagem da bateria devido à falta de manutenção apropriada, destacando a importância de seguir as práticas recomendadas para garantir a longevidade da bateria:
 
 ![Gráficos_2](../../static/img/sprint_3/bateria_ruim.png "Bateria cuidada de forma inadequada")
+
+<div align="center">
+Fonte: Elaboração do grupo Repipe
+</div>
 
 **OBS: Vale lembrar que se a voltagem da bateria ficar abaixo de 10V ela não funciona mais, ela incha por ser de lítio e para de funcinar e inchando é possível que exploda**
 
@@ -151,6 +179,10 @@ plt.grid(True)
 plt.show()
 ```
 
+<div align="center">
+Fonte: Elaboração do grupo Repipe
+</div>
+
 ## Conclusão:
 Cuidar adequadamente da bateria LB-12 é crucial para garantir a segurança e a eficiência do TurtleBot. Utilizar um carregador balanceador adequado e monitorar o nível de carga regularmente prolonga a vida útil da bateria e evita riscos, como explosões. Negligenciar esses cuidados resulta em degradação acelerada, perda de capacidade e possíveis danos irreparáveis. Seguir as práticas recomendadas é essencial para manter o robô funcionando de maneira eficiente e segura.
 
@@ -165,10 +197,19 @@ A imagem é capturada pela câmera e enviada para o servidor web, que a armazena
 Com isso, podemos gerar um gráfico partindo das imagens que foram armazenadas no banco de dados.
 
 ## Mapa de calor partindo das imagens da câmera:
-Com base nas imganes coletadas, podemos demonstrar através de um mapa de calor.
+Com base nas imagens analisadas pela câmera, idealizou-se que um gráfico de calor seria uma boa forma de representar os pontos de sujeira.
 O objetivo dessas imagens é poder demonstrar a situação dos canos em relação a sujeira, as manchas vermelhas são os pontos que contém mais sujeira, já os pontos em verde são as partes que estão, de certa forma, limpas.
 
+<div align="center">
+
 ![Visão computacional](../../static/img/sprint_3/mapa_de_calor.png "Mapa de Calor")
+
+</div>
+
+
+<div align="center">
+Fonte: Elaboração do grupo Repipe
+</div>
 
 **OBS: Esse funcionamento de visão computacional mostrando o mapa de calor detectando as sujeiras é uma funcionalidade que ainda será trabalhada para poder implementar no projeto. Essa é uma imagem meramente ilustrativa**
 
