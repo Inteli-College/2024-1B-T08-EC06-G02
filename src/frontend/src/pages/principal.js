@@ -4,9 +4,15 @@ import '../static/main.css';  // Caminho correto para o CSS
 import BotaoIniciar from '../components/home/botao-iniciar'; // Corrige a importação para minúsculas
 import BotaoVisualizar from '../components/home/botao-visualizar'; // Corrige a importação para minúsculas
 import BotoesMover from '../components/home/botoes-mover'; // Corrige a importação para minúsculas
+import AbaVisualizar from '../components/home/aba-visualizar'; // Caminho correto para o componente
 
 const Principal = () => {
   const [videoSrc, setVideoSrc] = useState('');
+  const [isAbaVisible, setIsAbaVisible] = useState(false);
+
+  const toggleAbaVisualizar = () => {
+    setIsAbaVisible(!isAbaVisible);
+  };
 
   useEffect(() => {
     const ros = new ROSLIB.Ros({
@@ -44,7 +50,7 @@ const Principal = () => {
   }, []);
 
   return (
-    <div className="principal-container">
+    <div className={`principal-container ${isAbaVisible ? 'with-aba' : ''}`}>
       <div className="content-box">
         <img id="videoStream" alt="Video Stream" src={videoSrc} className="video-stream" />
       </div>
@@ -52,7 +58,8 @@ const Principal = () => {
         <BotaoIniciar onClick={() => console.log('Botão Iniciar clicado!')} />
         <BotoesMover />
       </div>
-      <BotaoVisualizar onClick={() => console.log('Botão Visualizar clicado!')} />
+      <BotaoVisualizar onClick={toggleAbaVisualizar} />
+      {isAbaVisible && <AbaVisualizar />}
     </div>
   );
 };

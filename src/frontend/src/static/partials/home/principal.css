@@ -6,6 +6,10 @@
   background-color: #D3EBEE;
 }
 
+.principal-container.with-aba {
+  margin-right: 30%;
+}
+
 .content-box {
   background-color: #B9DCDF;
   border-radius: 16px;
@@ -25,3 +29,4 @@
   margin: 5px;
   cursor: pointer;
 }
+

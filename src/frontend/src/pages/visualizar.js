@@ -1,13 +1,13 @@
 import React from 'react';
-import '../static/partials/visualizar/visualizar.css'; 
-import AbaVisualizar from '../components/home/aba-visualizar';
+import AbaVisualizacao from '../components/home/aba-visualizar'; // Caminho relativo correto
 
-const Visualizacao = () => { 
-    return (
-       <div className="dados-analise">
-            <AbaVisualizar />
-       </div>
-    );
-}
+const Visualizar = () => {
+  return (
+    <div className="visualizar-page">
+      <AbaVisualizacao />
+      {/* Outros componentes ou conteúdo da página visualizar */}
+    </div>
+  );
+};
 
-export default Visualizacao;
+export default Visualizar;
