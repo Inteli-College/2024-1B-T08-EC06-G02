@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import ROSLIB from 'roslib';
-import '../static/main.css';
-import BotaoIniciar from '../components/home/botao-iniciar';
-import BotaoVisualizar from '../components/home/botao-visualizar';
-import BotoesMover from '../components/home/botoes-mover';
+import '../static/main.css';  // Caminho correto para o CSS
+import BotaoIniciar from '../components/home/botao-iniciar'; // Corrige a importação para minúsculas
+import BotaoVisualizar from '../components/home/botao-visualizar'; // Corrige a importação para minúsculas
+import BotoesMover from '../components/home/botoes-mover'; // Corrige a importação para minúsculas
+import { PopUpColisao } from '../components/home/popup-colisao';
 import AbaVisualizar from '../components/home/aba-visualizar';
 
 const Principal = () => {
@@ -16,7 +17,7 @@ const Principal = () => {
 
   useEffect(() => {
     const ros = new ROSLIB.Ros({
-      url: 'ws://10.128.0.17:9090'
+      url: 'ws://localhost:9090'
     });
 
     ros.on('connection', () => {
@@ -52,6 +53,7 @@ const Principal = () => {
   return (
     <div className={`principal-container ${isAbaVisible ? 'with-aba' : ''}`}>
       <div className="content-box">
+        <PopUpColisao />
         <img id="videoStream" alt="Video Stream" src={videoSrc} className="video-stream" />
       </div>
       <div className={`control-buttons ${isAbaVisible ? 'with-aba' : ''}`}>
