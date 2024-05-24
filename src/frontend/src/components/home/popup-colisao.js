@@ -4,7 +4,10 @@ import ROSLIB from 'roslib';
 
 export const PopUpColisao = (props) => {
     const LIDAR_RANGE = 0.5;
-    const [lidar, setLidar] = useState(0);
+    const [mostrarAlerta, setMostrarAlerta] = useState(false);
+    const [valorLidar, setValorLidar] = useState(null);
+
+    console.log("PopUp Colisão iniciado...");
 
     useEffect(() => {
         var ros = new ROSLIB.Ros({
@@ -14,27 +17,40 @@ export const PopUpColisao = (props) => {
         var listener = new ROSLIB.Topic({
             ros: ros,
             name: '/scan',
-            messageType: 'std_msgs/String'
+            messageType: 'sensor_msgs/LaserScan'
         });
 
         listener.subscribe(function (message) {
-            console.log('Mensagem recebida do' + listener.name + ': ' + message.data);
+            console.log('Mensagem recebida do ' + listener.name + ': ' + message.ranges);
 
-            var min_distance = message.data;
-            if (min_distance < LIDAR_RANGE) {
-                setLidar(message.data);
+            const validRanges = message.ranges.filter(range => !isNaN(range) && range !== null && range !== undefined);
+
+            if (validRanges.length > 0) {
+                var min_distance = Math.min(...validRanges);
+
+                console.log('Menor valor do ' + listener.name + ': ' + min_distance);
+                if (min_distance < LIDAR_RANGE) {
+                    setMostrarAlerta(true);
+                    setValorLidar(min_distance);
+                } else {
+                    setMostrarAlerta(false);
+                }
             }
-
-            listener.unsubscribe();
         });
+
+        // Clean up function to close ROS connection
+        return () => {
+            listener.unsubscribe();
+            ros.close();
+        };
     }, []);
 
     return (
         <Space direction="vertical" style={{ width: '50%' }}>
-            {lidar < LIDAR_RANGE && (
+            {mostrarAlerta && valorLidar !== null && (
                 <Alert
                     message="Cuidado"
-                    description={"O robô está prestes a colidir com um objeto em " + lidar.toString() + " metros."}
+                    description={"O robô está prestes a colidir com um objeto em " + valorLidar.toFixed(2) + " metros."}
                     type="warning"
                     showIcon
                     closable
@@ -42,4 +58,4 @@ export const PopUpColisao = (props) => {
             )}
         </Space>
     );
-}
+};
