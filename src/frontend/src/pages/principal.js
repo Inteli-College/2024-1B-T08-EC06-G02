@@ -38,13 +38,79 @@ const Principal = () => {
       messageType: 'sensor_msgs/CompressedImage'
     });
 
+    const controlTopic = new ROSLIB.Topic({
+      ros: ros,
+      name: '/cmd_vel',
+      messageType: 'geometry_msgs/Twist'
+    });
+
+    let turtleBotVel = {
+      linear: {
+        x: 0,
+        y: 0,
+        z: 0
+      },
+      angular: {
+        x: 0,
+        y: 0,
+        z: 0
+      }
+    };
+
+    const handleKeyDown = (event) => {
+      let key = event.key;
+
+      switch (key) {
+        case 'ArrowUp':
+          turtleBotVel.linear.x = 1;
+          break;
+        case 'ArrowDown':
+          turtleBotVel.linear.x = -1;
+          break;
+        case 'ArrowLeft':
+          turtleBotVel.angular.z = 1;
+          break;
+        case 'ArrowRight':
+          turtleBotVel.angular.z = -1;
+          break;
+        default:
+          break;
+      }
+      console.log(turtleBotVel.linear.x, turtleBotVel.angular.z);
+      controlTopic.publish(turtleBotVel);
+    };
+
+    const handleKeyUp = (event) => {
+      let key = event.key;
+
+      switch (key) {
+        case 'ArrowUp':
+        case 'ArrowDown':
+          turtleBotVel.linear.x = 0;
+          break;
+        case 'ArrowLeft':
+        case 'ArrowRight':
+          turtleBotVel.angular.z = 0;
+          break;
+        default:
+          break;
+      }
+
+      console.log(turtleBotVel.linear.x, turtleBotVel.angular.z);
+      controlTopic.publish(turtleBotVel);
+    };
+
     const handleVideoFrame = (message) => {
       setVideoSrc('data:image/jpeg;base64,' + message.data);
     };
 
     videoTopic.subscribe(handleVideoFrame);
+    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('keyup', handleKeyUp);
 
     return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('keyup', handleKeyUp);
       videoTopic.unsubscribe(handleVideoFrame);
       ros.close();
     };
