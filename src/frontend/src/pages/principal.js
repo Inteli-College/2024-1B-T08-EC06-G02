@@ -5,9 +5,15 @@ import BotaoIniciar from '../components/home/botao-iniciar'; // Corrige a import
 import BotaoVisualizar from '../components/home/botao-visualizar'; // Corrige a importação para minúsculas
 import BotoesMover from '../components/home/botoes-mover'; // Corrige a importação para minúsculas
 import { PopUpColisao } from '../components/home/popup-colisao';
+import AbaVisualizar from '../components/home/aba-visualizar';
 
 const Principal = () => {
   const [videoSrc, setVideoSrc] = useState('');
+  const [isAbaVisible, setIsAbaVisible] = useState(false);
+
+  const toggleAbaVisualizar = () => {
+    setIsAbaVisible(!isAbaVisible);
+  };
 
   useEffect(() => {
     const ros = new ROSLIB.Ros({
@@ -45,16 +51,19 @@ const Principal = () => {
   }, []);
 
   return (
-    <div className="principal-container">
+    <div className={`principal-container ${isAbaVisible ? 'with-aba' : ''}`}>
       <div className="content-box">
         <PopUpColisao />
         <img id="videoStream" alt="Video Stream" src={videoSrc} className="video-stream" />
       </div>
-      <div className="control-buttons">
+      <div className={`control-buttons ${isAbaVisible ? 'with-aba' : ''}`}>
         <BotaoIniciar onClick={() => console.log('Botão Iniciar clicado!')} />
+      </div>
+      <div className={`navigation-buttons ${isAbaVisible ? 'with-aba' : ''}`}>
         <BotoesMover />
       </div>
-      <BotaoVisualizar onClick={() => console.log('Botão Visualizar clicado!')} />
+      <BotaoVisualizar onClick={toggleAbaVisualizar} />
+      {isAbaVisible && <AbaVisualizar onClose={toggleAbaVisualizar} />}
     </div>
   );
 };

@@ -4,6 +4,11 @@
   align-items: center;
   height: 100vh;
   background-color: #D3EBEE;
+  transition: margin-right 0.3s ease;
+  }
+
+.principal-container.with-aba {
+  margin-right: 30%;
 }
 
 .content-box {
@@ -16,12 +21,12 @@
   margin-top: -200px;
 }
 
-.nav-button {
-  width: 50px;
-  height: 50px;
-  border: none;
-  background: none;
-  padding: 0;
-  margin: 5px;
-  cursor: pointer;
+.navigation-buttons.with-aba {
+  right: 650px;
+  transition: left 0.3s ease;
+}
+
+.control-buttons.with-aba {
+  left: -80px;
+  transition: left 0.3s ease;
 }
