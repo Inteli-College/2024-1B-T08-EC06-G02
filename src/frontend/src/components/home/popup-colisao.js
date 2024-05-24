@@ -7,7 +7,7 @@ export const PopUpColisao = (props) => {
     const [mostrarAlerta, setMostrarAlerta] = useState(false);
     const [valorLidar, setValorLidar] = useState(null);
 
-    console.log("PopUp Colisão iniciado...");
+    // console.log("PopUp Colisão iniciado...");
 
     useEffect(() => {
         var ros = new ROSLIB.Ros({
@@ -21,14 +21,14 @@ export const PopUpColisao = (props) => {
         });
 
         listener.subscribe(function (message) {
-            console.log('Mensagem recebida do ' + listener.name + ': ' + message.ranges);
+            // console.log('Mensagem recebida do ' + listener.name + ': ' + message.ranges);
 
             const validRanges = message.ranges.filter(range => !isNaN(range) && range !== null && range !== undefined);
 
             if (validRanges.length > 0) {
                 var min_distance = Math.min(...validRanges);
 
-                console.log('Menor valor do ' + listener.name + ': ' + min_distance);
+                // console.log('Menor valor do ' + listener.name + ': ' + min_distance);
                 if (min_distance < LIDAR_RANGE) {
                     setMostrarAlerta(true);
                     setValorLidar(min_distance);

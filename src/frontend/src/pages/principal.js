@@ -44,7 +44,7 @@ const Principal = () => {
       messageType: 'geometry_msgs/Twist'
     });
 
-    let turtleBotVel = {
+    let turtleBotVel = new ROSLIB.Message({
       linear: {
         x: 0,
         y: 0,
@@ -55,27 +55,33 @@ const Principal = () => {
         y: 0,
         z: 0
       }
-    };
+    });
 
     const handleKeyDown = (event) => {
       let key = event.key;
 
       switch (key) {
         case 'ArrowUp':
-          turtleBotVel.linear.x = 1;
+          turtleBotVel.linear.x = 2.0;
+          turtleBotVel.angular.z = 0;
           break;
         case 'ArrowDown':
-          turtleBotVel.linear.x = -1;
+          turtleBotVel.linear.x = -2.0;
+          turtleBotVel.angular.z = 0;
           break;
         case 'ArrowLeft':
           turtleBotVel.angular.z = 1;
+          turtleBotVel.linear.x = 0;
           break;
         case 'ArrowRight':
           turtleBotVel.angular.z = -1;
+          turtleBotVel.linear.x = 0;
+
           break;
         default:
           break;
       }
+
       console.log(turtleBotVel.linear.x, turtleBotVel.angular.z);
       controlTopic.publish(turtleBotVel);
     };
