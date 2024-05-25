@@ -1,7 +1,6 @@
-# Metodologia Sprint 3
+# Metodologia - Comunicação com a Câmera/Cálculo da Latência
 
-Este documento detalha as atualizações da Sprint 3 do grupo Repipe. O foco principal nas últimas duas semanas foi a implementação de uma webcam para observar o ambiente do robô e o cálculo da latência na transmissão das imagens. A seguir, discutiremos o setup da webcam, a criação de uma interface para visualização das imagens da webcam e as comunicações necessárias para que isso aconteça.
-
+O foco deste documento é explicitar como foi realizado durante essa sprint a implementação de uma webcam para observar o ambiente do robô e o cálculo da latência na transmissão das imagens. A seguir, discutiremos o setup da webcam, a criação de uma interface para visualização das imagens da webcam e as comunicações necessárias para que isso aconteça.
 
 ## Comunicação e Integração
 
@@ -9,15 +8,13 @@ A integração entre o Turtlebot3, a webcam e a interface de visualização exig
 
 ## Setup da Webcam
 
-Para realizar as primeiras configurações para as transmissões das imagens, inicialmente adquirimos uma webcam modelo DOBOT Magician para ser integrada ao Turtlebot3. A conexão foi estabelecida através das portas USB disponíveis, permitindo a leitura dos dados capturados pela webcam.
+Para realizar as primeiras configurações para as transmissões das imagens, inicialmente adquirimos uma webcam modelo DOBOT Magician para ser integrada ao Turtlebot3. A conexão foi estabelecida através das portas USB disponíveis, permitindo a leitura dos dados capturados pela webcam.<br/>
 
-Sendo assim, para configurar a transmissão dessas imagens através da rede, desenvolvemos um código no arquivo denominado `sender.py`, utilizando o ROSBridge para criar um WebSocket que possibilitasse a conexão entre os equipamentos e o ROS.
+Sendo assim, para configurar a transmissão dessas imagens através da rede, desenvolvemos um código no arquivo denominado `sender.py`, utilizando o ROSBridge para criar um WebSocket que possibilitasse a conexão entre os equipamentos e o ROS.<br/>
 
-O código `sender.py` foi especificamente projetado para transmitir as imagens da webcam conectada ao TurtleBot3 através de uma rede Wi-Fi. A seguir, encontra-se o código completo:
-
+O código `sender.py` foi especificamente projetado para transmitir as imagens da webcam conectada ao TurtleBot3 através de uma rede Wi-Fi. A seguir, encontra-se o código completo:<br/>
 
 ***sender.py***
-
 ```python
 import rclpy
 from rclpy.node import Node
@@ -104,16 +101,15 @@ if __name__ == '__main__':
 ```
 <h6 align="center"> Fonte: Elaboração grupo Repipe </h6>
 
-Tebdo esse código analisado observa-se que além de fazer as capturas das imagens da webcam, ele faz a compressão dessas imagens para JPEG e publica no tópico "/video_frames" utilizando o ROS. Assim, esse código permite a transmissão eficiente das imagens capturadas pela webcam, possibilitando uma integração suave e eficaz entre o Turtlebot3, a webcam e quaisquer interfaces de visualização.
+Tendo esse código analisado observa-se que além de fazer as capturas das imagens da webcam, ele faz a compressão dessas imagens para JPEG e publica no tópico "/video_frames" utilizando o ROS. Assim, esse código permite a transmissão eficiente das imagens capturadas pela webcam, possibilitando uma integração suave e eficaz entre o Turtlebot3, a webcam e quaisquer interfaces de visualização.<br/>
 
 
 
 ## Interface de Visualização das Imagens
 
-Para a visualização dos frames capturados pela webcam foi criado um arquivo HTML denominado `imagens.html`. Nesse sentido, utilizando o ROSBridge, foi estabelecido uma comunicação via WebSocket, permitindo o recebimento desses frames que foram então decodificadas e exibidas em tempo real na página web. A implementação dessa interface pode ser visualizada abaixo:
+Para a visualização dos frames capturados pela webcam foi criado um arquivo HTML denominado `imagens.html`. Nesse sentido, utilizando o ROSBridge, foi estabelecido uma comunicação via WebSocket, permitindo o recebimento desses frames que foram então decodificadas e exibidas em tempo real na página web. A implementação dessa interface pode ser visualizada abaixo:<br/>
 
 **imagens.html**
-
 ```html
 <!DOCTYPE html>
 <html>
@@ -168,13 +164,13 @@ Para a visualização dos frames capturados pela webcam foi criado um arquivo HT
 </html>
 ```
 
-# Cálculo da latência
+## Cálculo da latência
 
-A latência, que representa o tempo de atraso entre o envio e o recebimento de dados, foi meticulosamente calculada neste projeto. O processo de medição teve início no momento em que os frames eram capturados pela webcam do DOBOT Magician. O cálculo da latência era interrompido somente quando os frames alcançavam o destino final da aplicação, ou seja, na página HTML onde as imagens capturadas pela webcam eram apresentadas.
+A latência representa o tempo de atraso entre o envio e o recebimento de dados. Para realizar esse cálculo no contexto do projeto, iniciamos a medição no momento em que os frames eram capturados pela webcam do DOBOT Magician. Assim, o cálculo da latência era interrompido somente quando os frames alcançavam o destino final da aplicação, ou seja, na página HTML onde as imagens capturadas pela webcam eram apresentadas.<br/>
 
-Dessa maneira, este método de cálculo permitiu medir o tempo total necessário para que os frames percorressem o caminho completo desde a captura até a exibição, proporcionando uma visão precisa do desempenho do sistema.
+Dessa maneira, este método de cálculo permitiu medir o tempo total necessário para que os frames percorressem o caminho completo desde a captura até a exibição, proporcionando uma visão precisa do desempenho do sistema.<br/>
 
-Para uma compreensão detalhada da construção da latência no projeto, é crucial revisitar o código `sender.py`, onde toda a estrutura foi elaborada. Em especial, a função ***latencia()*** revela minuciosamente como o cálculo da latência foi implementado. Com isso em mente, a função apresenta detalhes sobre como foi realizada a medição do tempo de atraso desde a captura dos frames pela webcam até a sua exibição na página HTML. Abaixo, pode-se ter uma melhor noção de como se deu sua implementação:
+Para uma compreensão detalhada da construção da latência no projeto, é crucial revisitar o código `sender.py`, onde toda a estrutura foi elaborada. Em especial, a função ***latencia()*** explicita como o cálculo da latência foi implementado. Com isso em mente, a função apresenta detalhes sobre como foi realizada a medição do tempo de atraso desde a captura dos frames pela webcam até a sua exibição na página HTML. Abaixo, pode-se ter uma melhor noção de como se deu sua implementação:<br/>
 
 ```python
 def latencia(self):
@@ -219,4 +215,18 @@ def latencia(self):
         cv2.destroyAllWindows()
 ```
 
-Em resumo, durante a Sprint 3, foi integrada com sucesso uma webcam no Turtlebot3, desenvolvida uma interface para visualização em tempo real das imagens capturadas e garantida uma comunicação eficiente para minimizar a latência.
+Dentro dessa função, temos o loop, que se inicia no `While`, e é nele que a lógica para realizar o cálculo da latência é realmente implementado.<br/>
+Ele funciona da seguinte maneira, a cada iteração, ele captura um frame da webcam e incrementa o contador de frames. Se a captura falhar, o loop é interrompido.<br/>
+
+A função `cv2.getTickCount()` é usada para obter o número atual de ciclos de clock desde o início do sistema. Para calcular a latência, a diferença entre este valor e o valor anterior `(prev_tick)` é dividida pela frequência do clock do sistema, obtida com `cv2.getTickFrequency()`, que converte ciclos de clock em segundos.<br/>
+
+A taxa de frames é calculada como a diferença entre o contador de frames atual `(frame_number)` e o contador da última medição `(prev_change_frame)`. Esses valores de latência e taxa de frames são impressos em tempo real, fornecendo informações sobre a performance da captura de vídeo.<br/>
+
+O loop pode ser interrompido manualmente pressionando a tecla 'q'. Após sair do loop, a captura de vídeo é liberada e todas as janelas do OpenCV são fechadas, garantindo a liberação correta dos recursos.<br/>
+
+### Conclusão
+Portanto, este documento descreve a implementação de uma webcam para monitoramento do ambiente do robô TurtleBot3, juntamente com o cálculo da latência na transmissão das imagens. 
+
+Utilizando o ROSBridge para comunicação entre o sistema ROS e outras aplicações via WebSockets, o código `sender.py` foi desenvolvido para capturar, comprimir e publicar as imagens da webcam no tópico "/video_frames" do ROS. 
+
+A função `latencia` do código `sender.py` mediu a latência e a taxa de frames, fornecendo dados para monitorar a performance do sistema em tempo real. A interface de visualização, implementada em HTML, recebeu os frames via ROSBridge e os exibiu, garantindo uma experiência de monitoramento eficiente. 
