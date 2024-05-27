@@ -1,0 +1,32 @@
+.principal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #D3EBEE;
+  transition: margin-right 0.3s ease;
+  }
+
+.principal-container.with-aba {
+  margin-right: 30%;
+}
+
+.content-box {
+  background-color: #B9DCDF;
+  border-radius: 16px;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+  width: 70%;
+  height: 65%;
+  position: relative;
+  margin-top: -200px;
+}
+
+.navigation-buttons.with-aba {
+  right: 650px;
+  transition: left 0.3s ease;
+}
+
+.control-buttons.with-aba {
+  left: -80px;
+  transition: left 0.3s ease;
+}

@@ -1,7 +1,6 @@
 #bin/bash
 
-#====================== Intalling depende ======================
-================= Setting the project =====================
+#================= Setting the project =====================
 
 # Seting the Domain ID 
 read -p "Chose the ROS_DOMAIN_ID <0-232>: " ROS_DOMAIN_ID

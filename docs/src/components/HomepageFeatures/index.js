@@ -11,7 +11,7 @@ const FeatureList = [
   {
     img_name: 'Cecília Alonço Gonçalves',
     img_src: "https://media.licdn.com/dms/image/D4E03AQHFDADl2nqTcA/profile-displayphoto-shrink_200_200/0/1680660675815?e=1719446400&v=beta&t=ucOjGB_bF8KICbk3Qcm0G8zwiO7ZMjxnnojKFYjQ30k",
-    linkedin: "https://www.linkedin.com/in/caio-teixeira-paula/",
+    linkedin: "https://www.linkedin.com/in/cec%C3%ADlia-alonso-gon%C3%A7alves-3aa4bb271/",
   },
   {
     img_name: 'Eduardo do Santos',
