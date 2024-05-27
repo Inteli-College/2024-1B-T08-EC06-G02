@@ -13,33 +13,36 @@ No contexto da Prova de Conceito, a seção de Bill of Materials (BOM) descreve 
 - **Turtlebot3 Burger**: R$ 10.000 (R$ 5.000 para o robô + R$ 5.000 de imposto)
 - **Webcam C270**: R$ 170 (comprado no Brasil)
 
-### Custos de Projeto
+### Análise Financeira da PoC
 
-Dividimos a análise dos custos operacionais em duas versões do projeto: uma versão mínima e uma versão mais avançada. Estes custos são fundamentais para formar o orçamento total e avaliar a viabilidade financeira de cada versão da Prova de Conceito.
-
-#### Produto Mínimo
-
-Para o produto mínimo, focamos em manter os custos reduzidos e utilizar recursos com valor de mercado mais acessível. Esta versão é ideal para validar a ideia com o menor investimento possível.
-
-- **Desenvolvedores Backend**: R$ 18/h
-  - 2 horas/dia x 5 dias/semana x 10 semanas = R$ 1.800 total
-- **Desenvolvedores Frontend**: R$ 18/h
-  - 2 horas/dia x 5 dias/semana x 10 semanas = R$ 1.800 total
-- **Product Owner (PO)**: R$ 6.000/mês
-
-**Custo Total do Produto Mínimo**: R$ 9.600
-
-#### Produto Mais Avançado
-
-O produto mais avançado requer um investimento maior, pois envolve profissionais mais experientes e um período de desenvolvimento mais longo. Esta versão é projetada para entregar uma solução mais completa e robusta.
+A Prova de Conceito (PoC) é essencial para validar a viabilidade técnica e funcional da solução antes de investimentos maiores. Ela testa se os componentes de hardware e software podem integrar-se efetivamente para atender aos requisitos do projeto, identificando desafios potenciais e ajustando a estratégia de desenvolvimento com base em resultados tangíveis. Nessa Análise financeira da Poc foram considerados 2 cenários, primeiro uma implementação do conceito média, que utiliza valores médios do mercado, e uma implementação mínima que procura ao máximo reduzir os custos e ainda fornecer uma boa validação da idéia. 
 
 - **Desenvolvedores Backend**: R$ 40/h
-  - 3 horas/dia x 5 dias/semana x 4 semanas = R$ 2.400 total
+  - 3 horas/dia x 5 dias/semana x 4 semanas = R$ 2,400 total
 - **Desenvolvedores Frontend**: R$ 40/h
-  - 3 horas/dia x 5 dias/semana x 4 semanas = R$ 2.400 total
-- **Product Owner (PO)**: R$ 9.000/mês
+  - 3 horas/dia x 5 dias/semana x 4 semanas = R$ 2,400 total
+- **Product Owner (PO)**: - **Product Owner (PO)**: R$ 9.000/mês
 
-**Custo Total do Produto Mais Avançado**: R$ 13.800
+**Custo Base em serviços da PoC**: R$ 13,800
+
+**Custo Total em serviços com impostos e lucro**: R$ 18,512 = 1,1 * (13,800/0.82) (incluindo impostos de 18% e lucro de 10%)
+
+**Custo Total + Hardware**: R$29,272
+
+### Otimização de Custos
+
+Pensando em uma implementação mínima da PoC, essa segunda sessão foi estipulada procurando reduzir ao máximo os custos, a fim de disponibilizar uma prova de conceito pelo menor preço possível. 
+- **Desenvolvedores Backend**: R$ 18/h
+  - 2 horas/dia x 5 dias/semana x 10 semanas = R$ 1,800 total
+- **Desenvolvedores Frontend**: R$ 18/h
+  - 2 horas/dia x 5 dias/semana x 10 semanas = R$ 1,800 total
+- **Product Owner (PO)**: R$ 6,000/mês
+
+**Custo Base em serviços da implementação mínima=**: R$ 9,600
+
+**Custo Total do Produto Mínimo com impostos e lucro**: R$ 12,878 = 1,1 * (9,600/0.82) (incluindo impostos de 18% e lucro de 10%)
+
+**Custo Total + Hardware**: R$23,638
 
 ### Considerações Gerais
 
@@ -47,49 +50,48 @@ Para ambas as versões da prova de conceito, não serão considerados custos com
 
 ## Análise financeira, projeto final
 
-A análise financeira do projeto final, é uma pesquisa mais aprofuncada visando um produto mais definitivo para a Atvos, bem como os valores de criação e implementação dessa solução.
+A análise financeira do projeto final é uma pesquisa mais aprofundada visando um produto mais definitivo para a Atvos, bem como os valores de criação e implementação dessa solução.
 
-### Conceito final do peojeto
+### Conceito final do projeto
 
 Pensando em uma solução definitiva para a Atvos, o robô não só deve ser uma ferramenta de verificação de imagens, para a coleta de dados, como também um mecanismo de limpeza dos canos dos reboilers.
 
-Com base no cenário desejado de atuação do robô, que é o reboiler pré esfriamento, o robô deve ser capaz de aguentar altas temperaturas, bem como ser capaz de se locomover dentro da estrutura e ter autonomia para a limpeza e inspeção de todos os canos de um reboiler. 
+Com base no cenário desejado de atuação do robô, que é o reboiler pré-esfriamento, o robô deve ser capaz de aguentar altas temperaturas, bem como ser capaz de se locomover dentro da estrutura e ter autonomia para a limpeza e inspeção de todos os canos de um reboiler. 
 
 Além disso, com a finalidade de integrar todas as plantas, o sistema deve ter uma integração com a nuvem, a fim de guardar os dados de forma segura e acessível ao sistema de BI deles.
-
 
 :::note[Importante]
 É preciso informar que o tempo de desenvolvimento e implementação do projeto será de um ano.
 :::
 
-### Precificando 
+### Precificando
 
-Considerando as especificações eletro-mecânicas do robô, que deve ser compacto, para caber nos canos do reboiler, resistente à altas temperaturas e móvel usuficiente para se locomover entre os canos do reboilers; será preciso um equipe de dois engenheiros mecatrônicos para fazerem todo o desenvolvimento do robô. Esse processo tem estimativa de durar 9 meses, incluindo desenhos inicais, prototipação, testagem e verificações finais com integraçã.
+Considerando as especificações eletro-mecânicas do robô, que deve ser compacto, para caber nos canos do reboiler, resistente à altas temperaturas e móvel suficiente para se locomover entre os canos dos reboilers; será preciso um equipe de dois engenheiros mecatrônicos para fazerem todo o desenvolvimento do robô. Esse processo tem estimativa de durar 9 meses, incluindo desenhos iniciais, prototipação, testagem e verificações finais com integração.
 
-- **Engenheiro mecatrônico** : R$7.160/mês 
-  - 2 engeneiros x 9 meses = R$129.880,00
-- **Custo de prototipação** : R$230.000/mês
+- **Engenheiro mecatrônico**: R$7,160/mês
+  - 2 engenheiros x 9 meses = R$129,880.00
+- **Custo de prototipação**: R$230,000/mês
 
 Pensando na otimização dos dados coletados e na estruturação de um armazenamento nuvem, será preciso um engenheiro de dados. Não só, um analista de dados será responsável por fazer os ajustes necessários com o BI da Atvos. Tendo em mente que essa parte do projeto será feita mais ao seu final, a duração será de 3 meses.
 
-- **Engenheiro de dados** : R$9.250/mês
-  - 1 enenheiro de dados x 3 meses = R$27.750,00
-- **Analista de dados** : $3.929,00
-  - 1 analista de dados x 3 meses = R$7.85800
+- **Engenheiro de dados**: R$9,250/mês
+  - 1 engenheiro de dados x 3 meses = R$27,750.00
+- **Analista de dados**: $3,929.00
+  - 1 analista de dados x 3 meses = R$7,858.00
 
-Para que o projeto tenha seus sistemas integrados, bem como as interfaces de operação, comunicação e visualização de dados, serão necessários 3 desenvolvedores plenos. É importante considerar que os desenvolvedores estarão durante todo o desenvolvimento do projeto, totalizando 12 meses. 
+Para que o projeto tenha seus sistemas integrados, bem como as interfaces de operação, comunicação e visualização de dados, serão necessários 3 desenvolvedores plenos. É importante considerar que os desenvolvedores estarão durante todo o desenvolvimento do projeto, totalizando 12 meses.
 
-- **Desenvolvedor** : R$5.294/mês
-  - 3 desenvolvedores x 12 meses = R$190.584,00
+- **Desenvolvedor**: R$5,294/mês
+  - 3 desenvolvedores x 12 meses = R$190,584.00
 
-Com o intuito de manter o andamento do projeto de forma ordenada e contínua, um PO será necessário. Esse, também estara durante todo o desenvolvimento do projeto.
+Com o intuito de manter o andamento do projeto de forma ordenada e contínua, um PO será necessário. Esse, também estará durante todo o desenvolvimento do projeto.
 
-- **Product Owner (PO)**: R$ 9.198,00/mês
-  - 1 PO x 12 meses = R$110.376,00
+- **Product Owner (PO)**: R$9,198.00/mês
+  - 1 PO x 12 meses = R$110,376.00
 
-Considerando uma média de 1 robô para cada 4 reboiler e sabendo que são aproximadamente 32 reboiler por refinaria, o projeto teria seu valor cotado em **R$3.214,677.20**, por refinaria.
+Considerando uma média de 1 robô para cada 4 reboiler e sabendo que são aproximadamente 32 reboiler por refinaria, o projeto teria seu valor cotado em **R$3,214,677.20**, por refinaria, sem impostos.
 
-
+Considerando imposto de 18% e lucro de 10% (da mesma forma que foi utilizado na PoC), temos como valor por refinaria: **R$4,312,371.58**
 
 ### Fontes
 
