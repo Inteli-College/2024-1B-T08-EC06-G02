@@ -104,10 +104,9 @@ if __name__ == '__main__':
 Tendo esse código analisado observa-se que além de fazer as capturas das imagens da webcam, ele faz a compressão dessas imagens para JPEG e publica no tópico "/video_frames" utilizando o ROS. Assim, esse código permite a transmissão eficiente das imagens capturadas pela webcam, possibilitando uma integração suave e eficaz entre o Turtlebot3, a webcam e quaisquer interfaces de visualização.<br/>
 
 
-
 ## Interface de Visualização das Imagens
 
-Para a visualização dos frames capturados pela webcam foi criado um arquivo HTML denominado `imagens.html`. Nesse sentido, utilizando o ROSBridge, foi estabelecido uma comunicação via WebSocket, permitindo o recebimento desses frames que foram então decodificadas e exibidas em tempo real na página web. A implementação dessa interface pode ser visualizada abaixo:<br/>
+Para a visualização dos frames capturados pela webcam foi criado um arquivo HTML denominado `imagens.html`. Nesse sentido, utilizando o ROSBridge, foi estabelecido uma comunicação via WebSocket, permitindo o recebimento desses frames que foram então decodificadas e exibidas em tempo real na página web. A implementação dessa interface pode ser visualizada abaixo:
 
 **imagens.html**
 ```html
@@ -163,6 +162,23 @@ Para a visualização dos frames capturados pela webcam foi criado um arquivo HT
 </body>
 </html>
 ```
+
+## Frontend
+
+O desenvolvimento do frontend foi realizado utilizando React JS para a construção de componentes e CSS puro para estilização, o que permitiu a criação de uma interface alinhada com as expectativas visuais do projeto. 
+
+### Estrutura de Pastas
+
+A organização dos arquivos no projeto segue uma estrutura que facilita a manutenção do código:
+
+
+
+- **'components'**: Composta por componentes como botões (exemplo: botao-iniciar.js). Cada componente foi desenvolvido para ser independente, com suas próprias propriedades, facilitando a reutilização em diferentes páginas. 
+- **'pages'**: Armazena os scripts em React JS das páginas da aplicação como a página de login (login.js), a tela principal (principal.js) e a tela de visualização (visualizar.js).
+- **'static/partials'**: Inclui arquivos CSS específicos para cada componente e página, permitindo uma estilização em toda a aplicação. O CSS puro foi utilizado para colocar em prática o design do mockup. Arquivos como visualizar.css e login.css contêm as regras específicas para as páginas correspondentes, enquanto main.css define os estilos globais utilizados em toda a aplicação.
+
+### Integração com o Backend
+Utilizando o WebSocket com o ROSBridge, como descrito anteriormente na seção sobre comunicação e visualização de imagem, o frontend se inscreve em tópicos específicos do ROS para receber dados continuamente atualizados. Essa comunicação está sendo feita diretamente no script da página relacionada.
 
 ## Cálculo da latência
 
