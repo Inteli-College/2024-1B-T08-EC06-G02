@@ -1,9 +1,11 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Sugestão de gráficos para Atvos
 A documentação a seguir apresenta uma análise detalhada e visual dos dados coletados ao longo do projeto feito para a empresa Atvos. Com o objetivo de proporcionar uma visão abrangente e precisa do progresso e dos resultados obtidos, foram gerados diversos gráficos que ilustram os principais indicadores de desempenho.
+
+Nesta altura do projeto, surgem muitos dados a serem analisados. E dados não são nada sem uma visualização de dados adequada. 
 
 Essas sugestões de gráficos são ferramentas que a empresa Atvos possa obter insights valiosos, permitindo uma tomada de decisão mais informada e estratégica. A visualização dos dados facilita a identificação de padrões, tendências e possíveis áreas de melhoria, contribuindo para a otimização dos processos e a maximização dos resultados.
 
@@ -11,10 +13,12 @@ Além disso, os gráficos aqui apresentados podem ser integrados a um sistema de
 
 Portanto, esta documentação não apenas serve como um registro detalhado das atividades e resultados, mas também como uma base para a construção de um BI, fundamental para o sucesso contínuo da Atvos.
 
+Nota: os scripts para gerar o gráfico foram feitos "a mão" como base e não estão integrados diretamente com a nossa solução. O intuito é mostrar sugestões e possíveis aplicações. Num futuro, estes etapas poderiam estar integradas. 
+
 # Explicação da API da câmera no projeto
 
 ## Introdução:
-Este documento tem como objetivo explicar a utilização da câmera no projeto de inspeção de canos do reboiler. A câmera será utilizada para visualizar os canos do reboiler, possibilitando a identificação de sujeiras e obstruções. No contexto deste projeto, a capacidade de capturar imagens é essencial para a detecção das impurezas e manutenção preventiva eficiente. A implementação desta tecnologia é crucial para assegurar a integridade operacional dos reboilers, reduzindo o risco de falhas e otimizando os processos de limpeza e manutenção.
+Uma câmera será utilizada para visualizar os canos do reboiler, possibilitando a identificação de sujeiras e obstruções. No contexto deste projeto, a capacidade de capturar imagens é essencial para a detecção das impurezas e manutenção preventiva eficiente. A implementação desta tecnologia é crucial para assegurar a integridade operacional dos reboilers, reduzindo o risco de falhas e otimizando os processos de limpeza e manutenção.
 
 ## Funcionamento da câmera no projeto:
 Para entendermos melhor a transmissão de dados de imagem para a nossa página web, a câmera está conectada com essa a página via websocket (é uma tecnologia que permite a comunicação bidirecional por canais full-duplex sobre um único soquete Transmission Control Protocol).
@@ -44,7 +48,7 @@ A implementação da câmera no projeto de inspeção dos canos do reboiler dese
 # Explicação sobre a Bateria no projeto
 
 ## Introdução:
-Este documento tem como objetivo explicar a função da bateria e como as pessoas que estão operando o robô podem interfirir na vida útil da mesma. Lembrando sempre que estamos usando uma bateria de lítio então o mal uso pode ocorrer uma explosão (em pequena escala, claro, por conta do robô e a bateria serem pequenos). A seguir vamos falar mais sobre a bateria que estamos usando e o que devemos fazer para prolongar o período de vida útil dela tambem colocaremos um gráfico informativo sobre a vida útil dela, tomando e não tomando os devidos cuidados.
+Aqui temos como objetivo explicar a função da bateria e como as pessoas que estão operando o robô podem interfirir na vida útil da mesma. Lembrando sempre que estamos usando uma bateria de lítio então o mal uso pode ocorrer uma explosão (em pequena escala, claro, por conta do robô e a bateria serem pequenos). A seguir vamos falar mais sobre a bateria que estamos usando e o que devemos fazer para prolongar o período de vida útil dela tambem colocaremos um gráfico informativo sobre a vida útil dela, tomando e não tomando os devidos cuidados.
 
 ## Expecificações da bateria:
 - Modelo: LB-12
@@ -135,7 +139,7 @@ Cuidar adequadamente da bateria LB-12 é crucial para garantir a segurança e a 
 # Explicação da Latência no Projeto
 
 ## Introdução:
-Este documento tem como objetivo explicar a função de latência implementada no projeto de publicação de frames de vídeo usando ROS 2 (Robot Operating System). No contexto deste projeto, a latência refere-se ao tempo de atraso entre a captura de um frame pela câmera e a publicação deste frame como uma mensagem no tópico ROS. Entender e monitorar essa latência é crucial para aplicações em que o tempo real é um fator importante, como robótica, vigilância e sistemas de controle.
+Neste ponto temos como objetivo explicar a função de latência implementada no projeto de publicação de frames de vídeo usando ROS 2 (Robot Operating System). No contexto deste projeto, a latência refere-se ao tempo de atraso entre a captura de um frame pela câmera e a publicação deste frame como uma mensagem no tópico ROS. Entender e monitorar essa latência é crucial para aplicações em que o tempo real é um fator importante, como robótica, vigilância e sistemas de controle.
 
 ## Funcionamento da latência no projeto:
 A latência é um fator crítico em sistemas de visão computacional e robótica, onde decisões baseadas em vídeo precisam ser tomadas rapidamente. Monitorar a latência ajuda a:
