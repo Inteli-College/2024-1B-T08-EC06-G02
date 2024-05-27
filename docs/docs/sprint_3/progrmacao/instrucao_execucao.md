@@ -5,7 +5,7 @@ Nesta seção da documentação, explicaremos os passos necessários para rodar 
 Para começar a utilização do projeto é necessário primeiro garantir que todo o setup do robô está funcionando, para isso será utilizado o protocolo ssh que permite utilizar o terminal do raspberry pi acoplado ao turtlebot.
 Uma vez como terminal acessado via ssh, é preciso rodar os seguintes comandos: 
 - `ros2 launch turtlebot3_bringup robot.launch.py `-> Que é responsável por iniciar o serviço de comunicação do robô
-- `cat .bashrc` -> Que irá mostrar as variáveis de ambiente do sistema. Lá é necessário observar o valor de "ROS_DOMAIN_ID"
+- `cat .bashrc` -> Que irá mostrar às variáveis de ambiente do sistema. Lá é necessário observar o valor de "ROS_DOMAIN_ID"
 Fora do terminal ssh, na sua própria máquina, é necessário validar que a variável de ambiente "ROS_DOMAIN_ID" no seu computador é a mesma utilizada pelo seu robô, para garantir que a comunicação dos 2 acontecerá. Para isso pode rodar o mesmo comando `cat .bashrc` e verificar o valor.
 
 ## Passo a passo para a Execução do Backend
