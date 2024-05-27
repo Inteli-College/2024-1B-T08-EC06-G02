@@ -28,5 +28,5 @@ A tela de alerta de colisão no mockup é muito importante para segurança, proj
 ### Vídeo do Fluxo do Mockup
 A seguir tem-se um gif que representa o fluxo do mockup para melhor entendimento de como o frontend será implementado.
 
-![Vídeo de Fluxo](/videos/fluxo-mockup.gif)
+![Vídeo de Fluxo](/img/sprint_3/fluxo-mockup.gif)
 <h6 align="center"> Fonte: Elaboração grupo Repipe </h6>
