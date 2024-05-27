@@ -10,6 +10,11 @@ import AbaVisualizar from '../components/home/aba-visualizar';
 const Principal = () => {
   const [videoSrc, setVideoSrc] = useState('');
   const [isAbaVisible, setIsAbaVisible] = useState(false);
+  const [colisaoFrente, setColisaoFrente] = useState(false);
+  const [colisaoTras, setColisaoTras] = useState(false);
+  const [colisaoEsquerda, setColisaoEsquerda] = useState(false);
+  const [colisaoDireita, setColisaoDireita] = useState(false);
+  const STOP_DISTANCE = 0.5; 
 
   const toggleAbaVisualizar = () => {
     setIsAbaVisible(!isAbaVisible);
@@ -44,6 +49,40 @@ const Principal = () => {
       messageType: 'geometry_msgs/Twist'
     });
 
+    var listener = new ROSLIB.Topic({
+      ros: ros,
+      name: '/scan',
+      messageType: 'sensor_msgs/LaserScan'
+  });
+
+    listener.subscribe(function (message) {
+        // console.log('Mensagem recebida do ' + listener.name + ': ' + message.ranges);
+
+        const validRanges = message.ranges.filter(range => !isNaN(range) && range !== null && range !== undefined);
+
+        if (validRanges.length > 0) {
+          if (validRanges.length > 0) {
+            const back_index = 0;
+            const right_index = Math.floor(validRanges.length / 4);
+            const front_index = Math.floor(validRanges.length / 2);
+            const left_index = Math.floor(validRanges.length * 3 / 4);
+    
+            const front_distance = validRanges[front_index];
+            const right_distance = validRanges[right_index];
+            const back_distance = validRanges[back_index];
+            const left_distance = validRanges[left_index];
+    
+            // Log distances for debugging
+            console.log(`Front distance: ${front_distance}, Left distance: ${left_distance}, Back distance: ${back_distance}, Right distance: ${right_distance}`);
+    
+            setColisaoFrente(front_distance < STOP_DISTANCE);
+            setColisaoDireita(right_distance < STOP_DISTANCE);
+            setColisaoTras(back_distance < STOP_DISTANCE);
+            setColisaoEsquerda(left_distance < STOP_DISTANCE);
+        }
+        }
+    });
+
     let turtleBotVel = new ROSLIB.Message({
       linear: {
         x: 0,
@@ -62,26 +101,52 @@ const Principal = () => {
 
       switch (key) {
         case 'ArrowUp':
-          turtleBotVel.linear.x = 2.0;
-          turtleBotVel.angular.z = 0;
-          break;
+            if (!colisaoFrente){
+                turtleBotVel.linear.x = 2.0;  // Move forward
+                turtleBotVel.angular.z = 0;
+            } else {
+                turtleBotVel.linear.x = 0;  // Stop any forward motion due to collision risk
+                turtleBotVel.angular.z = 0;
+                console.log("Collision ahead! Stopping.");
+            }
+            break;
         case 'ArrowDown':
-          turtleBotVel.linear.x = -2.0;
-          turtleBotVel.angular.z = 0;
-          break;
+            if (!colisaoTras){
+                turtleBotVel.linear.x = -2.0;  // Move backward
+                turtleBotVel.angular.z = 0;
+            } else {
+                turtleBotVel.linear.x = 0;  // Stop any backward motion due to collision risk
+                turtleBotVel.angular.z = 0;
+                console.log("Collision behind! Stopping.");
+            }
+            break;
         case 'ArrowLeft':
-          turtleBotVel.angular.z = 1;
-          turtleBotVel.linear.x = 0;
-          break;
+            if (!colisaoEsquerda){
+                turtleBotVel.angular.z = 1;  // Turn left
+                turtleBotVel.linear.x = 0;
+            } else {
+                turtleBotVel.angular.z = 0;  // Stop any left turn due to collision risk
+                turtleBotVel.linear.x = 0;
+                console.log("Collision on the left! Stopping.");
+            }
+            break;
         case 'ArrowRight':
-          turtleBotVel.angular.z = -1;
-          turtleBotVel.linear.x = 0;
-
-          break;
+            if (!colisaoDireita){
+                turtleBotVel.angular.z = -1;  // Turn right
+                turtleBotVel.linear.x = 0;
+            } else {
+                turtleBotVel.angular.z = 0;  // Stop any right turn due to collision risk
+                turtleBotVel.linear.x = 0;
+                console.log("Collision on the right! Stopping.");
+            }
+            break;
         default:
-          break;
-      }
-
+            // If any other key is pressed, don't move the robot
+            turtleBotVel.linear.x = 0;
+            turtleBotVel.angular.z = 0;
+            break;
+    }
+    
       console.log(turtleBotVel.linear.x, turtleBotVel.angular.z);
       controlTopic.publish(turtleBotVel);
     };
@@ -107,8 +172,10 @@ const Principal = () => {
     };
 
     const handleVideoFrame = (message) => {
+      // console.log(message.data);  // debug
       setVideoSrc('data:image/jpeg;base64,' + message.data);
     };
+    
 
     videoTopic.subscribe(handleVideoFrame);
     window.addEventListener('keydown', handleKeyDown);
@@ -120,7 +187,7 @@ const Principal = () => {
       videoTopic.unsubscribe(handleVideoFrame);
       ros.close();
     };
-  }, []);
+  }, [colisaoDireita, colisaoEsquerda, colisaoFrente, colisaoTras]);
 
   return (
     <div className={`principal-container ${isAbaVisible ? 'with-aba' : ''}`}>
