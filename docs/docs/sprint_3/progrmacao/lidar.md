@@ -184,4 +184,4 @@ O código inteiro pode ser visualizado em: https://github.com/Inteli-College/202
 ## Demonstração
 ![Demonstração Lidar](https://s3.ezgif.com/tmp/ezgif-3-04e50646e6.gif)
 
-Neste exemplo teste de demonstração, estamos com o script da CLI rodando, além do frontend com a comunicação websocket. Nele, podemos perceber o resultado da implementação: quando o robô chega a 0.2 metros de algum objeto (neste caso a parede), é exibido um PopUp de alerta para a colisão (canto esquerdo) e o robô é parado (canto direito). Caso ele volte a posição de segurança, o PopUp é retirado. 
+Neste exemplo teste de demonstração, estamos com o script da CLI rodando, além do frontend com a comunicação websocket. Nele, podemos perceber o resultado da implementação: quando o robô chega a 0.2 metros de algum objeto (neste caso a parede), é exibido um PopUp de alerta para a colisão (canto esquerdo) e o robô é parado (canto direito). Caso ele volte a posição de segurança, o PopUp é retirado.
