@@ -1,6 +1,6 @@
 ---
-sidebar_position : 2
-title : "Mockup"
+sidebar_position: 2
+title: "Mockup"
 ---
 
 Após a elaboração inicial do wireframe, que permitiu visualizar as funcionalidades da aplicação, avançamos para o próximo passo no desenvolvimento da interface gráfica: a criação de um protótipo de alta fidelidade, ou mockup. Este mockup é a melhor forma de visualizar o design da aplicação sem a necessidade de desenvolver o frontend. Além disso, algumas funcionalidades foram ajustadas com base nos feedbacks fornecidos pelo parceiro, garantindo que o produto final atenda às expectativas e necessidades identificadas.
@@ -23,4 +23,10 @@ A tela de visualização no mockup segue a mesma abordagem do wireframe, só que
 ### Imagem 2 do Mockup - modal colisão
 ![Imagem 4 do Mockup - modal colisão](/img/sprint_3/mockup-colisao.png)
 <h6 align="center"> Fonte: Elaboração grupo Repipe </h6>
-A tela de alerta de colisão no mockup é muito importante para segurança, projetada para alertar imediatamente o usuário sobre potenciais riscos de colisão. Este alerta é apresentado por um pop-up destacado em cores vivas para assegurar máxima visibilidade e atenção. O texto "RISCO DE COLISÃO - Atente-se, está prestes a bater!" é claro e direto, minimizando a possibilidade de mal-entendidos e aumentando a rapidez na reação do usuário. 
+A tela de alerta de colisão no mockup é muito importante para segurança, projetada para alertar imediatamente o usuário sobre potenciais riscos de colisão. Este alerta é apresentado por um pop-up destacado em cores vivas para assegurar máxima visibilidade e atenção. O texto "RISCO DE COLISÃO - Atente-se, está prestes a bater!" é claro e direto, minimizando a possibilidade de mal-entendidos e aumentando a rapidez na reação do usuário.
+
+### Vídeo do Fluxo do Mockup
+A seguir tem-se um gif que representa o fluxo do mockup para melhor entendimento de como o frontend será implementado.
+
+![Vídeo de Fluxo](/videos/fluxo-mockup.gif)
+<h6 align="center"> Fonte: Elaboração grupo Repipe </h6>
