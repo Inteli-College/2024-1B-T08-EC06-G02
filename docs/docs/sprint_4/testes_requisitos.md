@@ -93,7 +93,11 @@ E a condução dos testes deve acontecer da seguinte forma:
 ## Tarefa para o teste de autonomia do robô
 O "Teste de autonomia" em questão, será realizado com o grupo de desenvolvedores para poder visualizar como a bateria se comprta com todos os componentes em funcionamento e o quanto de tempo ela poderá suportar. Esse teste é importante pois precisamos dessa teste da autonomia da bateria justamente para entender como o robô se comporta a medida que a bateria vai descarregando e quanto tempo de duração é o que ela aguenta.
 
-***Depois, colocar as etapas das tarefas de 1 a 4 ou 3 para que ele (persona/tester) possa colocar o que deu certo e o que nao deu certo na atividade proposta***
+**1. Autonomia do Robô (RNF01):**
+- Passo 1: Monte um ambiente controlado com obstáculos representativos e uma área de movimento para o robô.
+- Passo 2: Crie um script que simule as atividades típicas do robô, como movimento, coleta de dados e comunicação.
+- Passo 3: Implemente um sistema de monitoramento de energia que registre o consumo de energia do robô durante a simulação.
+- Passo 4: Execute o script por um período equivalente a 4 horas de operação e verifique se o consumo simulado de energia está dentro da capacidade da bateria do robô.
 
 ## Relatório de execução
 ...img...
@@ -115,7 +119,11 @@ Além disso, destacamos os principais problemas observados, classificando por n�
 O "Teste de latência" em questão, será realizado com o grupo de desenvolvedores para poder visualizar como a latência se comporta dependendo de onde a pessoa está com o computador eberto e fazendo o teste para poder controlar o robô. E claro, se a persona/tester conseguiu enviar os comando para o robô e ele conseguiu se movimentar.
 Será avaliado nesse teste também o tempo de reinderização da imagem para que a pessoa que esteja controlando consiga ver o que a câmera está transmitindo com uma qualidade razoável tambem, para poder ver se há sujeiras ou algum tipo de defeito nos canos do reboiler. 
 
-***Depois, colocar as etapas das tarefas de 1 a 4 ou 3 para que ele (persona/tester) possa colocar o que deu certo e o que nao deu certo na atividade proposta***
+**2. Latência de Comunicação (RNF03):**
+- Passo 1: Configure um ambiente de simulação de rede com as características desejadas de latência.
+- Passo 2: Estabeleça uma conexão de teleoperação entre o controlador e o robô através da rede simulada.
+- asso 3: Meça a latência de comunicação durante a operação do robô e registre os resultados.
+- Passo 4: Verifique se a latência de comunicação simulada está dentro dos limites especificados, com picos de 30ms para mais ou menos.
 
 ## Relatório de execução
 ...img...
@@ -136,7 +144,11 @@ Além disso, destacamos os principais problemas observados, classificando por n�
 ## Tarefa para o teste de interface interativa
 O "Teste de Interface Interativa" será realizado pelo grupo de desenvolvedores para avaliar a usabilidade da interface do usuário. Este teste é fundamental para garantir que a interface seja facilmente compreendida ao primeiro contato, seguindo os princípios das heurísticas de Nielsen. Durante o teste, os desenvolvedores observarão como os usuários interagem com a interface, identificando possíveis dificuldades e coletando feedback para melhorias. A realização deste teste é essencial para assegurar que os controles do robô sejam intuitivos e eficientes para todos os usuários, independentemente do seu nível de letramento digital.
 
-***Depois, colocar as etapas das tarefas de 1 a 4 ou 3 para que ele (persona/tester) possa colocar o que deu certo e o que nao deu certo na atividade proposta***
+**3. Interface Interativa (RNF05):**
+- Passo 1: Desenvolva protótipos interativos da interface do usuário com base nos requisitos de design.
+- Passo 2: Recrute usuários representativos para participar das sessões de teste.
+- Passo 3: Apresente a interface do usuário simulada aos usuários e observe sua interação e feedback.
+- Passo 4: Avalie se a interface do usuário é facilmente compreensível e atende aos princípios das heurísticas de Nielsen.
 
 ## Relatório de execução
 ...img...
