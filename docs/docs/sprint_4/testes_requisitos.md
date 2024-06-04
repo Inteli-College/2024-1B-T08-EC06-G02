@@ -58,9 +58,13 @@ Completar
 # Testes de validação: requisito não funcional
 ## Contexto
 
-Dos requisitos não funcionais estabeledcidos anteriormente, escolhemos o:
+Dos requisitos não funcionais estabeledcidos anteriormente, escolhemos os:
 
-**RNF02 - Latência de comunicação** Visto que haverá uma teleoperação em tempo real do robô, o sitema deve ter uma latência de comunicação estável e baixa. Nesse caso, uma latência de no máximo 150ms, com picos de 30ms para mais ou menos.
+1. **RNF01 - Autonomia do robô:** Diante da operação contínua do robô, durante o processo de limpeza, o mesmo deve ter autonomia necessária para verificar ao menos um reboiler, por vez. Sendo assim, é preciso ter uma autonomia de no mínimo 4 horas.
+
+Esse RNF escolhido para compor os testes é muito importante pois precisamos entender a autonomia da bateria e como ela se comporta com todos os componentes funcionanado ao mesmo tempo (respbery, câmera, motores). Esse é um bom teste para podermos enteder e analisar se faz sentido colocar uma bateria mais potênte para alimetar o robô e poder ter mais autonomia no dia a dia na inspeção dos reboilers.
+
+2. **RNF02 - Latência de comunicação** Visto que haverá uma teleoperação em tempo real do robô, o sitema deve ter uma latência de comunicação estável e baixa. Nesse caso, uma latência de no máximo 150ms, com picos de 30ms para mais ou menos.
 
 O RNF escolhido se dá pela importância na teleoperação do robô e é de super importância esse dado ja que, a latência varia de forma com a distância e o ambiente onde esteja para se comunicar e controlar o robô.
 
@@ -81,20 +85,28 @@ E a condução dos testes deve acontecer da seguinte forma:
 2. Realizar o setup previamente do robô: rodar a interface, o BringUp do turtlebot, a conexão WebSocket e o envio dos dados da câmera.
 3. Fornecer o notebook para teleoperar o robô e anotar as informações coletadas. 
 
+## Tarefa para o teste de autonomia do robô
+
+
+## Tarefa para o teste de latência
+O "Teste de latência" em questão, será feito com o grupo de desenvolvedores para poder visualizar como a latência se comporta dependendo de onde a pessoa está com o computador eberto e fazendo o teste para poder controlar o robô. E claro, se a persona/tester conseguiu enviar os comando para o robô e ele conseguiu se movimentar.
+Será avaliado nesse teste também o tempo de reinderização da imagem para que a pessoa que esteja controlando consiga ver o que a câmera está transmitindo com uma qualidade razoável tambem, para poder ver se há sujeiras ou algum tipo de defeito nos canos do reboiler. 
+
+***Depois, colocar as etapas das tarefas de 1 a 4 ou 3 para que ele (persona/tester) possa colocar o que deu certo e o que nao deu certo na atividade proposta***
+
 ## Relatório de execução
 ...img...
 
-Os testes foram executados por 4 pessoas. Os resultados podem ser visualizados[neste arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit?usp=sharing) do Google Sheets.
+Os testes foram executados pelo grupo de desenvolvedores. Os resultados podem ser visualizados[neste arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit?usp=sharing) do Google Sheets.
 
 No geral, este foi o resultado obtido: 
 
 | Tarefa | Perfil/Persona | Resultado Geral |
 |--------|----------------|----------------|
-|   1    | Operador Industrial/aluno/ professor | Visualizou com sucesso | 
-|   1    | Operador Industrial/aluno/ professor | Visualizou com dificuldade |
-|   1    | Operador Industrial/aluno/ professor | Não entendeu |
-|   1    | Operador Industrial/aluno/ professor | Não entendeu |
+|   1    | aluno | Sucesso | 
 
 Além disso, destacamos os principais problemas observados, classificando por nível de severidade e potenciais melhorias. Isto pode ser observado na segunda aba "ocorrências" do [mesmo arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit?usp=sharing)  Google Sheets.
 
 ## Conclusão
+...
+
