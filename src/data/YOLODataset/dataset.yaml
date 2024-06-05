@@ -1,4 +1,0 @@
-train: /home/eduardo/labelme/YOLODataset/images/train/
-val: /home/eduardo/labelme/YOLODataset/images/val/
-nc: 1
-names: ["pipe"]
