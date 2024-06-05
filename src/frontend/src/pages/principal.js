@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import ROSLIB from 'roslib';
-import '../static/main.css';  // Caminho correto para o CSS
-import BotaoIniciar from '../components/home/botao-iniciar'; // Corrige a importação para minúsculas
-import BotaoVisualizar from '../components/home/botao-visualizar'; // Corrige a importação para minúsculas
-import BotoesMover from '../components/home/botoes-mover'; // Corrige a importação para minúsculas
+import '../static/main.css';  
+import BotaoIniciar from '../components/home/botao-iniciar'; 
+import BotaoVisualizar from '../components/home/botao-visualizar'; 
+import BotoesMover from '../components/home/botoes-mover'; 
 import { PopUpColisao } from '../components/home/popup-colisao';
 import AbaVisualizar from '../components/home/aba-visualizar';
 
@@ -72,7 +72,6 @@ const Principal = () => {
             const back_distance = validRanges[back_index];
             const left_distance = validRanges[left_index];
     
-            // Log distances for debugging
             console.log(`Front distance: ${front_distance}, Left distance: ${left_distance}, Back distance: ${back_distance}, Right distance: ${right_distance}`);
     
             setColisaoFrente(front_distance < STOP_DISTANCE);
