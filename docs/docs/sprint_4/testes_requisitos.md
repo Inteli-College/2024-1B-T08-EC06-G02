@@ -91,18 +91,21 @@ E a condução dos testes deve acontecer da seguinte forma:
 3. Fornecer o notebook para teleoperar o robô e anotar as informações coletadas. 
 
 ## Tarefa para o teste de autonomia do robô
-O "Teste de autonomia" em questão, será realizado com o grupo de desenvolvedores para poder visualizar como a bateria se comprta com todos os componentes em funcionamento e o quanto de tempo ela poderá suportar. Esse teste é importante pois precisamos dessa teste da autonomia da bateria justamente para entender como o robô se comporta a medida que a bateria vai descarregando e quanto tempo de duração é o que ela aguenta.
+O "Teste de autonomia" em questão, será realizado com o grupo de desenvolvedores para poder visualizar como a bateria se comporta com todos os componentes em funcionamento e o quanto de tempo ela poderá suportar. Esse teste é importante pois precisamos dessa teste da autonomia da bateria justamente para entender como o robô se comporta a medida que a bateria vai descarregando e quanto tempo de duração é o que ela aguenta.
 
 **1. Autonomia do Robô (RNF01):**
 - Passo 1: Monte um ambiente controlado com obstáculos representativos e uma área de movimento para o robô.
 - Passo 2: Crie um script que simule as atividades típicas do robô, como movimento, coleta de dados e comunicação.
-- Passo 3: Implemente um sistema de monitoramento de energia que registre o consumo de energia do robô durante a simulação.
-- Passo 4: Execute o script por um período equivalente a 4 horas de operação e verifique se o consumo simulado de energia está dentro da capacidade da bateria do robô.
+- Passo 3: Pegue a bateria totalmente carregada 12.6V e acople no robô
+- Passo 4: Lique um cronômetro e execute o script por um período e verifique se o consumo simulado de energia está dentro da capacidade da bateria do robô.
+***OBS: Vale lembrar que o turtlebot por padrão começa a apitar quando chega as 11.0V como medida de segurança e quando começar a apitar nós paramos o cronômetro para ver quanto tempo deu***
+- Passo 5: Depois que apitou, parâmos o cronômetro e vemos quanto tempo deu de funcionamento do robô.
+
 
 ## Relatório de execução
 ...img...
 
-Os testes foram executados pelo grupo de desenvolvedores. Os resultados podem ser visualizados[neste arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit?usp=sharing) do Google Sheets.
+Os testes foram executados pelo grupo de desenvolvedores. Os resultados podem ser visualizados[neste arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit#gid=1538901939) do Google Sheets.
 
 No geral, este foi o resultado obtido: 
 
@@ -120,10 +123,10 @@ O "Teste de latência" em questão, será realizado com o grupo de desenvolvedor
 Será avaliado nesse teste também o tempo de reinderização da imagem para que a pessoa que esteja controlando consiga ver o que a câmera está transmitindo com uma qualidade razoável tambem, para poder ver se há sujeiras ou algum tipo de defeito nos canos do reboiler. 
 
 **2. Latência de Comunicação (RNF03):**
-- Passo 1: Configure um ambiente de simulação de rede com as características desejadas de latência.
-- Passo 2: Estabeleça uma conexão de teleoperação entre o controlador e o robô através da rede simulada.
-- asso 3: Meça a latência de comunicação durante a operação do robô e registre os resultados.
-- Passo 4: Verifique se a latência de comunicação simulada está dentro dos limites especificados, com picos de 30ms para mais ou menos.
+- Passo 1: Configuração e execução do código para começar a avaliação da latência e FPS.
+- Passo 2: Estabeleça uma conexão de teleoperação entre o controlador e o robô.
+- Passo 3: Meça a latência de comunicação durante a operação do robô com o auxílio da propriedado do front que mostra o FPS e a Latência.
+- Passo 4: Deixe o robô no laboratório e rode o programa dentro do ateliê para visualizar a latência e o FPS. Depois, rode o programa da biblioteca para visualizar a latência e o FPS e por último, rode do refeitório para fazer o mesmo teste.
 
 ## Relatório de execução
 ...img...
@@ -146,9 +149,8 @@ O "Teste de Interface Interativa" será realizado pelo grupo de desenvolvedores 
 
 **3. Interface Interativa (RNF05):**
 - Passo 1: Desenvolva protótipos interativos da interface do usuário com base nos requisitos de design.
-- Passo 2: Recrute usuários representativos para participar das sessões de teste.
-- Passo 3: Apresente a interface do usuário simulada aos usuários e observe sua interação e feedback.
-- Passo 4: Avalie se a interface do usuário é facilmente compreensível e atende aos princípios das heurísticas de Nielsen.
+- Passo 2: Apresente a interface do usuário simulada aos usuários e observe sua interação e feedback.
+- Passo 3: Avalie se a interface do usuário é facilmente compreensível e atende aos princípios das heurísticas de Nielsen.
 
 ## Relatório de execução
 ...img...
