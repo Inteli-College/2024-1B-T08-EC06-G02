@@ -4,7 +4,7 @@ from database import DatabaseConnector
 
 app = FastAPI(swagger_ui_parameters={"syntaxHighlight.theme": "obsidian"})
 
-connector = DatabaseConnector()
+connector = DatabaseConnector('repipe.db')
 
 @app.post("/users/{username}", status_code=201)
 async def create_user(username: str):
@@ -32,4 +32,4 @@ async def delete_user(username: str):
     delete_user = connector.delete_user(username)
     if not delete_user:
         raise HTTPException(status_code=404, detail="User not deleted")
-    return JSONResponse(content={"message": "User deleted"}, status_code=200)
+    return JSONResponse(content={"message": "User deleted"}, status_code=200)   
