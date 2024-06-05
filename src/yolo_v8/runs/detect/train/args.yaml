@@ -1,7 +1,7 @@
 task: detect
 mode: train
 model: yolov8m.pt
-data: /home/lidia/yolo_v8/YOLODataset/dataset.yaml
+data: YOLODataset/dataset.yaml
 epochs: 2
 time: null
 patience: 100
