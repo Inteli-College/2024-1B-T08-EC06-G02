@@ -201,3 +201,6 @@ Além disso, destacamos os principais problemas observados, classificando por n�
 
 ## Conclusão
 ...
+
+## Proposta de melhoria
+Lembra que é a mudança da bateria azul de 1800mha para a bateria preta de 2200mha.
