@@ -208,8 +208,10 @@ const Principal = () => {
         <PopUpColisao />
         <img id="videoStream" alt="Video Stream" src={videoSrc} className="video-stream" />
       </div>
-      <div className="latency-data">
-        <p>Latency: {latencyData}</p>
+      <div className="latency-container">
+        <div className="latency-data">
+          <p>Latency: {latencyData}</p>
+        </div>
       </div>
       <div className={`control-buttons ${isAbaVisible ? 'with-aba' : ''}`}>
         <BotaoIniciar onClick={() => console.log('Botão Iniciar clicado!')} />
