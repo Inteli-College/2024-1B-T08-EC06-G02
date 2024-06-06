@@ -6,6 +6,7 @@ import BotaoVisualizar from '../components/home/botao-visualizar'; // Corrige a 
 import BotoesMover from '../components/home/botoes-mover'; // Corrige a importação para minúsculas
 import { PopUpColisao } from '../components/home/popup-colisao';
 import AbaVisualizar from '../components/home/aba-visualizar';
+import { message } from 'antd';
 
 const Principal = () => {
   const [videoSrc, setVideoSrc] = useState('');
@@ -14,6 +15,7 @@ const Principal = () => {
   const [colisaoTras, setColisaoTras] = useState(false);
   const [colisaoEsquerda, setColisaoEsquerda] = useState(false);
   const [colisaoDireita, setColisaoDireita] = useState(false);
+  const [latencyData, setLatencyData] = useState('');
   const STOP_DISTANCE = 0.5; 
 
   const toggleAbaVisualizar = () => {
@@ -47,6 +49,16 @@ const Principal = () => {
       ros: ros,
       name: '/cmd_vel',
       messageType: 'geometry_msgs/Twist'
+    });
+
+    const fpsListener = new ROSLIB.Topic({
+      ros: ros,
+      name: '/fps',
+      messageType: 'std_msgs/Float'
+    });
+
+    fpsListener.subscribe((message) =>{
+      setLatencyData(message.data);
     });
 
     var listener = new ROSLIB.Topic({
@@ -185,6 +197,7 @@ const Principal = () => {
       window.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('keyup', handleKeyUp);
       videoTopic.unsubscribe(handleVideoFrame);
+      fpsListener.unsubscribe();
       ros.close();
     };
   }, [colisaoDireita, colisaoEsquerda, colisaoFrente, colisaoTras]);
@@ -194,6 +207,11 @@ const Principal = () => {
       <div className="content-box">
         <PopUpColisao />
         <img id="videoStream" alt="Video Stream" src={videoSrc} className="video-stream" />
+      </div>
+      <div className="latency-container">
+        <div className="latency-data">
+          <p>Latency: {latencyData}</p>
+        </div>
       </div>
       <div className={`control-buttons ${isAbaVisible ? 'with-aba' : ''}`}>
         <BotaoIniciar onClick={() => console.log('Botão Iniciar clicado!')} />
