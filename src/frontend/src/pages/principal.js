@@ -54,11 +54,12 @@ const Principal = () => {
     const fpsListener = new ROSLIB.Topic({
       ros: ros,
       name: '/fps',
-      messageType: 'std_msgs/Float'
+      messageType : 'std_msgs/String'
     });
 
     fpsListener.subscribe((message) =>{
       setLatencyData(message.data);
+      console.log(latencyData)
     });
 
     var listener = new ROSLIB.Topic({
@@ -85,7 +86,7 @@ const Principal = () => {
             const left_distance = validRanges[left_index];
     
             // Log distances for debugging
-            console.log(`Front distance: ${front_distance}, Left distance: ${left_distance}, Back distance: ${back_distance}, Right distance: ${right_distance}`);
+            // console.log(`Front distance: ${front_distance}, Left distance: ${left_distance}, Back distance: ${back_distance}, Right distance: ${right_distance}`);
     
             setColisaoFrente(front_distance < STOP_DISTANCE);
             setColisaoDireita(right_distance < STOP_DISTANCE);
@@ -114,7 +115,7 @@ const Principal = () => {
       switch (key) {
         case 'ArrowUp':
             if (!colisaoFrente){
-                turtleBotVel.linear.x = 2.0;  // Move forward
+                turtleBotVel.linear.x = 0.21;  // Move forward
                 turtleBotVel.angular.z = 0;
             } else {
                 turtleBotVel.linear.x = 0;  // Stop any forward motion due to collision risk
@@ -124,7 +125,7 @@ const Principal = () => {
             break;
         case 'ArrowDown':
             if (!colisaoTras){
-                turtleBotVel.linear.x = -2.0;  // Move backward
+                turtleBotVel.linear.x = -0.21;  // Move backward
                 turtleBotVel.angular.z = 0;
             } else {
                 turtleBotVel.linear.x = 0;  // Stop any backward motion due to collision risk
