@@ -2,6 +2,7 @@
 sidebar_position: 3
 title: "Teste de Requisitos"
 ---
+# Teste de Requisitos 
 
 Este documento é responsável por detalhar testes de funcionalidade para requisitos funcionais e testes de validação para requisitos não funcionais. 
 
@@ -18,7 +19,7 @@ O RF escolhido se dá pela sua importância na teleoperação do robô e por mes
 ## Roteiro de teste
 Todo teste é seguido por uma **tarefa**. E toda tarefa é realizada por um **perfil/persona** que obtém um **resultado geral** e um resultado **por etapas**. 
 
-Sendo assim, para garantir que o RF esteja de acordo com o estabelecido, criamos critérios para avaliar se o teste foi realizado com sucesso ou não. 
+Sendo assim, para garantir que o RF esteja de acordo com o estabelecido, criamos critérios para avaliar se o teste foi realizado com sucesso ou não. O RF escolhido, neste caso, é a tarefa. 
 
 No geral, avaliamos 4 fatores: 
 
@@ -39,21 +40,38 @@ Os testes foram executados por 4 pessoas, além do teste realizado pelo grupo. O
 
 No geral, este foi o resultado obtido: 
 
-| Tarefa | Perfil/Persona | Resultado Geral |
-|--------|----------------|----------------|
-|   1    | Operador Industrial | Sucesso | 
-|   1    | Operador Industrial | Conseguiu com dificuldade |
-|   1    | Operador Industrial | Não conseguiu |
-|   1    | Operador Industrial | Sucesso |
-|   1    | Operador Industrial | Sucesso |
+| Tarefa | Usuários | Perfil/Persona | Resultado Geral |
+|--------|---------|----------------|----------------|
+|   1    | Grupo   | Operador Industrial | Sucesso |
+|   1    | Antônio Ribeiro (3º Eng Comp)   | Operador Industrial | Sucesso | 
+|   1    | Kaiane Souza (2º Eng Soft)   | Operador Industrial | Sucesso |
+|   1    | André Leal (Téc Laboratório)   | Operador Industrial | Sucesso |
+|   1    | Pablo Ruan (3º Eng Comp)   | Operador Industrial | Conseguiu com dificuldade |
 
-Além disso, destacamos os principais problemas observados, classificando por nível de severidade e potenciais melhorias. Isto pode ser observado na segunda aba "ocorrências" do [mesmo arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit?usp=sharing)  Google Sheets.
+Além disso, destacamos os principais problemas observados, classificando por nível de severidade e potenciais melhorias. Isto pode ser observado na segunda aba "ocorrências" do [mesmo arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit?usp=sharing) Google Sheets.
+
+Nele também é possível observar se o problema relatado é um problema de funcionalidade, usabilidade ou compreensão. 
 
 ![Relatório de execução](../../static/img/sprint_4/testes_rf_ocorrencias.png)
 
 
 ## Conclusão
-Completar
+Como conclusão do teste de funcionalidade realizado, tivemos os seguintes feedbacks: 
+
+1.	Controle fácil do robô.
+2.	Movimentação intuitiva via teclado.
+3.	Resposta rápida para movimentação.
+4.	Sistema de alerta via pop-up eficaz.
+5.	Resposta rápida do vídeo e imagem.
+
+E como pontos de melhoria, tivemos: 
+
+1.	**Posicionamento do Pop-up**: Mover o pop-up para o centro da tela para destacar mais eficazmente o sistema de colisão.
+2.	**Informações adicionais no Pop-up**: Inserir no pop-up informações sobre a direção da colisão (frente, trás, direita, esquerda) para ajudar na orientação do usuário.
+3.	**Indicação dos botões**: Fornecer indicações claras de quais botões devem ser apertados, possivelmente destacando-os visualmente ou incluindo legendas explicativas.
+4.	**Feedback constante na interface**: Implementar um sistema que ofereça feedback constante sobre a direção em que o robô está se movendo, usando, por exemplo, indicações de cor nos botões ou setas.
+5.	**Melhoria na disposição dos elementos da interface**: Aperfeiçoar a responsividade e a disposição geral dos elementos na interface para melhorar a usabilidade e a estética geral.
+
 
 # Testes de validação: requisito não funcional
 ## Contexto
