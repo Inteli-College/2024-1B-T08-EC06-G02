@@ -26,6 +26,10 @@
   transition: left 0.3s ease;
 }
 
+.latency-data {
+
+}
+
 .control-buttons.with-aba {
   left: -80px;
   transition: left 0.3s ease;
