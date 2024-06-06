@@ -103,15 +103,21 @@ O "Teste de autonomia" em questão, será realizado com o grupo de desenvolvedor
 
 
 ## Relatório de execução
-...img...
+Segue imagem do relatório de execução de autonomia do robô com a bateria em 100% (12.6V):
+
+![RNF_de_autonomia_do_robô](../../static/img/sprint_4/RNF_autonomia_robo.png)
 
 Os testes foram executados pelo grupo de desenvolvedores. Os resultados podem ser visualizados[neste arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit#gid=1538901939) do Google Sheets.
 
 No geral, este foi o resultado obtido: 
 
-| Tarefa | Perfil/Persona | Resultado Geral |
-|--------|----------------|----------------|
-|   1    | aluno | Sucesso | 
+| #       | Nome          | Perfil/Persona                   | Teste                                                                                   | Resultado Geral |
+|---------|---------------|----------------------------------|-----------------------------------------------------------------------------------------|-----------------|
+| PASSO 1 | GRUPO         | Aluno (Cecília 2º Eng Comp)      | Monte um ambiente controlado com obstáculos representativos e uma área de movimento para o robô. | Sucesso         |
+| PASSO 2 | GRUPO         | Aluno (Cecília 2º Eng Comp)      | Crie um script que simule as atividades típicas do robô, como movimento, coleta de dados e comunicação. | Sucesso         |
+| PASSO 3 | GRUPO         | Aluno (Cecília 2º Eng Comp)      | Pegue a bateria totalmente carregada 12.6V e acople no robô | Sucesso         |
+| PASSO 4 | GRUPO         | Aluno (Cecília 2º Eng Comp)      | Lique um cronômetro e execute o script por um período e verifique se o consumo simulado de energia está dentro da capacidade da bateria do robô.| Sucesso  |
+| PASSO 5 | GRUPO         | Aluno (Cecília 2º Eng Comp)      | Depois que apitou, parâmos o cronômetro e vemos quanto tempo deu de funcionamento do robô. | Sucesso         |
 
 Além disso, destacamos os principais problemas observados, classificando por nível de severidade e potenciais melhorias. Isto pode ser observado na segunda aba "ocorrências" do [mesmo arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit?usp=sharing)  Google Sheets.
 
@@ -129,17 +135,22 @@ Será avaliado nesse teste também o tempo de reinderização da imagem para que
 - Passo 4: Deixe o robô no laboratório e rode o programa dentro do ateliê para visualizar a latência e o FPS. Depois, rode o programa da biblioteca para visualizar a latência e o FPS e por último, rode do refeitório para fazer o mesmo teste.
 
 ## Relatório de execução
-...img...
+Segue imagem do relatório de execução da latência e FPS do robô:
 
-Os testes foram executados pelo grupo de desenvolvedores. Os resultados podem ser visualizados[neste arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit?usp=sharing) do Google Sheets.
+![RNF_de_latência_e_FPS_do_robô](../../static/img/sprint_4/RNF_latencia_robo.png)
+
+Os testes foram executados pelo grupo de desenvolvedores. Os resultados podem ser visualizados[neste arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit#gid=1538901939) do Google Sheets.
 
 No geral, este foi o resultado obtido: 
 
-| Tarefa | Perfil/Persona | Resultado Geral |
-|--------|----------------|----------------|
-|   1    | aluno | Sucesso | 
+| #       | Nome          | Perfil/Persona                   | Teste                                                                                   | Resultado Geral |
+|---------|---------------|----------------------------------|-----------------------------------------------------------------------------------------|-----------------|
+| PASSO 1 | GRUPO         | Aluno (José Alencar 2º Eng Comp)      | Configuração e execução do código para começar a avaliação da latência e FPS. | Sucesso         |
+| PASSO 2 | GRUPO         | Aluno (José Alencar 2º Eng Comp)      | Estabeleça uma conexão de teleoperação entre o controlador e o robô. | Sucesso         |
+| PASSO 3 | GRUPO         | Aluno (José Alencar 2º Eng Comp)      | Meça a latência de comunicação durante a operação do robô com o auxílio da propriedado do front que mostra o FPS e a Latência. | Sucesso         |
+| PASSO 4 | GRUPO         | Aluno (José Alencar 2º Eng Comp)      | Deixe o robô no laboratório e rode o programa dentro do ateliê para visualizar a latência e o FPS. Depois, rode o programa da biblioteca para visualizar a latência e o FPS e por último, rode do refeitório para fazer o mesmo teste.| Sucesso  |
 
-Além disso, destacamos os principais problemas observados, classificando por nível de severidade e potenciais melhorias. Isto pode ser observado na segunda aba "ocorrências" do [mesmo arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit?usp=sharing)  Google Sheets.
+Além disso, destacamos os principais problemas observados, classificando por nível de severidade e potenciais melhorias. Isto pode ser observado na segunda aba "ocorrências" do [mesmo arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit#gid=1538901939)  Google Sheets.
 
 ## Conclusão
 ...
@@ -153,15 +164,20 @@ O "Teste de Interface Interativa" será realizado pelo grupo de desenvolvedores 
 - Passo 3: Avalie se a interface do usuário é facilmente compreensível e atende aos princípios das heurísticas de Nielsen.
 
 ## Relatório de execução
-...img...
+Segue imagem do relatório de visualização da interface interativa para controlar o robô e visualizar a imagem da câmera:
 
-Os testes foram executados pelo grupo de desenvolvedores. Os resultados podem ser visualizados[neste arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit?usp=sharing) do Google Sheets.
+![RNF_de_interface_interativa_do_robô](../../static/img/sprint_4/RNF_interface_robo.png)
+
+
+Os testes foram executados pelo grupo de desenvolvedores. Os resultados podem ser visualizados[neste arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit#gid=1538901939) do Google Sheets.
 
 No geral, este foi o resultado obtido: 
 
-| Tarefa | Perfil/Persona | Resultado Geral |
-|--------|----------------|----------------|
-|   1    | aluno | Sucesso | 
+| #       | Nome          | Perfil/Persona                   | Teste                                                                                   | Resultado Geral |
+|---------|---------------|----------------------------------|-----------------------------------------------------------------------------------------|-----------------|
+| PASSO 1 | GRUPO         | Aluno (Murilo 2º Eng Comp)      | Desenvolva protótipos interativos da interface do usuário com base nos requisitos de design. | Sucesso         |
+| PASSO 2 | GRUPO         | Aluno (Murilo 2º Eng Comp)      | Apresente a interface do usuário simulada aos usuários e observe sua interação e feedback. | Sucesso         |
+| PASSO 3 | GRUPO         | Aluno (Murilo 2º Eng Comp)      | Avalie se a interface do usuário é facilmente compreensível e atende aos princípios das heurísticas de Nielsen. | Sucesso         |
 
 Além disso, destacamos os principais problemas observados, classificando por nível de severidade e potenciais melhorias. Isto pode ser observado na segunda aba "ocorrências" do [mesmo arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit?usp=sharing)  Google Sheets.
 
