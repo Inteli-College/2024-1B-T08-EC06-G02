@@ -176,6 +176,23 @@ Além disso, destacamos os principais problemas observados, classificando por n�
 ## Tarefa para o teste de interface interativa
 O "Teste de Interface Interativa" será realizado pelo grupo de desenvolvedores para avaliar a usabilidade da interface do usuário. Este teste é fundamental para garantir que a interface seja facilmente compreendida ao primeiro contato, seguindo os princípios das heurísticas de Nielsen. Durante o teste, os desenvolvedores observarão como os usuários interagem com a interface, identificando possíveis dificuldades e coletando feedback para melhorias. A realização deste teste é essencial para assegurar que os controles do robô sejam intuitivos e eficientes para todos os usuários, independentemente do seu nível de letramento digital.
 
+## Heurísticas de Nielsen
+
+As heurísticas de Nielsen são um conjunto de dez princípios gerais para o design de interface de usuário, propostos por Jakob Nielsen. Elas servem como diretrizes para avaliar a usabilidade de um sistema. Aqui estão resumidamente:
+
+1. ***Visibilidade do status:*** Informar sempre o usuário sobre o que está acontecendo.
+2. ***Compatibilidade com o mundo real:*** Usar linguagem e conceitos familiares ao usuário.
+3. ***Controle e liberdade:*** Fornecer formas fáceis de desfazer e refazer ações.
+4. ***Consistência e padrões:*** Manter uniformidade no design e seguir convenções.
+5. ***Prevenção de erros:*** Evitar que erros aconteçam com um design cuidadoso.
+6. ***Reconhecimento em vez de lembrança:*** Tornar opções visíveis para reduzir a carga de memória.
+7. ***Flexibilidade e eficiência:*** Permitir atalhos e personalização para usuários experientes.
+8. ***Design estético e minimalista:*** Evitar informações irrelevantes ou desnecessárias.
+9. ***Ajuda no reconhecimento de erros:*** Mensagens de erro claras e úteis.
+10. ***Ajuda e documentação:*** Fornecer documentação fácil de buscar e usar.
+
+Essas heurísticas são amplamente utilizadas no design de interfaces para melhorar a usabilidade e a experiência do usuário e essas heurísticas vão nos ajudar com as métricas e avaliações a serem feitas internamente.
+
 **3. Interface Interativa (RNF05):**
 - Passo 1: Desenvolva protótipos interativos da interface do usuário com base nos requisitos de design.
 - Passo 2: Apresente a interface do usuário simulada aos usuários e observe sua interação e feedback.
