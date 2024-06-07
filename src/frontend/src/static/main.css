@@ -1,0 +1,12 @@
+@import url("./partials/login/login.css");
+@import url("./partials/home/botao-iniciar.css");
+@import url("./partials/home/botao-visualizar.css");
+@import url("./partials/home/botoes-mover.css");
+@import url("./partials/home/principal.css");
+
+html,
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #D3EBEE;
+}

@@ -1,0 +1,25 @@
+.view-button {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  background: #EEF0F0;
+  border: 1px solid #65B2BA;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 11px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.view-button:hover {
+  transform: scale(1.1);
+}

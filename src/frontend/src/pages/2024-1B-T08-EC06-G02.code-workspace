@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		},
+		{
+			"name": "ros2-turtlebot3-video",
+			"path": "../../../../../ros2-turtlebot3-video"
+		}
+	],
+	"settings": {}
+}
