@@ -8,15 +8,15 @@ Este documento é responsável por detalhar testes de funcionalidade para requis
 
 Os requisitos funcionais estabelecidos anteriormente podem ser visualizados [aqui](https://inteli-college.github.io/2024-1B-T08-EC06-G02/sprint_1/programacao/requisitos_funcionais), já os requisitos não funcionais neste [link](https://inteli-college.github.io/2024-1B-T08-EC06-G02/sprint_1/programacao/requisitos_nao_funcionais). 
 
-# Testes de funcionalidade: requisito funcional
-## Contexto
+## Testes de funcionalidade: requisito funcional
+### Contexto
 Dos requisitos funcionais estabelecidos anteriormente, escolhemos o:
 
 **RF03**: O robô deve ter um sistema de colisão. Neste requisito, o Operador Industrial estará pilotando o robô via controle remoto. No entanto, caso o robô se aproxime a uma determinada distância de um objeto ou ser vivo, o alerta será acionado na tela para notificar o usuário.
 
 O RF escolhido se dá pela sua importância na teleoperação do robô e por mesclar fatores como controle pela interface gráfica, sistema de colisão e alerta acionado. 
 
-## Roteiro de teste
+### Roteiro de teste
 Todo teste é seguido por uma **tarefa**. E toda tarefa é realizada por um **perfil/persona** que obtém um **resultado geral** e um resultado **por etapas**. 
 
 Sendo assim, para garantir que o RF esteja de acordo com o estabelecido, criamos critérios para avaliar se o teste foi realizado com sucesso ou não. O RF escolhido, neste caso, é a tarefa. 
@@ -33,7 +33,7 @@ E a condução dos testes deve acontecer da seguinte forma:
 2. Realizar o setup previamente do robô: rodar a interface, o BringUp do turtlebot, a conexão WebSocket e o envio dos dados da câmera.
 3. Fornecer o notebook para teleoperar o robô e anotar as informações coletadas. 
 
-## Relatório de execução
+### Relatório de execução
 ![Relatório de execução](../../static/img/sprint_4/testes_rf_registro.png)
 
 Os testes foram executados por 4 pessoas, além do teste realizado pelo grupo. Os resultados podem ser visualizados [neste arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit?usp=sharing) do Google Sheets.
@@ -55,7 +55,7 @@ Nele também é possível observar se o problema relatado é um problema de func
 ![Relatório de execução](../../static/img/sprint_4/testes_rf_ocorrencias.png)
 
 
-## Conclusão
+### Conclusão
 Como conclusão do teste de funcionalidade realizado, tivemos os seguintes feedbacks: 
 
 1.	Controle fácil do robô.
@@ -73,8 +73,8 @@ E como pontos de melhoria, tivemos:
 5.	**Melhoria na disposição dos elementos da interface**: Aperfeiçoar a responsividade e a disposição geral dos elementos na interface para melhorar a usabilidade e a estética geral.
 
 
-# Testes de validação: requisito não funcional
-## Contexto
+## Testes de validação: requisito não funcional
+### Contexto
 
 Dos requisitos não funcionais estabeledcidos anteriormente, escolhemos os:
 
@@ -91,7 +91,7 @@ O RNF escolhido se dá pela importância na teleoperação do robô e é de supe
 Esse RNF é de suma importância, pois permite compreender como o usuário interage com a página disponibilizada, facilitando o uso dos controles para comandar o robô. Através desses testes, poderemos ver se os comandos e teclas dispostos na tela estão fáceis para o usuário poder usar o robô com facilidade.
 Partindo desse teste, poderemos entender e aplicar modificações em nossa página com o auxílio dos feedbacks fornecidos.
 
-## Roteiro de teste
+### Roteiro de teste
 Todo teste é seguido por uma **tarefa**. E toda tarefa é realizada por um **perfil/persona** que obtém um **resultado geral** e um resultado **por etapas**. 
 
 Sendo assim, para garantir que o RNF esteja de acordo com o estabelecido, criamos critérios para avaliar se o teste foi realizado com sucesso ou não. 
@@ -120,7 +120,7 @@ O "Teste de autonomia" em questão, será realizado com o grupo de desenvolvedor
 - Passo 5: Depois que apitou, parâmos o cronômetro e vemos quanto tempo deu de funcionamento do robô.
 
 
-## Relatório de execução
+### Relatório de execução
 Segue imagem do relatório de execução de autonomia do robô com a bateria em 100% (12.6V):
 
 ![RNF_de_autonomia_do_robô](../../static/img/sprint_4/RNF_autonomia_robo.png)
@@ -139,8 +139,8 @@ No geral, este foi o resultado obtido:
 
 Além disso, destacamos os principais problemas observados, classificando por nível de severidade e potenciais melhorias. Isto pode ser observado na segunda aba "ocorrências" do [mesmo arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit?usp=sharing)  Google Sheets.
 
-## Conclusão
-...
+### Conclusão
+Os testes mostraram que o robô não alcançou o objetivo inicial de quatro horas, mas continuou funcionando com eficiência por três horas e vinte minutos. A diferença de quarenta minutos indica a possibilidade de melhorar a gestão de energia ou otimizar os componentes do robô para aumentar a eficiência da bateria. Para continuar, é fundamental estudar como várias condições operacionais, como variações de carga e condições ambientais, afetam a duração da bateria. A análise cuidadosa das ocorrências e reações registradas ajudará a identificar pontos de melhoria técnica específicos, garantindo melhorias contínuas na performance e na confiabilidade do robô em futuras implementações.
 
 ## Tarefa para o teste de latência
 O "Teste de latência" em questão, será realizado com o grupo de desenvolvedores para poder visualizar como a latência se comporta dependendo de onde a pessoa está com o computador eberto e fazendo o teste para poder controlar o robô. E claro, se a persona/tester conseguiu enviar os comando para o robô e ele conseguiu se movimentar.
@@ -152,7 +152,7 @@ Será avaliado nesse teste também o tempo de reinderização da imagem para que
 - Passo 3: Meça a latência de comunicação durante a operação do robô com o auxílio da propriedado do front que mostra o FPS e a Latência.
 - Passo 4: Deixe o robô no laboratório e rode o programa dentro do ateliê para visualizar a latência e o FPS. Depois, rode o programa da biblioteca para visualizar a latência e o FPS e por último, rode do refeitório para fazer o mesmo teste.
 
-## Relatório de execução
+### Relatório de execução
 Segue imagem do relatório de execução da latência e FPS do robô:
 
 ![RNF_de_latência_e_FPS_do_robô](../../static/img/sprint_4/RNF_latencia_robo.png)
@@ -164,19 +164,19 @@ No geral, este foi o resultado obtido:
 | #       | Nome          | Perfil/Persona                   | Teste                                                                                   | Resultado Geral |
 |---------|---------------|----------------------------------|-----------------------------------------------------------------------------------------|-----------------|
 | PASSO 1 | GRUPO         | Aluno (José Alencar 2º Eng Comp)      | Configuração e execução do código para começar a avaliação da latência e FPS. | Sucesso         |
-| PASSO 2 | GRUPO         | Aluno (José Alencar 2º Eng Comp)      | Estabeleça uma conexão de teleoperação entre o controlador e o robô. | Sucesso         |
+| PASSO 2 | GRUPO         | Aluno (José Alencar 2º Eng Comp)      | Estabeleça uma conexão de teleoperação entre o controlador e o robô. | Conseguiu com dificuldade         |
 | PASSO 3 | GRUPO         | Aluno (José Alencar 2º Eng Comp)      | Meça a latência de comunicação durante a operação do robô com o auxílio da propriedado do front que mostra o FPS e a Latência. | Sucesso         |
 | PASSO 4 | GRUPO         | Aluno (José Alencar 2º Eng Comp)      | Deixe o robô no laboratório e rode o programa dentro do ateliê para visualizar a latência e o FPS. Depois, rode o programa da biblioteca para visualizar a latência e o FPS e por último, rode do refeitório para fazer o mesmo teste.| Sucesso  |
 
 Além disso, destacamos os principais problemas observados, classificando por nível de severidade e potenciais melhorias. Isto pode ser observado na segunda aba "ocorrências" do [mesmo arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit#gid=1538901939)  Google Sheets.
 
-## Conclusão
-...
+### Conclusão
+Os testes de latência e FPS do robô mostraram que ele manteve a latência dentro de limites aceitáveis em vários ambientes, apesar de alguns problemas iniciais com a conexão de teleoperação. Isso mostra a força do sistema. Os resultados indicam que a otimização contínua é necessária, principalmente na conexão, para aumentar a eficiência operacional em ambientes difíceis. Além disso, é aconselhável realizar uma análise minuciosa das ocorrências com o objetivo de orientar melhorias e ajustes técnicos no futuro.
 
 ## Tarefa para o teste de interface interativa
 O "Teste de Interface Interativa" será realizado pelo grupo de desenvolvedores para avaliar a usabilidade da interface do usuário. Este teste é fundamental para garantir que a interface seja facilmente compreendida ao primeiro contato, seguindo os princípios das heurísticas de Nielsen. Durante o teste, os desenvolvedores observarão como os usuários interagem com a interface, identificando possíveis dificuldades e coletando feedback para melhorias. A realização deste teste é essencial para assegurar que os controles do robô sejam intuitivos e eficientes para todos os usuários, independentemente do seu nível de letramento digital.
 
-## Heurísticas de Nielsen
+### Heurísticas de Nielsen
 
 As heurísticas de Nielsen são um conjunto de dez princípios gerais para o design de interface de usuário, propostos por Jakob Nielsen. Elas servem como diretrizes para avaliar a usabilidade de um sistema. Aqui estão resumidamente:
 
@@ -198,7 +198,7 @@ Essas heurísticas são amplamente utilizadas no design de interfaces para melho
 - Passo 2: Apresente a interface do usuário simulada aos usuários e observe sua interação e feedback.
 - Passo 3: Avalie se a interface do usuário é facilmente compreensível e atende aos princípios das heurísticas de Nielsen.
 
-## Relatório de execução
+### Relatório de execução
 Segue imagem do relatório de visualização da interface interativa para controlar o robô e visualizar a imagem da câmera:
 
 ![RNF_de_interface_interativa_do_robô](../../static/img/sprint_4/RNF_interface_robo.png)
@@ -211,13 +211,13 @@ No geral, este foi o resultado obtido:
 | #       | Nome          | Perfil/Persona                   | Teste                                                                                   | Resultado Geral |
 |---------|---------------|----------------------------------|-----------------------------------------------------------------------------------------|-----------------|
 | PASSO 1 | GRUPO         | Aluno (Murilo 2º Eng Comp)      | Desenvolva protótipos interativos da interface do usuário com base nos requisitos de design. | Sucesso         |
-| PASSO 2 | GRUPO         | Aluno (Murilo 2º Eng Comp)      | Apresente a interface do usuário simulada aos usuários e observe sua interação e feedback. | Sucesso         |
-| PASSO 3 | GRUPO         | Aluno (Murilo 2º Eng Comp)      | Avalie se a interface do usuário é facilmente compreensível e atende aos princípios das heurísticas de Nielsen. | Sucesso         |
+| PASSO 2 | GRUPO         | Aluno (Murilo 2º Eng Comp)      | Apresente a interface do usuário simulada aos usuários e observe sua interação e feedback. | Conseguiu com dificuldade         |
+| PASSO 3 | GRUPO         | Aluno (Murilo 2º Eng Comp)      | Avalie se a interface do usuário é facilmente compreensível e atende aos princípios das heurísticas de Nielsen. | Não deu certo         |
 
 Além disso, destacamos os principais problemas observados, classificando por nível de severidade e potenciais melhorias. Isto pode ser observado na segunda aba "ocorrências" do [mesmo arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit?usp=sharing)  Google Sheets.
 
-## Conclusão
-...
+### Conclusão
+Os testes de interface interativa revelaram que, apesar do sucesso inicial no desenvolvimento dos protótipos, a interface enfrentou dificuldades em termos de usabilidade e não atendeu plenamente às heurísticas de Nielsen. Isso sublinha a necessidade de melhorias focadas em tornar a interface responsiva. Para futuros desenvolvimentos, recomenda-se revisar os elementos problemáticos com base no feedback dos usuários e realizar testes adicionais para garantir que a interface seja eficaz e satisfatória para o controle operacional do robô.
 
 ## Proposta de melhoria
 Lembra que é a mudança da bateria azul de 1800mha para a bateria preta de 2200mha.
