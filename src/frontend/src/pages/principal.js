@@ -59,11 +59,12 @@ const Principal = () => {
     const fpsListener = new ROSLIB.Topic({
       ros: ros,
       name: '/fps',
-      messageType: 'std_msgs/Float'
+      messageType : 'std_msgs/String'
     });
 
     fpsListener.subscribe((message) =>{
       setLatencyData(message.data);
+      console.log(latencyData)
     });
 
     var listener = new ROSLIB.Topic({
