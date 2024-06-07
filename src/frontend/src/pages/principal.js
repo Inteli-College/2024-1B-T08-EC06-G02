@@ -18,6 +18,11 @@ const Principal = () => {
   const [latencyData, setLatencyData] = useState('');
   const STOP_DISTANCE = 0.5; 
 
+  const MAX_LIN_VEL = 0.21 // m/s
+  const MIN_LIN_VEL = -0.21 // m/s
+  const MAX_ANG_VEL = 2.63 // rad/s
+  const MIN_ANG_VEL = -2.63 // rad/s
+
   const toggleAbaVisualizar = () => {
     setIsAbaVisible(!isAbaVisible);
   };
@@ -74,10 +79,10 @@ const Principal = () => {
 
         if (validRanges.length > 0) {
           if (validRanges.length > 0) {
-            const back_index = 0;
-            const right_index = Math.floor(validRanges.length / 4);
-            const front_index = Math.floor(validRanges.length / 2);
-            const left_index = Math.floor(validRanges.length * 3 / 4);
+            const front_index = 0;
+            const left_index = Math.floor(validRanges.length / 4);
+            const back_index = Math.floor(validRanges.length / 2);
+            const right_index = Math.floor(validRanges.length * 3 / 4);
     
             const front_distance = validRanges[front_index];
             const right_distance = validRanges[right_index];
@@ -85,7 +90,7 @@ const Principal = () => {
             const left_distance = validRanges[left_index];
     
             // Log distances for debugging
-            console.log(`Front distance: ${front_distance}, Left distance: ${left_distance}, Back distance: ${back_distance}, Right distance: ${right_distance}`);
+            // console.log(`Front distance: ${front_distance}, Left distance: ${left_distance}, Back distance: ${back_distance}, Right distance: ${right_distance}`);
     
             setColisaoFrente(front_distance < STOP_DISTANCE);
             setColisaoDireita(right_distance < STOP_DISTANCE);
@@ -114,7 +119,7 @@ const Principal = () => {
       switch (key) {
         case 'ArrowUp':
             if (!colisaoFrente){
-                turtleBotVel.linear.x = 2.0;  // Move forward
+                turtleBotVel.linear.x = MAX_LIN_VEL;  // Move forward
                 turtleBotVel.angular.z = 0;
             } else {
                 turtleBotVel.linear.x = 0;  // Stop any forward motion due to collision risk
@@ -124,7 +129,7 @@ const Principal = () => {
             break;
         case 'ArrowDown':
             if (!colisaoTras){
-                turtleBotVel.linear.x = -2.0;  // Move backward
+                turtleBotVel.linear.x = MIN_LIN_VEL;  // Move backward
                 turtleBotVel.angular.z = 0;
             } else {
                 turtleBotVel.linear.x = 0;  // Stop any backward motion due to collision risk
@@ -134,7 +139,7 @@ const Principal = () => {
             break;
         case 'ArrowLeft':
             if (!colisaoEsquerda){
-                turtleBotVel.angular.z = 1;  // Turn left
+                turtleBotVel.angular.z = MAX_ANG_VEL;  // Turn left
                 turtleBotVel.linear.x = 0;
             } else {
                 turtleBotVel.angular.z = 0;  // Stop any left turn due to collision risk
@@ -144,7 +149,7 @@ const Principal = () => {
             break;
         case 'ArrowRight':
             if (!colisaoDireita){
-                turtleBotVel.angular.z = -1;  // Turn right
+                turtleBotVel.angular.z = MIN_ANG_VEL;  // Turn right
                 turtleBotVel.linear.x = 0;
             } else {
                 turtleBotVel.angular.z = 0;  // Stop any right turn due to collision risk
@@ -200,7 +205,7 @@ const Principal = () => {
       fpsListener.unsubscribe();
       ros.close();
     };
-  }, [colisaoDireita, colisaoEsquerda, colisaoFrente, colisaoTras]);
+  }, [colisaoDireita, colisaoEsquerda, colisaoFrente, colisaoTras, MAX_ANG_VEL, MAX_LIN_VEL, MIN_ANG_VEL, MIN_LIN_VEL]);
 
   return (
     <div className={`principal-container ${isAbaVisible ? 'with-aba' : ''}`}>
