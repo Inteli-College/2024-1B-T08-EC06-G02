@@ -29,3 +29,51 @@ Após esse processo de demarcação dos pontos pelo software, foi feita a instal
 Por fim, com a base de imagens finalizada, deu-se início à construção do algoritmo para o treinamento e validação da visão computacional.
 
 
+## Algoritmo de visão computacional
+No intuito de implementar o algoritmo de visão computacional, após a montagem da base de dados, deu-se o treinamento de fato do modelo. Nesse sentido, neste projeto, primeiramente foram importados os recursos necessários para iniciar o treinamento do modelo pelo YOLOv8. Veja os *imports* abaixo:
+```python
+#  importação das dependencias necessárias
+from ultralytics import YOLO
+import cv2
+```
+
+Nota-se que a Ultralytics é responsável por importar os módulos utilizados no modelo de treinamento do YOLO. Além disso, após a importação, foi instanciada uma variável para obter as características da classe YOLO, como no comando abaixo:
+
+```python
+model = YOLO()
+```
+
+Após esse processo de instância, a função para começar o treinamento do modelo com a base de dados criada pelo grupo foi colocada em uma variável chamada "resultados". Isso pode ser visto no comando abaixo::
+
+```python
+# treinamento do modelo
+results = model.train(data="/home/grupo-02-t08/2024-1B-T08-EC06-G02/src/yolo_v8/YOLODataset/dataset.yaml", epochs=100, imgsz=640)
+```
+Nessa perspectiva, após o treinamento do modelo em 100 épocas, foi criado um arquivo PYTHON para realizar as predições do modelo treinado. Para isso, primeiramente foram feitas as importações das bibliotecas necessárias, conforme mostrado abaixo:
+
+```python
+#  importação das dependencias necessárias
+from ultralytics import YOLO
+import cv2
+```
+
+Depois das importações, foi instanciada uma variável denominada "model" para receber as informações da classe do YOLO e a base de dados gerada no treinamento, para que se pudesse analisar os resultados preditos. Além disso, foi instanciada uma variável chamada "cap" para fazer a captação das imagens da webcam. Esse processo pode ser visto no bloco de código abaixo:
+```python
+# instancia das variaveis
+cap = cv2.VideoCapture(0) # indice 0 indica como a webcam é lida no sistemaz
+model = YOLO("/2024-1B-T08-EC06-G02/runs/detect/train6/weights/best.pt")
+```
+Após esse processo, foi criada uma condição para a inicialização da webcam e também uma variável chamada "results" para que a webcam fosse inicializada juntamente com a predição, permitindo que os resultados fossem mostrados no computador para o usuário. Essa parte pode ser vista no bloco de código abaixo:
+
+
+```python
+# condicional para iniciar a webcam 
+if not cap.isOpened():
+    print("Error: Could not open video source.")
+else:
+    # inicializacao da captancao das imagens
+    cap.release()
+    # aparesentacao das imagens em tempo real dizendo a predicao delas
+    results = model.predict(source=0, show=True)
+``` 
+Por fim, com esse código implementado para treinamento e predição, o modelo pôde fornecer as primeiras impressões dos resultados das imagens captadas.
