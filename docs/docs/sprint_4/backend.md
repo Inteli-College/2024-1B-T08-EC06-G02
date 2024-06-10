@@ -47,4 +47,6 @@ Além disso, foi considerada a escalabilidade até nessa parte do banco de dados
 
 - [1] Introdução: SQL e NoSQL — trabalhando com bancos relacionais e não relacionais. Disponível em [Alura](https://www.alura.com.br/artigos/sql-nosql-bancos-relacionais-nao-relacionais?utm_term=&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conte%C3%BAdos&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=11384329873&hsa_grp=111087461203&hsa_ad=687448474447&hsa_src=g&hsa_tgt=dsa-425656816943&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAjwmYCzBhA6EiwAxFwfgEN0vKfEhIl31-eAlOPxrhZ8Um4oEOQs9YIdmi9MTRyybBXayq5uYRoCRwAQAvD_BwE). Acesso em 5 de junho de 2024.
 
-Toda a documentação referente ao backend e as APIs está disponível no seguinte URL: https://documenter.getpostman.com/view/30920057/2sA3XLEPYY#b8d4e7ba-7d73-4251-8934-04f564c64650
+## APIs e BACKEND
+É possível consultar a documentação das APIs de duas maneiras diferentes. A primeira é rodando o projeto e consultando o endereço /docs (Localmente seria a consulta do url [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs), neste link é possível testar interativamente cada um dos endpoints.
+A outra maneira é acessando a documentação estática escrita via postman disponível clicando [aqui](https://documenter.getpostman.com/view/30920057/2sA3XLEPYY#b8d4e7ba-7d73-4251-8934-04f564c64650)
