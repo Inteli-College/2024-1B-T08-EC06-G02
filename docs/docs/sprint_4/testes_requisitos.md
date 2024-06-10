@@ -220,4 +220,8 @@ Além disso, destacamos os principais problemas observados, classificando por n�
 Os testes de interface interativa revelaram que, apesar do sucesso inicial no desenvolvimento dos protótipos, a interface enfrentou dificuldades em termos de usabilidade e não atendeu plenamente às heurísticas de Nielsen. Isso sublinha a necessidade de melhorias focadas em tornar a interface responsiva. Para futuros desenvolvimentos, recomenda-se revisar os elementos problemáticos com base no feedback dos usuários e realizar testes adicionais para garantir que a interface seja eficaz e satisfatória para o controle operacional do robô.
 
 ## Proposta de melhoria
-Lembra que é a mudança da bateria azul de 1800mha para a bateria preta de 2200mha.
+### Melhorar Bateria
+Durante os testes, constatou-se que a bateria atual de 1800mAh não sustenta a operação do robô pelo período desejado de quatro horas. Através de análises comparativas e testes de desempenho, identificou-se que uma bateria de 2200mAh é capaz de atender a necessidade de maior autonomia. A substituição proposta visa não apenas alcançar as quatro horas de operação contínua mas também aumentar a confiabilidade do robô durante operações prolongadas, otimizando a eficiência operacional.
+
+### Melhoria na Interface do Usuário
+A avaliação da interface atual revelou falhas no cumprimento das heurísticas de Nielsen, principalmente relacionadas à visibilidade do sistema e feedback ao usuário. Para melhorar a interação, propõe-se centralizar os pop-ups de alerta, garantindo que eles captem eficientemente a atenção do usuário, além de implementar um design responsivo para adaptar a interface a diferentes dispositivos. Estas mudanças são esperadas para facilitar o entendimento e controle do robô pelos usuários, reduzindo o tempo de aprendizado e aumentando a satisfação e eficiência nas operações.
