@@ -15,7 +15,7 @@ A base de dados deste projeto foi criada utilizando o Chat GPT-4 para gerar imag
 
 <h2 align="center">Imagem 1 - Base de dados para treinamento </h2>
 
-![Imagem 1 do Wireframe - tela de login](/docs/static/img/sprint_4/canos_sujos.png)
+![Imagem 1 do Wireframe - tela de login](../../static/img/sprint_4/canos_sujos.png)
 <h6 align="center"> Fonte: Elaboração grupo Repipe </h6>
 
 Tendo em mente essa base de dados, nota-se que há vários tipos de imagens em diferentes contextos, para que o modelo possa aprender com as diversas circunstâncias encontradas na solução.
