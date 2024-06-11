@@ -1,4 +1,4 @@
-# Inteli - Inituto de Tecnologia e Liderança
+# Inteli - Instituto de Tecnologia e Liderança
 
 <div align="center">
     <a href= "https://www.inteli.edu.br/">
