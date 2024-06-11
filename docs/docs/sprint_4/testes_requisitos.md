@@ -86,7 +86,7 @@ Esse RNF escolhido para compor os testes é muito importante pois precisamos ent
 
 O RNF escolhido se dá pela importância na teleoperação do robô e é de super importância esse dado ja que, a latência varia de forma com a distância e o ambiente onde esteja para se comunicar e controlar o robô.
 
-3. **RNF05 - Interfácie interativa:** Com base no nivel de letramento digital dos possíveis usuários, interfácie do usuário precisa ser fácilmente compreendida ao primeiro contato e possuir os princípios das heurísticas de Nilsen. 
+3. **RNF05 - Interface interativa:** Com base no nivel de letramento digital dos possíveis usuários, interfácie do usuário precisa ser fácilmente compreendida ao primeiro contato e possuir os princípios das heurísticas de Nilsen. 
 
 Esse RNF é de suma importância, pois permite compreender como o usuário interage com a página disponibilizada, facilitando o uso dos controles para comandar o robô. Através desses testes, poderemos ver se os comandos e teclas dispostos na tela estão fáceis para o usuário poder usar o robô com facilidade.
 Partindo desse teste, poderemos entender e aplicar modificações em nossa página com o auxílio dos feedbacks fornecidos.
@@ -166,12 +166,20 @@ No geral, este foi o resultado obtido:
 | PASSO 1 | GRUPO         | Aluno (José Alencar 2º Eng Comp)      | Configuração e execução do código para começar a avaliação da latência e FPS. | Sucesso         |
 | PASSO 2 | GRUPO         | Aluno (José Alencar 2º Eng Comp)      | Estabeleça uma conexão de teleoperação entre o controlador e o robô. | Conseguiu com dificuldade         |
 | PASSO 3 | GRUPO         | Aluno (José Alencar 2º Eng Comp)      | Meça a latência de comunicação durante a operação do robô com o auxílio da propriedado do front que mostra o FPS e a Latência. | Sucesso         |
-| PASSO 4 | GRUPO         | Aluno (José Alencar 2º Eng Comp)      | Deixe o robô no laboratório e rode o programa dentro do ateliê para visualizar a latência e o FPS. Depois, rode o programa da biblioteca para visualizar a latência e o FPS e por último, rode do refeitório para fazer o mesmo teste.| Sucesso  |
+| PASSO 4 | GRUPO         | Aluno (José Alencar 2º Eng Comp)      | Deixe o robô no laboratório e rode o programa dentro do ateliê para visualizar a latência e o FPS. Depois, rode o programa da biblioteca para visualizar a latência e o FPS e por último, rode do refeitório para fazer o mesmo teste.| Conseguiu com dificuldade  |
 
 Além disso, destacamos os principais problemas observados, classificando por nível de severidade e potenciais melhorias. Isto pode ser observado na segunda aba "ocorrências" do [mesmo arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit#gid=1538901939)  Google Sheets.
 
 ### Conclusão
-Os testes de latência e FPS do robô mostraram que ele manteve a latência dentro de limites aceitáveis em vários ambientes, apesar de alguns problemas iniciais com a conexão de teleoperação. Isso mostra a força do sistema. Os resultados indicam que a otimização contínua é necessária, principalmente na conexão, para aumentar a eficiência operacional em ambientes difíceis. Além disso, é aconselhável realizar uma análise minuciosa das ocorrências com o objetivo de orientar melhorias e ajustes técnicos no futuro.
+Os testes de latência e FPS do robô mostraram que ele, inicialmente, não manteve a latência dentro de limites aceitáveis em vários ambientes, incluindo alguns problemas iniciais com a conexão de teleoperação. 
+
+![RNF_de_latência_e_FPS_do_robô_Antes](../../static/img/sprint_4/latencia_antes.png)
+
+A imagem acima demonstra o valor médio da latência ao medir em diferentes ambientes, que está em 1.5 segundos, ou, 1500ms. A nossa métrica exigia no máximo 150ms de latência, com picos de 30ms para mais ou menos. 
+
+Os resultados indicam que a otimização contínua é necessária, principalmente na conexão, para aumentar a eficiência operacional em ambientes difíceis. Além disso, é aconselhável realizar uma análise minuciosa das ocorrências com o objetivo de orientar melhorias e ajustes técnicos no futuro.
+
+Propostas de melhoria estão detalhadas melhor na seção "Proposta de Melhoria". 
 
 ## Tarefa para o teste de interface interativa
 O "Teste de Interface Interativa" será realizado pelo grupo de desenvolvedores para avaliar a usabilidade da interface do usuário. Este teste é fundamental para garantir que a interface seja facilmente compreendida ao primeiro contato, seguindo os princípios das heurísticas de Nielsen. Durante o teste, os desenvolvedores observarão como os usuários interagem com a interface, identificando possíveis dificuldades e coletando feedback para melhorias. A realização deste teste é essencial para assegurar que os controles do robô sejam intuitivos e eficientes para todos os usuários, independentemente do seu nível de letramento digital.
@@ -219,9 +227,72 @@ Além disso, destacamos os principais problemas observados, classificando por n�
 ### Conclusão
 Os testes de interface interativa revelaram que, apesar do sucesso inicial no desenvolvimento dos protótipos, a interface enfrentou dificuldades em termos de usabilidade e não atendeu plenamente às heurísticas de Nielsen. Isso sublinha a necessidade de melhorias focadas em tornar a interface responsiva. Para futuros desenvolvimentos, recomenda-se revisar os elementos problemáticos com base no feedback dos usuários e realizar testes adicionais para garantir que a interface seja eficaz e satisfatória para o controle operacional do robô.
 
-## Proposta de melhoria
+## Proposta de Melhoria
 ### Melhorar Bateria
 Durante os testes, constatou-se que a bateria atual de 1800mAh não sustenta a operação do robô pelo período desejado de quatro horas. Através de análises comparativas e testes de desempenho, identificou-se que uma bateria de 2200mAh é capaz de atender a necessidade de maior autonomia. A substituição proposta visa não apenas alcançar as quatro horas de operação contínua mas também aumentar a confiabilidade do robô durante operações prolongadas, otimizando a eficiência operacional.
 
 ### Melhoria na Interface do Usuário
 A avaliação da interface atual revelou falhas no cumprimento das heurísticas de Nielsen, principalmente relacionadas à visibilidade do sistema e feedback ao usuário. Para melhorar a interação, propõe-se centralizar os pop-ups de alerta, garantindo que eles captem eficientemente a atenção do usuário, além de implementar um design responsivo para adaptar a interface a diferentes dispositivos. Estas mudanças são esperadas para facilitar o entendimento e controle do robô pelos usuários, reduzindo o tempo de aprendizado e aumentando a satisfação e eficiência nas operações.
+
+### Melhoria na latência 
+Nós notamos que há uma diferença muito grande na latência em: 
+1. Rodar o WebSocket em outro computador ao invés de diretamente no robô; 
+2. Calcular a latência no frontend ao invés de diretamente no robô; 
+
+Por isso, implementamos essas duas mudanças, de rodar o websocket em outro computador: 
+
+```bash 
+ros2 launch rosbridge_server rosbridge_websocket_launch.xml # agora rodamos e outro computador
+```
+
+E também de retirar o cálculo da latência do robô paro o frontend. No arquivo sender.py do robô agora enviamos um timestamp para ser cálculado no frontend. 
+
+```python
+def timer_callback(self):
+        ret, frame = self.cap.read()
+        if ret:
+            _, buffer = cv2.imencode('.jpg', frame)
+            msg = CompressedImage()
+            msg.format = "jpeg"
+            msg.data = buffer.tobytes()
+            # Define na mensagem o timestamp atual 
+            msg.header = Header()
+            msg.header.stamp = self.get_clock().now().to_msg()
+            msg.header.frame_id = "camera_frame"
+            self.publisher_.publish(msg)
+```
+
+Já no frontend, recebemos a mensagem e calculamos a diferença:
+
+```javascript
+    videoTopic.subscribe((message) => {
+      const base64Data = message.data;
+      setVideoSrc('data:image/jpeg;base64,' + base64Data);
+    
+      console.log('Received message header:', message.header);
+      if (message.header && message.header.stamp) {
+        const { sec, nanosec } = message.header.stamp;
+    
+        console.log('sec:', sec, 'nanosec:', nanosec);
+    
+        if (typeof sec === 'number' && typeof nanosec === 'number') {
+          const now = new Date().getTime() / 1000; // Tempo atual em segundos
+          const rosTimeInSeconds = sec + nanosec * 1e-9; // Tempo vindo do ROS em segundos
+          const latency = now - rosTimeInSeconds; // Calcula a latencia com a diferença
+    
+          setLatencyData(latency.toFixed(3) + ' seconds');
+        } else {
+          console.error('Invalid or missing timestamp data');
+          setLatencyData('Invalid timestamp data');
+        }
+      } else {
+        console.error('No timestamp data available in the message header');
+        setLatencyData('Missing timestamp data');
+      }
+    });
+```
+
+O resultado, conseguimos bater a métrica estabelecida anteriormente de uma latência de no máximo 150ms, com picos de 30ms para mais ou menos. A latência reduziu drasticamente e tanto o envio dos dados da câmera e lidar como troca das mensagens de movimentação estão acontecendo muito mais rápido. 
+
+
+![Latencia depois da melhoria](../../static/img/sprint_4/latencia_depois.png)
