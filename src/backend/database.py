@@ -93,7 +93,7 @@ class DatabaseConnector:
         conn = self.create_connection()
         try:
             with conn:
-                sql = '''SELECT * FROM Quadrant WHERE quadrant_id = ?'''
+                sql = '''SELECT * FROM Quadrant WHERE quadrand_id = ?'''
                 cur = conn.cursor()
                 cur.execute(sql, (quadrant_id,))
                 return cur.fetchone()
@@ -206,7 +206,7 @@ class DatabaseConnector:
         conn = self.create_connection()
         try:
             with conn:
-                sql = '''INSERT INTO Reboilers (num_pipes, status, refinery_id) VALUES (?, ?, ?)'''
+                sql = '''INSERT INTO Reboilers (reboiler_num_pipes, reboiler_status, refinary_id) VALUES (?, ?, ?)'''
                 cur = conn.cursor()
                 cur.execute(sql, (reboiler.num_pipes, reboiler.status, reboiler.refinery_id))
                 conn.commit()
@@ -269,7 +269,7 @@ class DatabaseConnector:
         conn = self.create_connection()
         try:
             with conn:
-                sql = '''INSERT INTO Refinary (location, num_reboilers, name) VALUES (?, ?, ?)'''
+                sql = '''INSERT INTO Refinary (refinary_location, refinary_num_reboilers, refinary_name) VALUES (?, ?, ?)'''
                 cur = conn.cursor()
                 cur.execute(sql, (refinary.location, refinary.num_reboilers, refinary.name))
                 conn.commit()
@@ -294,7 +294,7 @@ class DatabaseConnector:
         conn = self.create_connection()
         try:
             with conn:
-                sql = '''UPDATE Refinary SET location = ?, num_reboilers = ?, name = ? WHERE refinary_id = ?'''
+                sql = '''UPDATE Refinary SET refinary_location = ?, refinary_num_reboilers = ?, refinary_name = ? WHERE refinary_id = ?'''
                 cur = conn.cursor()
                 cur.execute(sql, (refinary.location, refinary.num_reboilers, refinary.name, refinary_id))
                 conn.commit()

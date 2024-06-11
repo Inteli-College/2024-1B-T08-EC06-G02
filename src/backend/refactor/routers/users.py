@@ -4,7 +4,7 @@ from databases.users import DatabaseConnector
 from schemas.users import User, Role
 
 
-router = APIRouter(prefix="/users", tags=["users"])
+router = APIRouter(tags=["users"])
 
 connector = DatabaseConnector('repipe.db')
 

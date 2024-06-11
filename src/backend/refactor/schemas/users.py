@@ -10,3 +10,5 @@ class Role(BaseModel):
     role_id: int
     role_name: str
     role_permission_level: int
+
+oi = 'tchau'
