@@ -11,3 +11,4 @@ if not cap.isOpened():
 else:
     cap.release()
     results = model.predict(source=2, show=True)
+    
