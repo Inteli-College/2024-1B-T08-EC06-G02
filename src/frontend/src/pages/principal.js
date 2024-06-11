@@ -189,24 +189,51 @@ const Principal = () => {
       controlTopic.publish(turtleBotVel);
     };
 
-    const handleVideoFrame = (message) => {
-      // console.log(message.data);  // debug
-      setVideoSrc('data:image/jpeg;base64,' + message.data);
-    };
+    // const handleVideoFrame = (message) => {
+    //   // console.log(message.data);  // debug
+    //   setVideoSrc('data:image/jpeg;base64,' + message.data);
+    // };
     
 
-    videoTopic.subscribe(handleVideoFrame);
+    // videoTopic.subscribe(handleVideoFrame);
+
+    videoTopic.subscribe((message) => {
+      const base64Data = message.data;
+      setVideoSrc('data:image/jpeg;base64,' + base64Data);
+    
+      console.log('Received message header:', message.header); // Log the full header to confirm structure
+      if (message.header && message.header.stamp) {
+        const { sec, nanosec } = message.header.stamp;
+    
+        console.log('sec:', sec, 'nanosec:', nanosec); // Explicitly log sec and nanosec
+    
+        if (typeof sec === 'number' && typeof nanosec === 'number') {
+          const now = new Date().getTime() / 1000; // Current time in seconds since the epoch
+          const rosTimeInSeconds = sec + nanosec * 1e-9; // Convert ROS time to seconds
+          const latency = now - rosTimeInSeconds; // Calculate latency in seconds
+    
+          setLatencyData(latency.toFixed(3) + ' seconds');
+        } else {
+          console.error('Invalid or missing timestamp data');
+          setLatencyData('Invalid timestamp data');
+        }
+      } else {
+        console.error('No timestamp data available in the message header');
+        setLatencyData('Missing timestamp data');
+      }
+    });
+
     window.addEventListener('keydown', handleKeyDown);
     window.addEventListener('keyup', handleKeyUp);
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('keyup', handleKeyUp);
-      videoTopic.unsubscribe(handleVideoFrame);
+      videoTopic.unsubscribe();
       fpsListener.unsubscribe();
       ros.close();
     };
-  }, [colisaoDireita, colisaoEsquerda, colisaoFrente, colisaoTras, MAX_ANG_VEL, MAX_LIN_VEL, MIN_ANG_VEL, MIN_LIN_VEL]);
+  }, [colisaoDireita, colisaoEsquerda, colisaoFrente, colisaoTras, MAX_ANG_VEL, MAX_LIN_VEL, MIN_ANG_VEL, MIN_LIN_VEL, latencyData]);
 
   return (
     <div className={`principal-container ${isAbaVisible ? 'with-aba' : ''}`}>
