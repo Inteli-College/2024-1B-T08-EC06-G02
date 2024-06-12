@@ -6,7 +6,7 @@ import BotaoVisualizar from '../components/home/botao-visualizar'; // Corrige a 
 import BotoesMover from '../components/home/botoes-mover'; // Corrige a importação para minúsculas
 import { PopUpColisao } from '../components/home/popup-colisao';
 import AbaVisualizar from '../components/home/aba-visualizar';
-import { message } from 'antd';
+// import { message } from 'antd';
 
 const Principal = () => {
   const [videoSrc, setVideoSrc] = useState('');
@@ -240,16 +240,17 @@ const Principal = () => {
       <div className="content-box">
         <PopUpColisao />
         <img id="videoStream" alt="Video Stream" src={videoSrc} className="video-stream" />
-      </div>
-      <div className="latency-container">
-        <div className="latency-data">
-          <p>Latency: {latencyData}</p>
+        <div className="latency-container">
+          <div className="latency-data">
+            <p>Latency: {latencyData}</p>
+            <p>Status: {latencyData}</p>
+          </div>
         </div>
       </div>
-      <div className={`control-buttons ${isAbaVisible ? 'with-aba' : ''}`}>
+      <div className="control-buttons">
         <BotaoIniciar onClick={() => console.log('Botão Iniciar clicado!')} />
       </div>
-      <div className={`navigation-buttons ${isAbaVisible ? 'with-aba' : ''}`}>
+      <div className="navigation-buttons">
         <BotoesMover />
       </div>
       <BotaoVisualizar onClick={toggleAbaVisualizar} />
