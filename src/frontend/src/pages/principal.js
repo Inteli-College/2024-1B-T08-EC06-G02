@@ -236,7 +236,7 @@ const Principal = () => {
   }, [colisaoDireita, colisaoEsquerda, colisaoFrente, colisaoTras, MAX_ANG_VEL, MAX_LIN_VEL, MIN_ANG_VEL, MIN_LIN_VEL, latencyData]);
 
   return (
-    <div className={`principal-container ${isAbaVisible ? 'with-aba' : ''}`}>
+    <div className="principal-container">
       <div className="content-box">
         <PopUpColisao />
         <img id="videoStream" alt="Video Stream" src={videoSrc} className="video-stream" />
@@ -247,12 +247,14 @@ const Principal = () => {
           </div>
         </div>
       </div>
-      <div className="control-buttons">
-        <BotaoIniciar onClick={() => console.log('Botão Iniciar clicado!')} />
-      </div>
-      <div className="navigation-buttons">
-        <BotoesMover />
-      </div>
+      {!isAbaVisible && (
+        <><div className="botao-iniciar">
+          <BotaoIniciar onClick={() => console.log('Botão Iniciar clicado!')} />
+        </div>
+        <div className="navigation-buttons">
+            <BotoesMover />
+          </div></>
+      )}
       <BotaoVisualizar onClick={toggleAbaVisualizar} />
       {isAbaVisible && <AbaVisualizar onClose={toggleAbaVisualizar} />}
     </div>
