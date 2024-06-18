@@ -22,29 +22,27 @@ Este é um passo importante do projeto, pois realiza as configurações iniciais
 # Interface navegável 
 
 
-Depois de ter instalado e configurado os pacotes do Turtlebot3, precisamos criar um método efetivo para controlar o robô. Para isso, nesta seção iremos abordar a comunicação com o robô e como faremos para isso chegar com uma boa usabilidade ao usuário final. 
+Depois de ter instalado e configurado os pacotes do Turtlebot3, é preciso criar um método efetivo para controlar o robô. Para isso, nesta seção será abordado a comunicação com o robô e como é feito para isso chegar com uma boa usabilidade ao usuário final. 
 
 ## Comunicação com o Robô 
 
 A estrutura do ROS é baseada em nós, tópicos, mensagens e serviços, que juntos criam uma arquitetura flexível e poderosa para robótica do nosso projeto. 
 
 #### Nós
-No ROS 2, um nó representa um processo que realiza computação. Nós são entidades autônomas que podem se comunicar com outros nós por meio de tópicos ou serviços. No código em que mencionamos abaixo, o TeleopTurtle é um nó que foi criado para enviar comandos de controle ao Turtlebot3.
+No ROS 2, um nó representa um processo que realiza computação. Nós são entidades autônomas que podem se comunicar com outros nós por meio de tópicos ou serviços. No código mencionado abaixo, o TeleopTurtle é um nó que foi criado para enviar comandos de controle ao Turtlebot3.
 
 #### Tópicos e Mensagens
 Tópicos são canais onde os nós podem publicar ou se inscrever para ler dados. No nosso script, o nó TeleopTurtle publica mensagens no tópico cmd_vel. Essas mensagens são do tipo Twist, que é uma estrutura de dados definida em geometry_msgs.msg. Essa mensagem contém dois vetores principais: linear e angular. Esses vetores especificam a velocidade na direção linear (x, y, z) e angular (roll, pitch, yaw), respectivamente. 
 
-Quando publicamos uma mensagem Twist no tópico cmd_vel, o Turtlebot3 recebe essa mensagem e a interpreta como uma instrução para mover-se de acordo com os parâmetros de velocidade especificados.
+Quando publica-se uma mensagem Twist no tópico cmd_vel, o Turtlebot3 recebe essa mensagem e a interpreta como uma instrução para mover-se de acordo com os parâmetros de velocidade especificados.
 
 #### Serviços
-Serviços no ROS 2 são outra forma de comunicação entre nós. Diferentemente dos tópicos, que são geralmente usados para transmissão contínua de dados, os serviços são mais adequados para interações de requisição-resposta. Neste script, especificamente, não estamos usando, mas, por exemplo, poderíamos usar um serviço para configurar parâmetros do robô ou para iniciar/parar determinadas ações.
+Serviços no ROS 2 são outra forma de comunicação entre nós. Diferentemente dos tópicos, que são geralmente usados para transmissão contínua de dados, os serviços são mais adequados para interações de requisição-resposta. Neste script, especificamente, não estamos usando, mas, por exemplo, pode-se usar um serviço para configurar parâmetros do robô ou para iniciar/parar determinadas ações.
 
 #### Rede Local e Comunicação
-Além disso, é válido mencionar que o ROS 2 permite que os nós se comuniquem eficientemente em uma rede local ou mesmo distribuídos por várias máquinas. No nosso cenário, tanto o nó TeleopTurtle quanto o robô Turtlebot3 estão operando na mesma rede local, permitindo que as mensagens sejam transmitidas. 
+Além disso, é válido mencionar que o ROS 2 permite que os nós se comuniquem eficientemente em uma rede local ou mesmo distribuídos por várias máquinas. No cenário em questão, tanto o nó TeleopTurtle quanto o robô Turtlebot3 estão operando na mesma rede local, permitindo que as mensagens sejam transmitidas. 
 
-
-
-Abaixo, segue uma explicação detalhada de cada parte do código. Nosso grupo se inspirou neste repositório [aqui](https://github.com/ROBOTIS-GIT/turtlebot3/blob/master/turtlebot3_teleop/nodes/turtlebot3_teleop_key). Porém, achamos muito confuso e diminuímos/refatoramos algumas coisas. 
+Abaixo, segue uma explicação detalhada de cada parte do código. O grupo se inspirou neste repositório [aqui](https://github.com/ROBOTIS-GIT/turtlebot3/blob/master/turtlebot3_teleop/nodes/turtlebot3_teleop_key). Porém, achamos muito confuso e diminuímos/refatoramos algumas coisas. 
 
 
 ### Dependências 
@@ -62,7 +60,7 @@ import sys, select, termios, tty
 * Os módulos sys, select, termios, tty são utilizados para manipulação de entrada de teclado, mas não são demonstrados neste trecho específico do código.
 
 ### Classe TeleopTurtle
-Depois, criamos uma classe `TeleopTurtle`, que é um nó ROS 2 projetado para facilitar a teleoperação do Turtlebot3. Sua implementação:
+Depois, cria uma classe `TeleopTurtle`, que é um nó ROS 2 projetado para facilitar a teleoperação do Turtlebot3. Sua implementação:
 
 ```python
 class TeleopTurtle(Node):
@@ -74,7 +72,7 @@ class TeleopTurtle(Node):
 * O publisher é configurado para publicar mensagens no tópico `cmd_vel`, que o Turtlebot3 escuta para receber comandos de movimento. Um publisher é um componente que publica mensagens em um tópico específico. Ele é responsável por produzir dados que outros nós podem consumir. Aqui, a classe TeleopTurtle possui um publisher configurado para enviar mensagens ao tópico cmd_vel. Este é o mecanismo pelo qual o nó envia comandos de movimento para o Turtlebot3.
 
 ### Método send_cmd_vel
-O método send_cmd_vel é usado para definir e enviar os comandos de velocidade para o robô. Como vamos fazer isso?
+O método send_cmd_vel é usado para definir e enviar os comandos de velocidade para o robô. Como se faz isso?
 
 ```python
     def send_cmd_vel(self, linear_vel, angular_vel):
@@ -89,7 +87,7 @@ O método send_cmd_vel é usado para definir e enviar os comandos de velocidade 
 
 ### Enviando movimentos para o robô 
 
-Certo. Depois de estabelecer a estrutura necessária pra movimentar o nosso turtlebot, como é controlado? Nesta parte da implementação, foi configurado para que o usuário em controle possa apertar teclas como `w, x, d, a` e consiga operar o robô. 
+Certo. Depois de estabelecer a estrutura necessária pra movimentar o turtlebot, como é controlado? Nesta parte da implementação, foi configurado para que o usuário em controle possa apertar teclas como `w, x, d, a` e consiga operar o robô. 
 
 #### Método get_key
 Este método serve para capturar uma única tecla pressionada pelo usuário diretamente do terminal. 
@@ -139,7 +137,7 @@ O botão:
 * ctrl + c: corta a comunicação e fecha nó. 
 
 ### Resumo
-De forma resumida, o script que desenvolvemos utiliza os conceitos do ROS para implementar uma forma de teleoperação onde:
+De forma resumida, o script que foi desenvolvido utiliza os conceitos do ROS para implementar uma forma de teleoperação onde:
 
 * Um nó (TeleopTurtle) é criado e configurado para enviar comandos.
 * Mensagens do tipo Twist são usadas para encapsular as instruções de movimento.
@@ -147,7 +145,7 @@ De forma resumida, o script que desenvolvemos utiliza os conceitos do ROS para i
 * A interface do usuário (captura de teclas no terminal) é mapeada para comandos de movimento, tornando a interação com o robô intuitiva e responsiva.
 
 ## Decisões de design 
-Para que o usuário consiga aproveitar ao máximo dessa comunicação com o robô, pensamos em duas soluções viáveis: 
+Para que o usuário consiga aproveitar ao máximo dessa comunicação com o robô, duas soluções viáveis foram consideradas: 
 
 * CLI (Interface por Linha de Comando) - para controlar o robô pelo terminal e executar funções pré-definidas de uma forma mais rápida e fácil;
 * Interface gráfica - uma interface onde o usuário possa controlar através de uma tela, apertando botões e interagindo com o robô ao invés de comandos via terminal. 
@@ -159,12 +157,11 @@ A escolha entre utilizar uma Interface de Linha de Comando (CLI) ou uma interfac
 
 Logo, nesta Sprint, o grupo considerou válido criar uma CLI para que seja possível navegar pelo robô. Esta abordagem é mais direta, rápida e fácil para o usuário. O ponto negativo é que talvez não seja tão intuitivo quanto interface. 
 
-
 Uma CLI é uma interface de linha de comando que permite aos usuários interagir com um programa ou sistema por meio de comandos de texto digitados em um terminal. Com uma CLI, os usuários podem executar tarefas, fornecer entrada e receber saída diretamente na linha de comando, sem a necessidade de uma interface gráfica.
 
-No contexto do nosso projeto, a implementação de uma CLI permitiria que os usuários controlassem o robô Turtlebot3 por meio de comandos digitados no terminal. Isso proporcionaria uma forma direta e rápida de interagir com o robô, executando funções pré-definidas e controlando seu movimento.
+No contexto desse projeto, a implementação de uma CLI permitiria que os usuários controlassem o robô Turtlebot3 por meio de comandos digitados no terminal. Isso proporcionaria uma forma direta e rápida de interagir com o robô, executando funções pré-definidas e controlando seu movimento.
 
-Mantendo apenas a mesma classe TeleopTurtle com a função send_cmd_vel ao código que comentamos anteriormente, os principais ajustes que fizemos para implementar uma CLI, foi:
+Mantendo apenas a mesma classe TeleopTurtle com a função send_cmd_vel ao código que foi mencionado anteriormente, os principais ajustes que foram feitos para implementar uma CLI, foi:
 * Importar bibliotecas para criar a CLI;
 * Criar a função necessária de acordo com as entradas do usuário.
 
@@ -179,9 +176,9 @@ app = typer.Typer()
 
 O código acima importa as bibliotecas necessárias. A biblioteca typer é uma biblioteca de linha de comando que permite criar facilmente interfaces de linha de comando interativas e amigáveis.
 
-Já a biblioteca inquirer é uma biblioteca de interação de linha de comando que fornece uma maneira fácil de criar perguntas interativas para o usuário. Com o inquirer, podemos criar perguntas de múltipla escolha e perguntas de entrada de texto.
+Já a biblioteca inquirer é uma biblioteca de interação de linha de comando que fornece uma maneira fácil de criar perguntas interativas para o usuário. Com o inquirer, pode-se criar perguntas de múltipla escolha e perguntas de entrada de texto.
 
-Sendo assim, implementamos a seguinte função ao nosso código:
+Sendo assim, foi implementado a seguinte função ao nosso código:
 
 ```python
 @app.command()
