@@ -29,7 +29,8 @@ Por fim, com a base de imagens finalizada, deu-se início à construção do alg
 
 ## Algoritmo de visão computacional
 ### Treinamento
-No intuito de implementar o algoritmo de visão computacional, após a montagem da base de dados, deu-se o treinamento de fato do modelo.<br/>
+No intuito de implementar o algoritmo de visão computacional, após a montagem da base de dados, deu-se o treinamento de fato do modelo.
+
 Nesse sentido, neste projeto, primeiramente foram importados os recursos necessários para iniciar o treinamento do modelo pelo YOLOv8. Veja os *imports* abaixo:
 
 ```python
