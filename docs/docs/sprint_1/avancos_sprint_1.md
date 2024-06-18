@@ -6,7 +6,7 @@ sidebar_position: "1"
 
 Com base no desafio proposto pela Atvos de desenvolver um robô teleoperado para escanear os canos de reboilers, o grupo Repipe concentrou seus esforços durante esta sprint nas áreas de experiência do usuário, negócios e programação.
 
-Durante esta semana, o trabalho foi focado no entendimento detalhado do escopo do projeto, incluindo suas nuances técnicas e requisitos operacionais. Além disso, foi realizada uma pesquisa abrangente sobre tecnologias emergentes e tendências de mercado, visando garantir que a solução esteja alinhada com as melhores práticas e as necessidades dos usuários.
+Esta semana, o foco foi entender detalhadamente o escopo do projeto, suas nuances técnicas e requisitos operacionais. Além disso, foi realizada uma pesquisa abrangente sobre tecnologias emergentes e tendências de mercado, visando garantir que a solução esteja alinhada com as melhores práticas e as necessidades dos usuários.
 
 ## Experiência do Usuário
 

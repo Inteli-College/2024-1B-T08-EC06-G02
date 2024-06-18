@@ -7,7 +7,7 @@ title: "Requisitos Não-Funcionais"
 
 ## Entendendo os requisitos não funcionais
 
-Primeiramente, vamos entender o que são requisitos não funcionais. Um requisito funcional se refere a uma especificação do sistema que descreve uma funcionalidade específica que o sistema deve cumprir. Por outro lado, um requisito não funcional se refere a uma especificação do sistema que descreve critérios de qualidade, restrições ou limitações que o sistema deve atender. Em outras palavras, enquanto um requisito funcional descreve o que o sistema deve fazer, um requisito não funcional descreve como o sistema deve fazer.
+Primeiramente, deve-se entender o que são requisitos não funcionais. Um requisito funcional se refere a uma especificação do sistema que descreve uma funcionalidade específica que o sistema deve cumprir. Por outro lado, um requisito não-funcional se refere a uma especificação do sistema que descreve critérios de qualidade, restrições ou limitações que o sistema deve atender. Em outras palavras, enquanto um requisito funcional descreve o que o sistema deve fazer, um requisito não-funcional descreve como o sistema deve fazer.
 
 ## RNF do sistema
 
@@ -19,7 +19,7 @@ Primeiramente, vamos entender o que são requisitos não funcionais. Um requisit
 
 **RNF04 - Tempo de escaneamento:** Tendo em mente a quantidade de canos de um reboiler, o robô deve ter um tempo máximo de checagem dos canos de 7 segundos.
 
-**RNF05 - Interfácie interativa:** Com base no nivel de letramento digital dos possíveis usuários, interfácie do usuário precisa ser fácilmente compreendida ao primeiro contato e possuir os princípios das heurísticas de Nilsen. 
+**RNF05 - Interface interativa:** Com base no nivel de letramento digital dos possíveis usuários, interface do usuário precisa ser fácilmente compreendida ao primeiro contato e possuir os princípios das heurísticas de Nilsen. 
 
 **RNF06 - Robustês de monimentação:** O projeto precisa ter uma construção que permita o robô operar em pisos com desníveis de solo, poças de água e outro obstáculos.
 
@@ -59,7 +59,7 @@ Primeiramente, vamos entender o que são requisitos não funcionais. Um requisit
 - Passo 3: Apresente a interface do usuário simulada aos usuários e observe sua interação e feedback.
 - Passo 4: Avalie se a interface do usuário é facilmente compreensível e atende aos princípios das heurísticas de Nielsen.
 
-**6. Robustez de Monumentação (RNF06):**
+**6. Robustez de Movimentação (RNF06):**
 - Passo 1: Configure um ambiente de simulação que reproduza condições realistas de terreno e obstáculos.
 - Passo 2: Execute o robô em diferentes condições de terreno e registre seu desempenho.
 - Passo 3: Introduza desafios, como desníveis de solo e poças de água, para testar a robustez do robô.
