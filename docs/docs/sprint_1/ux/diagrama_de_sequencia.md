@@ -1,6 +1,6 @@
 ---
 title: "Diagrama de Sequência"
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # O que é um Diagrama de Sequência?

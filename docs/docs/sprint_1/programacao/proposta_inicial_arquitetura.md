@@ -1,6 +1,6 @@
 ---
-   label : "Proposta inicial da Arquitetura"
-   sidebar_position : 3 
+title : "Proposta inicial da Arquitetura"
+sidebar_position : 3 
 ---
 
 # Proposta Inicial da Arquitetura  

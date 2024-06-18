@@ -1,13 +1,13 @@
 ---
+title: "Instrução de Execução"
 sidebar_position: 4
-title: "Como Executar"
 ---
 
 # Instrução de Execução da aplicação
 ## Introdução
 Nesta seção da documentação, explicaremos os passos necessários para rodar a aplicação, conforme o estágio atual do desenvolvimento do projeto. Abordaremos as etapas necessárias para executar tanto o backend quanto o frontend, considerando que estamos desenvolvendo uma aplicação completa de comunicação com o robô.
-## Setup Inicial do Robô
 
+## Setup Inicial do Robô
 Para começar a utilização do projeto é necessário primeiro garantir que todo o setup do robô está funcionando, para isso será utilizado o protocolo SSH que permite utilizar o terminal do raspberry pi acoplado ao turtlebot.
 
 ### Rede Wi-Fi e Conexão SSH
@@ -24,7 +24,6 @@ ssh grupo2@grupo2.local
 E preencha com a senha Repipe2
 
 ### Bringup do Robô 
-
 Uma vez como terminal acessado via ssh, é preciso rodar os seguintes comandos: 
 - `ros2 launch turtlebot3_bringup robot.launch.py `-> Que é responsável por iniciar o serviço de comunicação do robô
 - `cat .bashrc` -> Que irá mostrar às variáveis de ambiente do sistema. Lá é necessário observar o valor de "ROS_DOMAIN_ID"

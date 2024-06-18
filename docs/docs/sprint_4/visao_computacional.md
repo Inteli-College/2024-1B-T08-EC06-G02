@@ -1,6 +1,6 @@
 ---
+title: "Visão Computacional"
 sidebar_position: 1
-title: "Sistema de Visão Computacional"
 ---
 
 # Visão Computacional

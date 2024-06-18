@@ -1,5 +1,6 @@
 ---
-sidebar_position: 1
+title: Business Model Canvas
+sidebar_position: 2
 ---
 
 # Business Model Canvas (BMC)

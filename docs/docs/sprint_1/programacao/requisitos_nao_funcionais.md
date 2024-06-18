@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: "Requisitos não Funcionais"
+title: "Requisitos Não-Funcionais"
 ---
 
 # Requisitos não funcionais (RNF)

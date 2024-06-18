@@ -1,6 +1,6 @@
 ---
+title : "Análise Financeira"
 sidebar_position: 2
-title : "Análise financeira do projeto"
 ---
 
 ## Análise de Prova de Conceito (PoC)

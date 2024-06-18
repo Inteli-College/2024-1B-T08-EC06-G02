@@ -1,4 +1,5 @@
 ---
+title: "Sugestões de Gráficos"
 sidebar_position: 2
 ---
 

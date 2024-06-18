@@ -1,6 +1,6 @@
 ---
-sidebar_position: 4
 title : "Arquitetura de Informação"
+sidebar_position: 3
 ---
 
 # Arquitetura de Informação

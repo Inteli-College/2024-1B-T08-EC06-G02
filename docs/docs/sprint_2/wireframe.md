@@ -1,6 +1,6 @@
 ---
-sidebar_position : 2
 title : "Wireframe"
+sidebar_position : 1
 ---
 
 Com o objetivo de avançar no desenvolvimento da interface gráfica, o grupo considerou necessário já planejar os seguintes passos da mesma. Então, foi prototipado um wireframe onde é possível visualizar as principais funcionalidades da aplicação.

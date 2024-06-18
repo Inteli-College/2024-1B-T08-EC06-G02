@@ -1,3 +1,8 @@
+---
+title: "Lidar"
+sidebar_position: 2
+---
+
 # Sensor Lidar
 
 Este documento detalha a integração e utilização do sensor de distância a laser 360 Laser Distance Sensor (LDS-02) para que, quando uma pessoa estiver controlando o robô, o sensor auxilia a evitar colisões e obter informações da distãncia do robô a um certo objeto. No decorrer do documento, discutiremos a instalação e configuração do LDS-01, a coleta e análise dos dados de varredura do ambiente ao redor do robô e a implementação da interface de comunicação necessária para o funcionamento do sensor.

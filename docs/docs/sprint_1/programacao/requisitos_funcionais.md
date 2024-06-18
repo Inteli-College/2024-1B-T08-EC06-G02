@@ -1,6 +1,6 @@
 ---
 sidebar_position : 1
-tittle : "Requisitos Funcionais"
+title : "Requisitos Funcionais"
 ---
 
 # Requisitos funcionais 
