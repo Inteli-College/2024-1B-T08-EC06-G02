@@ -1,11 +1,20 @@
+html, body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .principal-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #D3EBEE;
   transition: margin-right 0.3s ease;
-  }
+  padding: 10px;
+}
 
 .principal-container.with-aba {
   margin-right: 30%;
@@ -15,44 +24,94 @@
   background-color: #B9DCDF;
   border-radius: 16px;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
-  width: 70%;
-  height: 65%;
+  width: 90%;
+  max-width: 1000px;
+  /* height: 60%; */
   position: relative;
-  margin-top: -200px;
+  /* margin-top: 20px; */
+  /* padding: 10px; */
+  margin-right: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.navigation-buttons.with-aba {
-  right: 650px;
-  transition: left 0.3s ease;
-}
-
-.control-buttons.with-aba {
-  left: -80px;
-  transition: left 0.3s ease;
+.video-stream {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Adjusted object-fit for better scaling */
+  border-radius: 16px;
 }
 
 .latency-container {
-  position: absolute;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  width: 190px;
+  width: 90%;
+  max-width: 200px;
   height: 70px;
   border-radius: 10px;
   background-color: #E3E3E3;
   border: 4px solid #152457;
-  bottom: 200px;
+  margin-top: 10px;
 }
+
+/* .control-buttons {
+  position: absolute;
+  bottom: 100px;
+} */
 
 .latency-data {
   display: flex;
   text-align: center;
-  width: 200px;
+  width: 100%;
   height: 36px;
-  flex-direction: center;
+  flex-direction: column;
   justify-content: center;
   color: #152457;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
   font-size: 15px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
+}
+
+.latency-data p {
+  margin: 0;
+  line-height: 2.0; /* Adjust this value to decrease/increase the space between lines */
+}
+
+
+@media (min-width: 600px) {
+  .principal-container {
+    flex-direction: row;
+  }
+
+  .content-box {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+  }
+
+  .latency-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .navigation-buttons {
+    position: absolute;
+    bottom: 30px;
+  }
+
+/* 
+  .navigation-buttons {
+    right: 10px;
+  } */
+}
+
+@media (min-width: 1024px) {
+  .content-box {
+    height: 80%;
+  }
 }

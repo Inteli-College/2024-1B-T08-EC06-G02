@@ -4,11 +4,12 @@
     ". up ."
     "left . right"
     ". down .";
-  grid-gap: 10px; 
+  grid-gap: 40px; 
   position: absolute;
-  bottom: 40px;
-  right: 145px;
+  bottom: 100px; /* Adjusted value to move the buttons higher */
+  right: 10px;
   transition: right 0.3s ease;
+  margin-right: 30px;
 }
 
 .nav-button {
@@ -18,6 +19,7 @@
   background: none;
   padding: 0;
   margin: 5px;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 
