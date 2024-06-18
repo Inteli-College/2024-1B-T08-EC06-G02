@@ -6,15 +6,15 @@ sidebar_position: 2
 # Sugestão de gráficos para Atvos
 A documentação a seguir apresenta uma análise detalhada e visual dos dados coletados ao longo do projeto feito para a empresa Atvos. Com o objetivo de proporcionar uma visão abrangente e precisa do progresso e dos resultados obtidos, foram gerados diversos gráficos que ilustram os principais indicadores de desempenho.
 
-Nesta altura do projeto, surgem muitos dados a serem analisados. E dados não são nada sem uma visualização de dados adequada. 
+Nesta etapa do projeto, há muitos dados a serem analisados, os quais requerem uma visualização adequada para serem plenamente compreendidos. 
 
-Essas sugestões de gráficos são ferramentas que a empresa Atvos possa obter insights valiosos, permitindo uma tomada de decisão mais informada e estratégica. A visualização dos dados facilita a identificação de padrões, tendências e possíveis áreas de melhoria, contribuindo para a otimização dos processos e a maximização dos resultados.
+Essas sugestões de gráficos fornecem ferramentas com as quais a empresa Atvos pode obter insights valiosos, facilitando uma tomada de decisão mais informada e estratégica. A visualização dos dados facilita a identificação de padrões, tendências e possíveis áreas de melhoria, contribuindo para a otimização dos processos e a maximização dos resultados.
 
 Além disso, os gráficos aqui apresentados podem ser integrados a um sistema de Business Intelligence (BI), oferecendo uma visão dinâmica de como as iniciativas implementadas estão evoluindo. Com isso, a Atvos poderá monitorar o desempenho em tempo real, ajustando suas estratégias conforme necessário e assegurando que os objetivos do projeto sejam alcançados de maneira eficiente e eficaz.
 
 Portanto, esta documentação não apenas serve como um registro detalhado das atividades e resultados, mas também como uma base para a construção de um BI, fundamental para o sucesso contínuo da Atvos.
 
-Nota: os scripts para gerar o gráfico foram feitos "a mão" como base e não estão integrados diretamente com a nossa solução. O intuito é mostrar sugestões e possíveis aplicações. Num futuro, estes etapas poderiam estar integradas. 
+Nota: os scripts para a geração dos gráficos foram criados manualmente como base e ainda não estão integrados diretamente à solução atual. O objetivo é apresentar sugestões e possíveis aplicações, que poderiam ser integradas em etapas futuras.
 
 # Explicação da API da câmera no projeto
 

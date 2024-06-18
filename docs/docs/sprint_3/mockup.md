@@ -3,7 +3,7 @@ title: "Mockup"
 sidebar_position: 1
 ---
 
-Após a elaboração inicial do wireframe, que permitiu visualizar as funcionalidades da aplicação, avançamos para o próximo passo no desenvolvimento da interface gráfica: a criação de um protótipo de alta fidelidade, ou mockup. Este mockup é a melhor forma de visualizar o design da aplicação sem a necessidade de desenvolver o frontend. Além disso, algumas funcionalidades foram ajustadas com base nos feedbacks fornecidos pelo parceiro, garantindo que o produto final atenda às expectativas e necessidades identificadas.
+Após a elaboração inicial do wireframe, que permitiu visualizar as funcionalidades da aplicação, o grupo avançou para o próximo passo no desenvolvimento da interface gráfica: a criação de um protótipo de alta fidelidade, ou mockup. Este mockup é a melhor forma de visualizar o design da aplicação sem a necessidade de desenvolver o frontend. Além disso, algumas funcionalidades foram ajustadas com base nos feedbacks fornecidos pelo parceiro, garantindo que o produto final atenda às expectativas e necessidades identificadas.
 
 ### Imagem 1 do Mockup - tela de login
 ![Imagem 1 do Mockup - tela de login](../../static/img/sprint_3/mockup-login.png)
