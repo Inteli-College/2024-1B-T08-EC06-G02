@@ -53,3 +53,4 @@ flowchart TB
     Módulo_de_Visão_Computacional-->Módulo_de_Interface_do_Usuário
     Módulo_de_Interface_do_Usuário-->Módulo_de_Gerenciamento_de_Dados
 ```
+<h6> Fonte: Elaboração Grupo Repipe </h6>

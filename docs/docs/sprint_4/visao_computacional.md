@@ -13,7 +13,7 @@ Nesse sentido, esta etapa do projeto envolveu a construção de um algoritmo de 
 ## Base de Dados
 A base de dados deste projeto foi criada utilizando o Chat GPT-4 para gerar imagens que seriam utilizadas no início do treinamento. Esta medida se mostrou necessária devido à falta de imagens representativas da solução trabalhada em plataformas de bancos de imagens gratuitas, como Roboflow e Google. Assim, com o uso do Chat GPT-4, o conjunto de imagens geradas pode ser visto abaixo:
 
-<h2 align="center">Imagem 1 - Base de dados para treinamento </h2>
+<h2 align="center">Base de dados para treinamento </h2>
 
 ![Imagem 1 do Wireframe - tela de login](../../static/img/sprint_4/canos_sujos.png)
 <h6 align="center"> Fonte: Elaboração grupo Repipe </h6>

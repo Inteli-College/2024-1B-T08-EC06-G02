@@ -9,6 +9,8 @@ No caso desse projeto, pode-se fazer com que o BMC auxilie o grupo para que seja
 
 ![BMC](/img/sprint_1/BMC.png "Business Model Canvas")
 
+<h6 align="center"> Fonte: Elaboração Grupo Repipe </h6>
+
 Ao usar o BMC, você pode dividir o processo de planejamento em nove blocos principais, cada um representando um aspecto fundamental do seu negócio:
 
 ### 1 Value Propositions: 
@@ -83,7 +85,7 @@ Com isso em mente, este projeto apresenta os seguintes Cost Structure:
 - Custos de transporte, manutenção dos equipamentos tanto em hardware como em software.
 - Aquisição de peças de reposição (motores, sensores).
 
-# Bibliografia:
+## Referências
 [1] Jr L. Canvas: o que é e quais os benefícios para um plano de negócios. Líder Júnior. Published May 28, 2020. Accessed April 26, 2024. https://liderjr.com/blog/canvas/?utm_source=Google&utm_medium=Grants&utm_campaign=Blog&gad_source=1&gclid=CjwKCAjwoa2xBhACEiwA1sb1BFchfDKOFRve3LO60lB7prWXNy0pZGKXTA_H9W_MYniAzIiwDmfdQRoCC6gQAvD_BwE
 ‌
 

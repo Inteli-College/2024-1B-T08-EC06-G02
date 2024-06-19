@@ -16,11 +16,11 @@ Simultaneamente à teleoperação do robô, o mesmo está capturando imagens dos
 Se o backend identificar um cano sujo, ele envia um alerta visual e sonoro para a tela do operador, além de armazenar o status do cano no banco de dados.
 
 <div align="center">
-**Figura 1** - Diagrama de Sequência Rubens Ferreira
+<h2 align="center"> Diagrama de Sequência - Rubens Ferreira </h2>
 
 ![Diagrama de Sequência Rubens Ferreira](/img/sprint_1/diagrama_de_sequencia_rubens_ferreira.drawio.png)
 
-Fonte: Elaboração do grupo Repipe
+<h6 align="center"> Fonte: Elaboração Grupo Repipe </h6>
 </div>
 
 ## Diagrama 2: Marcos Batista
@@ -34,11 +34,11 @@ O backend, então, ordena esses dados do banco de dados para criar um mapa dos c
 Finalmente, esse mapa é retornado ao frontend, permitindo que Marcos identifique rapidamente quais canos estão limpos ou sujos, otimizando seu tempo de trabalho.
 
 <div align="center">
-**Figura 2** - Diagrama de Sequência Marcos Batista
+<h2 align="center"> Diagrama de Sequência - Marcos Batista </h2>
 
 ![Diagrama de Sequência Marcos Batista](/img/sprint_1/diagrama_de_sequencia_marcos_batista.drawio.png)
 
-Fonte: Elaboração do grupo Repipe
+<h6 align="center"> Fonte: Elaboração Grupo Repipe </h6>
 </div>
 
 ## Referências 

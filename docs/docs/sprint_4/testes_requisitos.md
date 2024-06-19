@@ -35,6 +35,7 @@ E a condução dos testes deve acontecer da seguinte forma:
 
 ### Relatório de execução
 ![Relatório de execução](../../static/img/sprint_4/testes_rf_registro.png)
+<h6 align="center"> Fonte: Elaboração Grupo Repipe </h6>
 
 Os testes foram executados por 4 pessoas, além do teste realizado pelo grupo. Os resultados podem ser visualizados [neste arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit?usp=sharing) do Google Sheets.
 
@@ -53,6 +54,7 @@ Além disso, destacou-se os principais problemas observados, classificando por n
 Nele também é possível observar se o problema relatado é um problema de funcionalidade, usabilidade ou compreensão. 
 
 ![Relatório de execução](../../static/img/sprint_4/testes_rf_ocorrencias.png)
+<h6 align="center"> Fonte: Elaboração Grupo Repipe </h6>
 
 
 ### Conclusão
@@ -123,6 +125,8 @@ O "Teste de autonomia" em questão será realizado pelo grupo de desenvolvedores
 Segue imagem do relatório de execução de autonomia do robô com a bateria em 100% (12.6V):
 
 ![RNF_de_autonomia_do_robô](../../static/img/sprint_4/RNF_autonomia_robo.png)
+<h6 align="center"> Fonte: Elaboração Grupo Repipe </h6>
+
 
 Os testes foram executados pelo grupo de desenvolvedores. Os resultados podem ser visualizados[neste arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit#gid=1538901939) do Google Sheets.
 
@@ -154,6 +158,7 @@ O "Teste de Latência" em questão será realizado pelo grupo de desenvolvedores
 Segue imagem do relatório de execução da latência e FPS do robô:
 
 ![RNF_de_latência_e_FPS_do_robô](../../static/img/sprint_4/RNF_latencia_robo.png)
+<h6 align="center"> Fonte: Elaboração Grupo Repipe </h6>
 
 Os testes foram executados pelo grupo de desenvolvedores. Os resultados podem ser visualizados [neste arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit#gid=1538901939) do Google Sheets.
 
@@ -172,6 +177,7 @@ Além disso, foram destacados os principais problemas observados, classificando 
 Os testes de latência e FPS do robô mostraram que ele, inicialmente, não manteve a latência dentro de limites aceitáveis em vários ambientes, incluindo alguns problemas iniciais com a conexão de teleoperação. 
 
 ![RNF_de_latência_e_FPS_do_robô_Antes](../../static/img/sprint_4/latencia_antes.png)
+<h6 align="center"> Fonte: Elaboração Grupo Repipe </h6>
 
 A imagem acima demonstra o valor médio da latência ao medir em diferentes ambientes, que está em 1.5 segundos, ou, 1500ms. A nossa métrica exigia no máximo 150ms de latência, com picos de 30ms para mais ou menos. 
 
@@ -208,7 +214,7 @@ Essas heurísticas são amplamente utilizadas no design de interfaces para melho
 Segue imagem do relatório de visualização da interface interativa para controlar o robô e visualizar a imagem da câmera:
 
 ![RNF_de_interface_interativa_do_robô](../../static/img/sprint_4/RNF_interface_robo.png)
-
+<h6 align="center"> Fonte: Elaboração Grupo Repipe </h6>
 
 Os testes foram executados pelo grupo de desenvolvedores. Os resultados podem ser visualizados[neste arquivo](https://docs.google.com/spreadsheets/d/1FnYlsAU4UXWCYReaynA9F_aY9sgXys9OXnpAjph5xss/edit#gid=1538901939) do Google Sheets.
 
@@ -293,3 +299,4 @@ Já no frontend, recebe-se a mensagem e calcula-se a diferença:
 O resultado alcançado superou a métrica estabelecida anteriormente, que previa uma latência máxima de 150ms, apresentando variações de apenas 30ms para mais ou menos. A latência foi drasticamente reduzida, e tanto o envio dos dados da câmera e lidar quanto a troca das mensagens de movimentação ocorrem agora muito mais rapidamente.
 
 ![Latencia depois da melhoria](../../static/img/sprint_4/latencia_depois.png)
+<h6 align="center"> Fonte: Elaboração Grupo Repipe </h6>
