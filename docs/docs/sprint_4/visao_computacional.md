@@ -3,8 +3,6 @@ sidebar_position: 1
 title: "Sistema de Visão Computacional"
 ---
 
-### Este documento deve detalhar o sistema de visão computacional da sprint 4
-
 # Visão Computacional
 Visão computacional é um campo da inteligência artificial que se concentra em capacitar os computadores a interpretar e compreender o mundo visual de maneira semelhante aos seres humanos. Essa disciplina envolve o desenvolvimento de algoritmos e modelos que permitem a um sistema extrair informações úteis de imagens e vídeos. As aplicações de visão computacional são amplas e variadas, incluindo o reconhecimento de objetos, detecção de rostos, análise de movimento, e segmentação de imagens.
 
@@ -17,7 +15,7 @@ A base de dados deste projeto foi criada utilizando o Chat GPT-4 para gerar imag
 
 <h2 align="center">Imagem 1 - Base de dados para treinamento </h2>
 
-![Imagem 1 do Wireframe - tela de login](/docs/static/img/sprint_4/canos_sujos.png)
+![Imagem 1 do Wireframe - tela de login](../../static/img/sprint_4/canos_sujos.png)
 <h6 align="center"> Fonte: Elaboração grupo Repipe </h6>
 
 Tendo em mente essa base de dados, nota-se que há vários tipos de imagens em diferentes contextos, para que o modelo possa aprender com as diversas circunstâncias encontradas na solução.
@@ -30,11 +28,13 @@ Por fim, com a base de imagens finalizada, deu-se início à construção do alg
 
 
 ## Algoritmo de visão computacional
-No intuito de implementar o algoritmo de visão computacional, após a montagem da base de dados, deu-se o treinamento de fato do modelo. Nesse sentido, neste projeto, primeiramente foram importados os recursos necessários para iniciar o treinamento do modelo pelo YOLOv8. Veja os *imports* abaixo:
+### Treinamento
+No intuito de implementar o algoritmo de visão computacional, após a montagem da base de dados, deu-se o treinamento de fato do modelo.<br/>
+Nesse sentido, neste projeto, primeiramente foram importados os recursos necessários para iniciar o treinamento do modelo pelo YOLOv8. Veja os *imports* abaixo:
+
 ```python
 #  importação das dependencias necessárias
 from ultralytics import YOLO
-import cv2
 ```
 
 Nota-se que a Ultralytics é responsável por importar os módulos utilizados no modelo de treinamento do YOLO. Além disso, após a importação, foi instanciada uma variável para obter as características da classe YOLO, como no comando abaixo:
@@ -47,8 +47,10 @@ Após esse processo de instância, a função para começar o treinamento do mod
 
 ```python
 # treinamento do modelo
-results = model.train(data="/home/grupo-02-t08/2024-1B-T08-EC06-G02/src/yolo_v8/YOLODataset/dataset.yaml", epochs=100, imgsz=640)
+results = model.train(data="YOLODataset/dataset.yaml", epochs=100, imgsz=640)
 ```
+
+### Predição
 Nessa perspectiva, após o treinamento do modelo em 100 épocas, foi criado um arquivo PYTHON para realizar as predições do modelo treinado. Para isso, primeiramente foram feitas as importações das bibliotecas necessárias, conforme mostrado abaixo:
 
 ```python
@@ -61,7 +63,7 @@ Depois das importações, foi instanciada uma variável denominada "model" para 
 ```python
 # instancia das variaveis
 cap = cv2.VideoCapture(0) # indice 0 indica como a webcam é lida no sistemaz
-model = YOLO("/2024-1B-T08-EC06-G02/runs/detect/train6/weights/best.pt")
+model = YOLO("runs/detect/train6/weights/best.pt")
 ```
 Após esse processo, foi criada uma condição para a inicialização da webcam e também uma variável chamada "results" para que a webcam fosse inicializada juntamente com a predição, permitindo que os resultados fossem mostrados no computador para o usuário. Essa parte pode ser vista no bloco de código abaixo:
 

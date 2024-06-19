@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Body
 from fastapi.responses import JSONResponse
-from databases.users import DatabaseConnector
-from schemas.users import User, Role
+from database.database import DatabaseConnector
+from schemas.schemas import User, Role
 
 
 router = APIRouter(tags=["users"])
