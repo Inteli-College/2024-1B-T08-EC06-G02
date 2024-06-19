@@ -2,7 +2,7 @@ import sqlite3
 from sqlite3 import Error
 from typing import Any, List, Dict, Tuple
 from schemas import *
-
+import os
 
 def create_connection(db_path:str) -> Any:
     """
@@ -102,20 +102,17 @@ def execute_query(conn: Any, query: str, params=Tuple) -> None:
         cursor.execute(query, params)
         conn.commit()
     except Error as e:
+        print(os.getcwd())
         print(e)
 
 
 class DatabaseConnection:
-    def __init__(self, db_path:str) -> None :
+    def __init__(self) -> None :
         """
         Classe que conecta com o banco de dados
-
-        Parameters
-        ----------
-        db_path : str
-            Caminho do arquivo referente ao banco de dados
         """
-        self.connection = create_connection(db_path=db_path)
+        self.connection = create_connection(db_path='database/repipe.db')
+
 
     def query_database(self, operation: str, table_name: str, **kwargs) -> Any:
         """
