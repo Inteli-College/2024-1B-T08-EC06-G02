@@ -1,27 +1,46 @@
 .botao-iniciar {
   width: 180px;
-  height: 120px;
-  position: absolute;
+  height: 70px; /* Matching the height of latency-container */
   border-radius: 10px;
   background-color: #152457;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25); */
   color: #ffffff;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
   font-size: 22px;
   font-weight: 800;
   cursor: pointer;
-  border: none; 
-  bottom: 75px;
-  left: 290px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 250px;
+  right: 180px;
+}
+
+.botao-font{
+  width: 180px;
+  height: 70px; /* Matching the height of latency-container */
+  border-radius: 10px;
+  background-color: #152457;
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25); */
+  color: #ffffff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+  font-size: 22px;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.botao-font:hover{
+  background-color: #25385A;
 }
 
 .botao-iniciar:hover {
   background-color: #25385A; 
-}
-
-.control-buttons {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  transition: left 0.3s ease;
+  transform: scale(1.1); 
 }

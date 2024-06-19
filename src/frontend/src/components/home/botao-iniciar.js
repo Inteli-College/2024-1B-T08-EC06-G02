@@ -3,8 +3,8 @@ import React from 'react';
 
 const BotaoIniciar = ({ onClick }) => {
   return (
-    <button className="botao-iniciar" onClick={onClick}>
-      INICIAR
+    <button className="botao-font" onClick={onClick}>
+      PREVER
     </button>
   );
 };
