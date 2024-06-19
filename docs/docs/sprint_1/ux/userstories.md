@@ -1,4 +1,5 @@
 ---
+title : User Stories
 sidebar_position : 2
 ---
 
@@ -12,6 +13,7 @@ As histórias de usuário são uma ferramenta essencial no desenvolvimento ágil
 
 ## Marcos Batista (Operador Industrial)
 ![User stories 1](/img/sprint_1/userstories1.png "User Stories 1")
+<h6 align="center"> Fonte: Elaboração Grupo Repipe </h6>
 
 ### User Stories 1
 
@@ -33,6 +35,7 @@ As histórias de usuário são uma ferramenta essencial no desenvolvimento ágil
 
 ## Rubens Ferreira (Controlador de Processos Industriais)
 ![User stories 2](/img/sprint_1/userstories2.png "User Stories 2")
+<h6 align="center"> Fonte: Elaboração Grupo Repipe </h6>
 
 ### User Stories 1
 

@@ -1,6 +1,6 @@
 ---
-sidebar_position: 4
 title : "Arquitetura de Informação"
+sidebar_position: 3
 ---
 
 # Arquitetura de Informação
@@ -13,10 +13,11 @@ A hierarquia de informações começa na tela de login da aplicação, que propo
 
 Em seguida, estão as telas de teleoperação do robô, onde o operador pode controlar o robô remotamente, e a tela de visualização do mapeamento dos canos escaneados. Ambas as telas estão no mesmo nível hierárquico.
 
+
 <div align="center">
-**Figura 1** - Arquitetura de Informação 
+<h2 align="center"> Arquitetura de Informação </h2>
 
 ![Arquitetura de Informação](/img/sprint_1/arquitetura_de_informacao.drawio.png)
 
-Fonte: Elaboração própria
+<h6 align="center"> Fonte: Elaboração Grupo Repipe </h6>
 </div>

@@ -1,6 +1,6 @@
 ---
+title : "Análise Financeira"
 sidebar_position: 2
-title : "Análise financeira do projeto"
 ---
 
 ## Análise de Prova de Conceito (PoC)
@@ -31,7 +31,7 @@ A Prova de Conceito (PoC) é essencial para validar a viabilidade técnica e fun
 
 ### Otimização de Custos
 
-Pensando em uma implementação mínima da PoC, essa segunda sessão foi estipulada procurando reduzir ao máximo os custos, a fim de disponibilizar uma prova de conceito pelo menor preço possível. 
+Para uma implementação mínima da PoC, foi estipulada uma segunda sessão com o objetivo de reduzir ao máximo os custos, a fim de disponibilizar uma prova de conceito pelo menor preço possível. 
 - **Desenvolvedores Backend**: R$ 18/h
   - 2 horas/dia x 5 dias/semana x 10 semanas = R$ 1,800 total
 - **Desenvolvedores Frontend**: R$ 18/h
@@ -61,7 +61,7 @@ Com base no cenário desejado de atuação do robô, que é o reboiler pré-esfr
 Além disso, com a finalidade de integrar todas as plantas, o sistema deve ter uma integração com a nuvem, a fim de guardar os dados de forma segura e acessível ao sistema de BI deles.
 
 :::note[Importante]
-É preciso informar que o tempo de desenvolvimento e implementação do projeto será de um ano.
+Deve-se notar que o tempo de desenvolvimento e implementação do projeto é estimado em um ano.
 :::
 
 ### Precificando
@@ -72,7 +72,7 @@ Considerando as especificações eletro-mecânicas do robô, que deve ser compac
   - 2 engenheiros x 9 meses = R$129,880.00
 - **Custo de prototipação**: R$230,000/mês
 
-Pensando na otimização dos dados coletados e na estruturação de um armazenamento nuvem, será preciso um engenheiro de dados. Não só, um analista de dados será responsável por fazer os ajustes necessários com o BI da Atvos. Tendo em mente que essa parte do projeto será feita mais ao seu final, a duração será de 3 meses.
+Visando a otimização dos dados coletados e a estruturação de um armazenamento na nuvem, será preciso um engenheiro de dados. Não só, um analista de dados será responsável por fazer os ajustes necessários com o BI da Atvos. Tendo em mente que essa parte do projeto será feita mais ao seu final, a duração será de 3 meses.
 
 - **Engenheiro de dados**: R$9,250/mês
   - 1 engenheiro de dados x 3 meses = R$27,750.00

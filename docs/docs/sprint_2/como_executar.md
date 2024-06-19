@@ -1,6 +1,6 @@
 ---
+title: "Execução"
 sidebar_position: 3
-title: "Como executar"
 ---
 
 Este documento guiará por todas as etapas e processos necessários para que o projeto funcione, desde a compatibilidade de sistemas até a configuração do robô e do computador que o controlará.
