@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from fastapi import File, UploadFile
 
 class User(BaseModel):
     user_email: str
@@ -30,3 +31,6 @@ class Refinary(BaseModel):
     location: str
     num_reboilers: int
     name: str
+
+class Predict(BaseModel):
+    image: str
