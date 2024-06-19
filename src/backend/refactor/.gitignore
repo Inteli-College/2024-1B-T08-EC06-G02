@@ -1,0 +1,4 @@
+__pycache__
+./database/__pycache__/
+./routers/__pycache__/
+./schemas/__pycache__/
