@@ -235,6 +235,28 @@ const Principal = () => {
     };
   }, [colisaoDireita, colisaoEsquerda, colisaoFrente, colisaoTras, MAX_ANG_VEL, MAX_LIN_VEL, MIN_ANG_VEL, MIN_LIN_VEL, latencyData]);
 
+
+  const postImageToPredict = async () => {
+    try {
+      const response = await fetch('http://127.0.0.1:8000/predict', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ image: videoSrc.split('base64,')[1] }), // Sending the base64 image without the prefix
+      });
+      const data = await response.json();
+      if (response.ok) {
+        console.log('Prediction result:', data.result);
+        // Handle the result as needed
+      } else {
+        console.error('Prediction error:', data.detail);
+      }
+    } catch (error) {
+      console.error('Error posting image:', error);
+    }
+  };
+
   return (
     <div className="principal-container">
       <div className="content-box">
@@ -249,7 +271,7 @@ const Principal = () => {
       </div>
       {!isAbaVisible && (
         <><div className="botao-iniciar">
-          <BotaoIniciar onClick={() => console.log('Botão Iniciar clicado!')} />
+          <BotaoIniciar onClick={postImageToPredict} />
         </div>
         <div className="navigation-buttons">
             <BotoesMover />
