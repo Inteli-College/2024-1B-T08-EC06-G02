@@ -1,8 +1,3 @@
----
-title: "Câmera e Latência"
-sidebar_position: 1
----
-
 # Comunicação com a Câmera/Cálculo da Latência
 
 O foco deste documento é explicitar como foi realizado durante essa sprint a implementação de uma webcam para observar o ambiente do robô e o cálculo da latência na transmissão das imagens. A seguir, será discutido o setup da webcam, a criação de uma interface para visualização das imagens da webcam e as comunicações necessárias para que isso aconteça.
