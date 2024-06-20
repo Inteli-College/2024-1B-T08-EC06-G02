@@ -95,20 +95,20 @@ Considerando imposto de 18% e lucro de 10% (da mesma forma que foi utilizado na 
 
 ### Fontes
 
-[1] **Webcam C270**: [Amazon](https://www.amazon.com.br/Chamadas-Grava%C3%A7%C3%B5es-Widescreen-Logitech-Equipamentos/dp/B003PAOAWG/ref=asc_df_B003PAOAWG/?tag=googleshopp00-20&linkCode=df0&hvadid=379712974695&hvpos=&hvnetw=g&hvrand=10570527231774725958&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-521463501059&psc=1&mcid=5791f36b8833353392495198dc82fc2a)
+[4] **Webcam C270**: [Amazon](https://www.amazon.com.br/Chamadas-Grava%C3%A7%C3%B5es-Widescreen-Logitech-Equipamentos/dp/B003PAOAWG/ref=asc_df_B003PAOAWG/?tag=googleshopp00-20&linkCode=df0&hvadid=379712974695&hvpos=&hvnetw=g&hvrand=10570527231774725958&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-521463501059&psc=1&mcid=5791f36b8833353392495198dc82fc2a)
 
-[2] **Turtlebot3 Burger**: [Aliexpress](https://pt.aliexpress.com/item/1005004405764315.html?src=google)
+[5]**Turtlebot3 Burger**: [Aliexpress](https://pt.aliexpress.com/item/1005004405764315.html?src=google)
 
-[3] **Raspberry Pi 4**: [Robocore](https://www.robocore.net/placa-raspberry-pi/raspberry-pi-4-4gb?gad_source=1&gclid=Cj0KCQjw6auyBhDzARIsALIo6v-AFlENSy9z7KWwSZ_ZM2WIk3mL0nxqUJWdMTAzWaftDLnGBUoZboEaAl0EEALw_wcB)
+[6] **Raspberry Pi 4**: [Robocore](https://www.robocore.net/placa-raspberry-pi/raspberry-pi-4-4gb?gad_source=1&gclid=Cj0KCQjw6auyBhDzARIsALIo6v-AFlENSy9z7KWwSZ_ZM2WIk3mL0nxqUJWdMTAzWaftDLnGBUoZboEaAl0EEALw_wcB)
 
-[4] **Salário Desenvolvedor Júnior**: [Talent.com](https://br.talent.com/salary?job=desenvolvedor+j%C3%BAnior)
+[7] **Salário Desenvolvedor Júnior**: [Talent.com](https://br.talent.com/salary?job=desenvolvedor+j%C3%BAnior)
 
-[5] **Salário Product Owner**. Disponível em [glassdoor](https://www.glassdoor.com.br/Sal%C3%A1rios/product-owner-po-sal%C3%A1rio-SRCH_KO0,16.htm). Acesso em 15 de maio de 2024.
+[8] **Salário Product Owner**. Disponível em [glassdoor](https://www.glassdoor.com.br/Sal%C3%A1rios/product-owner-po-sal%C3%A1rio-SRCH_KO0,16.htm). Acesso em 15 de maio de 2024.
 
-[6] **Engenheiro Mecatrônico**. Disponível em [vagas](https://www.vagas.com.br/cargo/engenheiro-mecatronico). Acesso em 14 de maio de 2024.
+[9] **Engenheiro Mecatrônico**. Disponível em [vagas](https://www.vagas.com.br/cargo/engenheiro-mecatronico). Acesso em 14 de maio de 2024.
 
-[7] **Salário Engenheiro de Dados**. Disponível em [glassdoor](https://www.glassdoor.com.br/Sal%C3%A1rios/engenheiro-de-dados-sal%C3%A1rio-SRCH_KO0,19.htm). Acesso em 15 de maio de 2024.
+[10] **Salário Engenheiro de Dados**. Disponível em [glassdoor](https://www.glassdoor.com.br/Sal%C3%A1rios/engenheiro-de-dados-sal%C3%A1rio-SRCH_KO0,19.htm). Acesso em 15 de maio de 2024.
 
-[8] **Salário Analista de Dados**. Disponível em [glassdoor](https://www.glassdoor.com.br/Sal%C3%A1rios/analista-de-dados-junior-sal%C3%A1rio-SRCH_KO0,24.htm). Acesso em 15 de maio de 2024.
+[11] **Salário Analista de Dados**. Disponível em [glassdoor](https://www.glassdoor.com.br/Sal%C3%A1rios/analista-de-dados-junior-sal%C3%A1rio-SRCH_KO0,24.htm). Acesso em 15 de maio de 2024.
 
-[9] **Salário Desenvolvedor**. Disponível em [glassdoor](https://www.glassdoor.com.br/Sal%C3%A1rios/desenvolvedor-sal%C3%A1rio-SRCH_KO0,13.htm). Acesso em 15 de maio de 2024.
+[12] **Salário Desenvolvedor**. Disponível em [glassdoor](https://www.glassdoor.com.br/Sal%C3%A1rios/desenvolvedor-sal%C3%A1rio-SRCH_KO0,13.htm). Acesso em 15 de maio de 2024.
