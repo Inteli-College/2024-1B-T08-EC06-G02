@@ -1,7 +1,4 @@
----
-title: Business Model Canvas
-sidebar_position: 2
----
+Nesta seção de negócios do projeto, foram abordados temas para o desenvolvimento estratégico e operacional. Dessa forma, foram explorados o Business Model Canvas (BMC) para analisar a proposta de valor, os segmentos de clientes, os canais de distribuição e outras dimensões essenciais do modelo de negócios. Ademais,foi analisada a matriz de risco para identificar, avaliar e mitigar possíveis ameaças ao projeto. Além disso, foi detalhada a Bill of Materials (BOM) para especificar os componentes e custos necessários, assegurando uma gestão eficaz dos recursos e orçamentos.
 
 # Business Model Canvas (BMC)
 O Business Model Canvas (BMC) é uma ferramenta poderosa para ajudar no planejamento e desenvolvimento de negócios de forma estratégica e eficiente. Ele oferece uma visão panorâmica e estruturada de um empreendimento, permitindo que empreendedores, gestores e equipes analisem e iterem sobre seu modelo de negócio de maneira mais clara e concisa.
