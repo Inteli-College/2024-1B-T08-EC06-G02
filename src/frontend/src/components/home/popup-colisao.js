@@ -11,7 +11,7 @@ export const PopUpColisao = (props) => {
 
     useEffect(() => {
         var ros = new ROSLIB.Ros({
-            url: 'ws://localhost:9090'
+            url: 'ws://grupo2.local:9090'
         });
 
         var listener = new ROSLIB.Topic({
