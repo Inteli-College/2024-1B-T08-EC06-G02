@@ -1,3 +1,5 @@
+# Documentação Final da Programação
+
 Esta seção é dedicada à descrição detalhada do que foi desenvolvido na parte de backend e na comunicação com o hardware durante o desenvolvimento do projeto.
 
 Inicialmente, desenvolveu-se uma arquitetura inicial que definiu como e quais tecnologias seriam utilizadas no desenvolvimento do projeto. Esse planejamento foi crucial para estabelecer uma base sólida e assegurar que todos os componentes se integrassem de maneira eficiente. Para mais detalhes sobre o desenvolvimento da arquitetura, acesse [essa página](./docs/sprint_1/programacao/proposta_inicial_arquitetura.md).
