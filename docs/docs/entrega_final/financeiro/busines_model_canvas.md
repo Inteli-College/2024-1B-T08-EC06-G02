@@ -1,3 +1,8 @@
+---
+title: UX
+sidebar_position: 2
+---
+
 Nesta seção de negócios do projeto, foram abordados temas para o desenvolvimento estratégico e operacional. Dessa forma, foram explorados o Business Model Canvas (BMC) para analisar a proposta de valor, os segmentos de clientes, os canais de distribuição e outras dimensões essenciais do modelo de negócios. Ademais,foi analisada a matriz de risco para identificar, avaliar e mitigar possíveis ameaças ao projeto. Além disso, foi detalhada a Bill of Materials (BOM) para especificar os componentes e custos necessários, assegurando uma gestão eficaz dos recursos e orçamentos.
 
 # Business Model Canvas (BMC)
@@ -215,7 +220,8 @@ Considerando uma média de 1 robô para cada 4 reboiler e sabendo que são aprox
 
 Considerando imposto de 18% e lucro de 10% (da mesma forma que foi utilizado na PoC), temos como valor por refinaria: **R$4,312,371.58**
 
-
+# Conclusão 
+Após a análise financeira e de viabilidade de implementação do projeto, segue-se para a análise e levantamento de requisitos.
 
 ## Referências
 [1] Jr L. Canvas: o que é e quais os benefícios para um plano de negócios. Líder Júnior. Published May 28, 2020. Accessed April 26, 2024. https://liderjr.com/blog/canvas/?utm_source=Google&utm_medium=Grants&utm_campaign=Blog&gad_source=1&gclid=CjwKCAjwoa2xBhACEiwA1sb1BFchfDKOFRve3LO60lB7prWXNy0pZGKXTA_H9W_MYniAzIiwDmfdQRoCC6gQAvD_BwE

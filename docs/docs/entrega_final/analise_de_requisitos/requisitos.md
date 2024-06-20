@@ -1,3 +1,7 @@
+---
+title: UX
+sidebar_position: 3
+---
 # Introdução 
 Nesta seção, serão apresentados os requisitos funcionais e não funcionais do sistema. Os requisitos funcionais descrevem as ações específicas que o sistema deve realizar para atender às necessidades dos usuários. Eles detalham as funcionalidades e comportamentos esperados, definindo o que o sistema deve fazer. Já os requisitos não funcionais especificam as características de qualidade, restrições e limitações do sistema, abordando como o sistema deve operar para ser eficiente, seguro e utilizável. Com uma compreensão clara desses requisitos, é possível garantir que o sistema desenvolvido atenderá às expectativas de desempenho, segurança e usabilidade, além de cumprir suas funções essenciais.
 
@@ -110,5 +114,7 @@ Primeiramente, deve-se entender o que são requisitos não funcionais. Um requis
 
 [1] Requisitos não funcionais: o guia completo!. Disponível em : [betrybe](https://blog.betrybe.com/tecnologia/requisitos-nao-funcionais/)
 
-# Conclusão
 Ao concluir a apresentação dos requisitos funcionais e não funcionais, é essencial reconhecer a importância de ambos na construção de um sistema robusto e eficiente. Os requisitos funcionais garantem que o sistema cumpra suas funções essenciais e atenda às expectativas dos usuários, enquanto os requisitos não funcionais asseguram que o sistema opere com qualidade, segurança e desempenho adequados. Juntos, esses requisitos fornecem uma base sólida para o desenvolvimento, implementação e avaliação do sistema, contribuindo para o sucesso do projeto e a satisfação dos usuários finais.
+
+# Conclusão
+Ao concluir a análise dos requisitos, é possível ter uma visão mais clara do que a solução deve abranger. Assim, inicia-se o desenvolvimento do projeto, abrangendo tanto a plataforma web quanto o backend de comunicação com o robô.

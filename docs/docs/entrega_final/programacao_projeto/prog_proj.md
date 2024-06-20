@@ -1,3 +1,7 @@
+---
+title: UX
+sidebar_position: 4
+---
 # Documentação Final da Programação
 
 Esta seção é dedicada à descrição detalhada do que foi desenvolvido na parte de backend e na comunicação com o hardware durante o desenvolvimento do projeto.

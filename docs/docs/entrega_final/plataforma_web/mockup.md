@@ -1,3 +1,7 @@
+---
+title: UX
+sidebar_position: 4
+---
 # Introdução
 Nesta seção, apresentaremos o mockup desenvolvido para a interface gráfica da aplicação. Após a criação inicial do wireframe, que permitiu visualizar as funcionalidades principais, avançamos para a elaboração de um protótipo de alta fidelidade. Este mockup oferece uma visão detalhada do design final da aplicação, permitindo uma melhor compreensão de sua aparência e interação sem a necessidade de desenvolvimento do frontend. Além disso, ajustes foram realizados com base nos feedbacks recebidos, assegurando que o produto final esteja alinhado com as expectativas e necessidades dos usuários.
 

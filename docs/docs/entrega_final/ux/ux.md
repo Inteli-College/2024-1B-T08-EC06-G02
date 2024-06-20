@@ -1,3 +1,8 @@
+---
+title: UX
+sidebar_position: 1
+---
+
 # Introdução
 No desenvolvimento de projetos, especialmente aqueles voltados para soluções tecnológicas complexas, é essencial compreender e atender às necessidades dos usuários finais. Para isso, utilizamos dois conceitos-chave: personas e user stories. Esses conceitos não apenas nos ajudam a entender melhor quem são nossos usuários, mas também guiam o processo de desenvolvimento, garantindo que o produto final seja útil e relevante.
 
@@ -82,3 +87,6 @@ As histórias de usuário são uma ferramenta essencial no desenvolvimento ágil
 - **Persona:** Rubens Ferreira (Controlador de Processos Industriais)
 - **Objetivo:** Aumentar a eficiência do processo de manutenção, assegurando que apenas os tubos que realmente necessitam de limpeza sejam atendidos.
 - **Descrição:** Como Rubens, preciso de um sistema que indique os tubos que precisam de limpeza adicional após a primeira verificação, para otimizar o processo e economizar recursos.
+
+# Conclusão
+Após identificar e analisar os usuários finais do projeto, iniciou-se a análise financeira para avaliar a viabilidade de implementação do projeto para a Atvos.
