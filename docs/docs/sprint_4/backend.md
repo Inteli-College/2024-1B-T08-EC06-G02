@@ -50,3 +50,7 @@ Além disso, foi considerada a escalabilidade até nessa parte do banco de dados
 ## APIs e BACKEND
 É possível consultar a documentação das APIs de duas maneiras diferentes. A primeira é rodando o projeto e consultando o endereço /docs (Localmente seria a consulta do url [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs), neste link é possível testar interativamente cada um dos endpoints.
 A outra maneira é acessando a documentação estática escrita via postman disponível clicando [aqui](https://documenter.getpostman.com/view/30920057/2sA3XLEPYY#b8d4e7ba-7d73-4251-8934-04f564c64650)
+
+
+*Toda a documentação referente ao backend e as APIs está disponível no seguinte URL: https://documenter.getpostman.com/view/30920057/2sA3XLEPYY#b8d4e7ba-7d73-4251-8934-04f564c64650*
+
