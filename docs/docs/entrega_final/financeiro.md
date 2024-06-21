@@ -1,5 +1,5 @@
 ---
-title: Business Model Canvas
+title: Negócios
 sidebar_position: 2
 ---
 
