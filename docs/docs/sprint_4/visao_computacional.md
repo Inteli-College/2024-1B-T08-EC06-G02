@@ -1,8 +1,3 @@
----
-title: "Visão Computacional"
-sidebar_position: 1
----
-
 # Visão Computacional
 Visão computacional é um campo da inteligência artificial que se concentra em capacitar os computadores a interpretar e compreender o mundo visual de maneira semelhante aos seres humanos. Essa disciplina envolve o desenvolvimento de algoritmos e modelos que permitem a um sistema extrair informações úteis de imagens e vídeos. As aplicações de visão computacional são amplas e variadas, incluindo o reconhecimento de objetos, detecção de rostos, análise de movimento, e segmentação de imagens.
 

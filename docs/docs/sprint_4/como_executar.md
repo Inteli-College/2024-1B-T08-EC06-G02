@@ -1,8 +1,3 @@
----
-title: "Instrução de Execução"
-sidebar_position: 4
----
-
 # Instrução de Execução da aplicação
 ## Introdução
 Esta seção da documentação detalha os passos necessários para executar a aplicação, conforme o estágio atual do desenvolvimento do projeto. Serão abordadas as etapas para operar tanto o backend quanto o frontend, considerando o desenvolvimento de uma aplicação completa de comunicação com o robô.

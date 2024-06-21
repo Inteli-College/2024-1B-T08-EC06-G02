@@ -1,7 +1,3 @@
----
-title: "Teste de Requisitos"
-sidebar_position: 3
----
 # Teste de Requisitos 
 
 Este documento é responsável por detalhar testes de funcionalidade para requisitos funcionais e testes de validação para requisitos não funcionais. 
