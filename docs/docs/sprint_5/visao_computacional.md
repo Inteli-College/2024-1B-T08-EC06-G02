@@ -1,0 +1,9 @@
+# Visão Computacional II
+A visão computacional é um campo da inteligência artificial que se concentra em capacitar os computadores a interpretar e compreender o mundo visual de maneira semelhante aos seres humanos. Essa disciplina envolve o desenvolvimento de algoritmos e modelos que permitem a um sistema extrair informações úteis de imagens e vídeos. As aplicações de visão computacional são amplas e variadas, incluindo o reconhecimento de objetos, detecção de rostos, análise de movimento, e segmentação de imagens.
+
+Nesse sentido, essa funcionalidade foi implementada na Sprint 4. Entretanto, o algoritmo estava funcionando de maneira isolaada na aplicação. Assim, na Sprint 5 foi feita a integração desse algoritmo com o robô completamente. 
+
+## Metodologia
+Para possibilitar a visualização dos dados capturados pela câmera do robô, foi implementada a rota `/predict`, que recebe as imagens e as disponibiliza no front-end. Além disso, houve uma atualização significativa no back-end. Agora, quando as informações são enviadas para a rota `/predict`, o sistema analisa as imagens com base em porcentagens predefinidas pela funço do *predict* do YOLOv8. Esse processamento determina se o cano está sujo ou não. Dessa forma, o usuário pode saber o status da limpeza do cano em tempo real, com maior precisão e eficiência. 
+
+Nesse sentido, a atualização do back-end envolveu algoritmos de análise de imagem que avaliam a presença de sujeira ou obstruções no cano. Esses algoritmos calculam uma porcentagem de sujeira presente na imagem recebida. Se essa porcentagem exceder um determinado limite, o sistema classifica o cano como sujo e notifica o usuário no front-end com o resultado definido. Caso contrário, o sistema indica que o cano está limpo. Assim, com essas atualizações, foi garantido que a solução cumpra com as exigências de verificação e retorno de status de cada cano.

@@ -1,6 +1,11 @@
+---
+title: "Câmera e Latência"
+sidebar_position: 1
+---
+
 # Comunicação com a Câmera/Cálculo da Latência
 
-O foco deste documento é explicitar como foi realizado durante essa sprint a implementação de uma webcam para observar o ambiente do robô e o cálculo da latência na transmissão das imagens. A seguir, discutiremos o setup da webcam, a criação de uma interface para visualização das imagens da webcam e as comunicações necessárias para que isso aconteça.
+O foco deste documento é explicitar como foi realizado durante essa sprint a implementação de uma webcam para observar o ambiente do robô e o cálculo da latência na transmissão das imagens. A seguir, será discutido o setup da webcam, a criação de uma interface para visualização das imagens da webcam e as comunicações necessárias para que isso aconteça.
 
 ## Comunicação e Integração
 
@@ -8,9 +13,9 @@ A integração entre o Turtlebot3, a webcam e a interface de visualização exig
 
 ## Setup da Webcam
 
-Para realizar as primeiras configurações para as transmissões das imagens, inicialmente adquirimos uma webcam modelo DOBOT Magician para ser integrada ao Turtlebot3. A conexão foi estabelecida através das portas USB disponíveis, permitindo a leitura dos dados capturados pela webcam.<br/>
+Para realizar as primeiras configurações para as transmissões das imagens, inicialmente adquirimos uma webcam modelo DOBOT Magician para ser integrada ao Turtlebot3. A conexão foi estabelecida através das portas USB disponíveis, permitindo a leitura dos dados capturados pela webcam.
 
-Sendo assim, para configurar a transmissão dessas imagens através da rede, desenvolvemos um código no arquivo denominado `sender.py`, utilizando o ROSBridge para criar um WebSocket que possibilitasse a conexão entre os equipamentos e o ROS.<br/>
+Sendo assim, para configurar a transmissão dessas imagens através da rede, foi desenvolvido um código no arquivo denominado `sender.py`, utilizando o ROSBridge para criar um WebSocket que possibilitasse a conexão entre os equipamentos e o ROS.
 
 O código `sender.py` foi especificamente projetado para transmitir as imagens da webcam conectada ao TurtleBot3 através de uma rede Wi-Fi. A seguir, encontra-se o código completo:<br/>
 
