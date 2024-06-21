@@ -6,7 +6,7 @@ import BotaoVisualizar from '../components/home/botao-visualizar'; // Corrige a 
 import BotoesMover from '../components/home/botoes-mover'; // Corrige a importação para minúsculas
 import { PopUpColisao } from '../components/home/popup-colisao';
 import AbaVisualizar from '../components/home/aba-visualizar';
-import { message } from 'antd';
+// import { message } from 'antd';
 
 const Principal = () => {
   const [videoSrc, setVideoSrc] = useState('');
@@ -16,6 +16,8 @@ const Principal = () => {
   const [colisaoEsquerda, setColisaoEsquerda] = useState(false);
   const [colisaoDireita, setColisaoDireita] = useState(false);
   const [latencyData, setLatencyData] = useState('');
+  const [rosOn, setRosOn] = useState('Desligado');
+  const [predict, setPredict] = useState('');
   const STOP_DISTANCE = 0.5; 
 
   const MAX_LIN_VEL = 0.21 // m/s
@@ -29,11 +31,12 @@ const Principal = () => {
 
   useEffect(() => {
     const ros = new ROSLIB.Ros({
-      url: 'ws://localhost:9090'
+      url: 'ws://grupo2.local:9090'
     });
 
     ros.on('connection', () => {
-      console.log('Connected to websocket server.');
+      setRosOn('Conectado');
+      // console.log('Connected to websocket server.');
     });
 
     ros.on('error', (error) => {
@@ -41,6 +44,7 @@ const Principal = () => {
     });
 
     ros.on('close', () => {
+      setRosOn('Desconectado');
       console.log('Connection to websocket server closed.');
     });
 
@@ -193,19 +197,17 @@ const Principal = () => {
     //   // console.log(message.data);  // debug
     //   setVideoSrc('data:image/jpeg;base64,' + message.data);
     // };
-    
-
     // videoTopic.subscribe(handleVideoFrame);
 
     videoTopic.subscribe((message) => {
       const base64Data = message.data;
       setVideoSrc('data:image/jpeg;base64,' + base64Data);
     
-      console.log('Received message header:', message.header); // Log the full header to confirm structure
+      // console.log('Received message header:', message.header); // Log the full header to confirm structure
       if (message.header && message.header.stamp) {
         const { sec, nanosec } = message.header.stamp;
     
-        console.log('sec:', sec, 'nanosec:', nanosec); // Explicitly log sec and nanosec
+        // console.log('sec:', sec, 'nanosec:', nanosec); // Explicitly log sec and nanosec
     
         if (typeof sec === 'number' && typeof nanosec === 'number') {
           const now = new Date().getTime() / 1000; // Current time in seconds since the epoch
@@ -231,29 +233,60 @@ const Principal = () => {
       window.removeEventListener('keyup', handleKeyUp);
       videoTopic.unsubscribe();
       fpsListener.unsubscribe();
-      ros.close();
+      // ros.close();
     };
   }, [colisaoDireita, colisaoEsquerda, colisaoFrente, colisaoTras, MAX_ANG_VEL, MAX_LIN_VEL, MIN_ANG_VEL, MIN_LIN_VEL, latencyData]);
 
+
+  const postImageToPredict = async () => {
+    try {
+      const response = await fetch('http://127.0.0.1:8000/predict', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ image: videoSrc.split('base64,')[1] }), // Sending the base64 image without the prefix
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setPredict(data.result ? "Sujo!" : "limpo!");
+        console.log('Prediction result:', data.result);
+        // Handle the result as needed
+      } else {
+        console.error('Prediction error:', data.detail);
+      }
+    } catch (error) {
+      console.error('Error posting image:', error);
+    }
+  };
+
   return (
-    <div className={`principal-container ${isAbaVisible ? 'with-aba' : ''}`}>
+    <div>
+      <div>
+    </div>
+    <div className="principal-container">
       <div className="content-box">
-        <PopUpColisao />
+      <PopUpColisao className="colisao-box"/>
         <img id="videoStream" alt="Video Stream" src={videoSrc} className="video-stream" />
-      </div>
-      <div className="latency-container">
-        <div className="latency-data">
-          <p>Latency: {latencyData}</p>
+        <div className="latency-container">
+          <div className="latency-data">
+            <p>Latency: {latencyData}</p>
+            <p>Status: {rosOn}</p>
+          </div>
         </div>
       </div>
-      <div className={`control-buttons ${isAbaVisible ? 'with-aba' : ''}`}>
-        <BotaoIniciar onClick={() => console.log('Botão Iniciar clicado!')} />
-      </div>
-      <div className={`navigation-buttons ${isAbaVisible ? 'with-aba' : ''}`}>
-        <BotoesMover />
-      </div>
+      {!isAbaVisible && (
+        <><div className="botao-iniciar">
+          <BotaoIniciar onClick={postImageToPredict} />
+          <p style={{ color: 'black', paddingTop: '200px' }}>Resultado: {predict}</p>
+        </div>
+        <div className="navigation-buttons">
+            <BotoesMover />
+          </div></>
+      )}
       <BotaoVisualizar onClick={toggleAbaVisualizar} />
       {isAbaVisible && <AbaVisualizar onClose={toggleAbaVisualizar} />}
+    </div>
     </div>
   );
 };
