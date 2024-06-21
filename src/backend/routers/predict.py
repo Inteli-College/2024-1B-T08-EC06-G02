@@ -34,7 +34,7 @@ async def predict(predict: Predict):
 
 def detect_objects(image):
     model = YOLO('./utils/best.pt')
-    results = model.predict(source=image, show=True)
+    results = model.predict(source=image, show=False)
 
     print("Results structure:", results)
 
