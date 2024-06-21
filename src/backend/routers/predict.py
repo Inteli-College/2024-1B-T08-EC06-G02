@@ -1,15 +1,17 @@
-from fastapi import APIRouter, HTTPException, Body
+from fastapi import APIRouter, HTTPException
 from fastapi.responses import JSONResponse
+from database.connector import DatabaseConnection
 from schemas.schemas import Predict
 import base64
-import numpy as np
 from PIL import Image
 import io
 import torch
 from ultralytics import YOLO
+import datetime
 import os
 
 router = APIRouter(tags=["predict"])
+connector = DatabaseConnection()
 
 @router.post("/predict")
 async def predict(predict: Predict):
@@ -27,6 +29,10 @@ async def predict(predict: Predict):
 
         # Predict using the YOLO model
         result = detect_objects(image)
+
+        # Log the prediction result using the value of 'result' directly
+        log_prediction(str(result))
+
         return JSONResponse(content={"result": result})
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
@@ -38,7 +44,7 @@ def detect_objects(image):
 
     print("Results structure:", results)
 
-   # Itera sobre os resultados e verifica se há detecções 
+    # Itera sobre os resultados e verifica se há detecções 
     for result in results:
         print("Type of result element:", type(result))
         print("Attributes of result element:", dir(result))
@@ -57,3 +63,10 @@ def detect_objects(image):
     
     # If no valid detections found
     return False
+
+def log_prediction(status):
+    date = str(datetime.datetime.now())  # Capture current date and time
+    query = "INSERT INTO PredictLogs (Date, Status, reboiler_id) VALUES (?, ?, ?)"
+    params = (date, status, 1)  # Always using 1 for reboiler_id
+    # Execute the query to log the prediction
+    connector.query_database("INSERT", "Predict_Logs", data={"Date": date, "Status": status, "reboiler_id": 1})
