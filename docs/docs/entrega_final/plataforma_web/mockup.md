@@ -1,9 +1,9 @@
 ---
-title: "Mockup"
-sidebar_position: 1
+title: UX
+sidebar_position: 4
 ---
-
-Após a elaboração inicial do wireframe, que permitiu visualizar as funcionalidades da aplicação, o grupo avançou para o próximo passo no desenvolvimento da interface gráfica: a criação de um protótipo de alta fidelidade, ou mockup. Este mockup é a melhor forma de visualizar o design da aplicação sem a necessidade de desenvolver o frontend. Além disso, algumas funcionalidades foram ajustadas com base nos feedbacks fornecidos pelo parceiro, garantindo que o produto final atenda às expectativas e necessidades identificadas.
+# Introdução
+Nesta seção, apresentaremos o mockup desenvolvido para a interface gráfica da aplicação. Após a criação inicial do wireframe, que permitiu visualizar as funcionalidades principais, avançamos para a elaboração de um protótipo de alta fidelidade. Este mockup oferece uma visão detalhada do design final da aplicação, permitindo uma melhor compreensão de sua aparência e interação sem a necessidade de desenvolvimento do frontend. Além disso, ajustes foram realizados com base nos feedbacks recebidos, assegurando que o produto final esteja alinhado com as expectativas e necessidades dos usuários.
 
 ### Imagem 1 do Mockup - tela de login
 ![Imagem 1 do Mockup - tela de login](../../static/img/sprint_3/mockup-login.png)
@@ -30,3 +30,6 @@ A seguir tem-se um gif que representa o fluxo do mockup para melhor entendimento
 
 ![Vídeo de Fluxo](/img/sprint_3/fluxo-mockup.gif)
 <h6 align="center"> Fonte: Elaboração grupo Repipe </h6>
+
+# Conclusão
+A criação do mockup de alta fidelidade é um passo crucial no desenvolvimento da interface gráfica, pois permite uma visualização clara e detalhada do design da aplicação antes da implementação do frontend. Com base nos feedbacks recebidos, ajustes foram feitos para garantir que o produto final não só atenda às expectativas dos usuários, mas também ofereça uma experiência intuitiva e agradável. As imagens apresentadas, juntamente com o vídeo do fluxo do mockup, fornecem uma visão abrangente de como a aplicação funcionará, destacando o cuidado com a usabilidade e a identidade visual do projeto.
