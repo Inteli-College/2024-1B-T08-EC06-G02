@@ -23,7 +23,11 @@ Essa abordagem foi escolhida visando a escalabilidade. Se o projeto continuar a 
 <div align="center">
 
 #### Imagem 1 - Tabelas de Usuários
-![alt text](../../static/img/sprint_4/tabela_de_usuarios.png)
+- user_id
+- user_email
+- user_password
+- user_role
+- user_name
 ##### Fonte: Elaboração grupo Repipe
 </div>
 
@@ -39,7 +43,10 @@ Além disso, foi considerada a escalabilidade até nessa parte do banco de dados
 <div align="center">
 
 #### Imagem 2 - Tabelas de Reboilers
-![alt text](../../static/img/sprint_4/tabelas_reboilers.png)
+- reboiler_id
+- reboiler_num_pipes
+- refinary_id
+- refinary_name
 #### Fonte: Elaboração grupo Repipe
 </div>
 
