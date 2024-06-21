@@ -197,8 +197,6 @@ const Principal = () => {
     //   // console.log(message.data);  // debug
     //   setVideoSrc('data:image/jpeg;base64,' + message.data);
     // };
-    
-
     // videoTopic.subscribe(handleVideoFrame);
 
     videoTopic.subscribe((message) => {

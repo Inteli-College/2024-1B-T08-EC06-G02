@@ -1,8 +1,3 @@
----
-sidebar_position: 1
-title: "Sistema de Visão Computacional"
----
-
 # Visão Computacional
 Visão computacional é um campo da inteligência artificial que se concentra em capacitar os computadores a interpretar e compreender o mundo visual de maneira semelhante aos seres humanos. Essa disciplina envolve o desenvolvimento de algoritmos e modelos que permitem a um sistema extrair informações úteis de imagens e vídeos. As aplicações de visão computacional são amplas e variadas, incluindo o reconhecimento de objetos, detecção de rostos, análise de movimento, e segmentação de imagens.
 
@@ -13,7 +8,7 @@ Nesse sentido, esta etapa do projeto envolveu a construção de um algoritmo de 
 ## Base de Dados
 A base de dados deste projeto foi criada utilizando o Chat GPT-4 para gerar imagens que seriam utilizadas no início do treinamento. Esta medida se mostrou necessária devido à falta de imagens representativas da solução trabalhada em plataformas de bancos de imagens gratuitas, como Roboflow e Google. Assim, com o uso do Chat GPT-4, o conjunto de imagens geradas pode ser visto abaixo:
 
-<h2 align="center">Imagem 1 - Base de dados para treinamento </h2>
+<h2 align="center">Base de dados para treinamento </h2>
 
 ![Imagem 1 do Wireframe - tela de login](../../static/img/sprint_4/canos_sujos.png)
 <h6 align="center"> Fonte: Elaboração grupo Repipe </h6>
@@ -29,7 +24,8 @@ Por fim, com a base de imagens finalizada, deu-se início à construção do alg
 
 ## Algoritmo de visão computacional
 ### Treinamento
-No intuito de implementar o algoritmo de visão computacional, após a montagem da base de dados, deu-se o treinamento de fato do modelo.<br/>
+No intuito de implementar o algoritmo de visão computacional, após a montagem da base de dados, deu-se o treinamento de fato do modelo.
+
 Nesse sentido, neste projeto, primeiramente foram importados os recursos necessários para iniciar o treinamento do modelo pelo YOLOv8. Veja os *imports* abaixo:
 
 ```python
