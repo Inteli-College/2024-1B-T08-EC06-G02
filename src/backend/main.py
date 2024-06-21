@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import users, zones, quadrants, reboilers, refinaries, predict
+from routers import users, zones, quadrants, reboilers, refinaries, predict, logs
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -12,6 +12,7 @@ app.include_router(quadrants.router)
 app.include_router(reboilers.router)
 app.include_router(refinaries.router)
 app.include_router(predict.router)
+app.include_router(logs.router)
 
 app.add_middleware(
     CORSMiddleware,
