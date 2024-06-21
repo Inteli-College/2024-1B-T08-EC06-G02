@@ -1,5 +1,5 @@
 ---
-title: UX
+title: Programação do Projeto
 sidebar_position: 4
 ---
 # Documentação Final da Programação

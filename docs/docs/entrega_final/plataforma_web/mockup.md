@@ -1,5 +1,5 @@
 ---
-title: UX
+title: Plataforma Web
 sidebar_position: 4
 ---
 # Introdução

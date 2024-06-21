@@ -1,5 +1,5 @@
 ---
-title: UX
+title: Business Model Canvas
 sidebar_position: 2
 ---
 

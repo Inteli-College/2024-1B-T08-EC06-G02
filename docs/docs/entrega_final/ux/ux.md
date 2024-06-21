@@ -1,5 +1,5 @@
 ---
-title: UX
+title: User Experience
 sidebar_position: 1
 ---
 
