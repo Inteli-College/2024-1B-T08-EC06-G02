@@ -95,7 +95,7 @@ Em suma, a criação deste robô AGV em parceria com a Atvos não só representa
 
 ## 💻 Execução do projeto
 
-É possível acessar os passos de como executar o projeto, na documentação do grupo, neste [link](https://inteli-college.github.io/2024-1B-T08-EC06-G02/);
+É possível acessar os passos de como executar o projeto, na documentação do grupo, neste [link](https://inteli-college.github.io/2024-1B-T08-EC06-G02/sprint_4/como_executar);
 
 
 ## 📋 Licença/License
